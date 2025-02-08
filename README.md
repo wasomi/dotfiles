@@ -13,7 +13,7 @@ paru -S python-pywal16 python-pywalfox
 
 ## optional:
 ```
-sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing
+sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale
 ```
 
 ```
