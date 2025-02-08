@@ -19,3 +19,8 @@ sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent
 ```
 paru -S visual-studio-code-bin
 ```
+
+## todo:
+- [] waybar
+- [] wofi
+- [] hyprland separeted configs
