@@ -21,6 +21,6 @@ paru -S visual-studio-code-bin
 ```
 
 ## todo:
-- [] waybar
-- [] wofi
-- [] hyprland separeted configs
+- [ ] waybar
+- [ ] wofi
+- [ ] hyprland separeted configs
