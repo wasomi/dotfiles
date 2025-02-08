@@ -4,7 +4,7 @@ i did it for me...
 
 ## required:
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar wofi
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar wofi wlogout
 ```
 
 ```
@@ -24,3 +24,6 @@ paru -S visual-studio-code-bin
 - [ ] waybar
 - [ ] wofi
 - [ ] hyprland separeted configs
+- [ ] hyprlock
+- [ ] hypridle
+- [ ] wlogout
