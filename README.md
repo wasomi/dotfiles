@@ -4,11 +4,11 @@ i did it for me...
 
 ## required:
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar wofi wlogout
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar wofi wlogout waypaper
 ```
 
 ```
-paru -S python-pywal16 python-pywalfox
+paru -S python-pywal16 python-pywalfox python2
 ```
 
 ## optional:
