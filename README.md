@@ -4,7 +4,7 @@ i did it for me...
 
 ## required:
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar wofi wlogout waypaper
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi wlogout waypaper
 ```
 
 ```
