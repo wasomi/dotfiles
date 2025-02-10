@@ -29,3 +29,4 @@ paru -S visual-studio-code-bin
 - [ ] wlogout
 - [ ] screenshot tool
 - [ ] auto gtk theme
+- [ ] fastfetch
