@@ -23,7 +23,7 @@ paru -S visual-studio-code-bin
 ## todo:
 - [ ] waybar
 - [ ] rofi
-- [/] hyprland separeted configs
+- [ ] hyprland separeted configs
 - [ ] hyprlock
 - [ ] hypridle
 - [ ] wlogout
