@@ -13,7 +13,7 @@ paru -S python-pywal16 python-pywalfox python2
 
 ## optional:
 ```
-sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale
+sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop
 ```
 
 ```
@@ -22,8 +22,10 @@ paru -S visual-studio-code-bin
 
 ## todo:
 - [ ] waybar
-- [ ] wofi
+- [ ] rofi
 - [ ] hyprland separeted configs
 - [ ] hyprlock
 - [ ] hypridle
 - [ ] wlogout
+- [ ] screenshot tool
+- [ ] auto gtk theme
