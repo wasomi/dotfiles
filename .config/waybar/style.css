@@ -51,7 +51,7 @@
     background: @background;
     color: white;
     font-family: "Jetbrains Mono", "Jetbrains Nerd Mono";
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Each module */
@@ -128,10 +128,6 @@
 
 #temperature.critical {
     color: red;
-}
-
-#window {
-    font-weight: bold;
 }
 
 #workspaces button {

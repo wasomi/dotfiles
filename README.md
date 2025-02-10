@@ -21,12 +21,13 @@ paru -S visual-studio-code-bin
 ```
 
 ## todo:
-- [ ] waybar
+- [x] waybar
 - [ ] rofi
 - [ ] hyprland separeted configs
-- [ ] hyprlock
-- [ ] hypridle
+- [x] hyprlock
+- [x] hypridle
 - [ ] wlogout
 - [ ] screenshot tool
 - [ ] auto gtk theme
+- [ ] icons
 - [ ] fastfetch
