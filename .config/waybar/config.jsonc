@@ -42,13 +42,14 @@
     // -------------------------------------------------------------------------
 
     "battery": {
-        "interval": 60,
+        "interval": 5,
         "states": {
             "warning": 30,
             "critical": 15
         },
         "format": "{icon}",
         "format-alt": "{icon} {capacity}%",
+        "format-charging": "󰠠 {capacity}%",
         "format-icons": ["", "", "", "", ""]
     },
 
@@ -96,7 +97,7 @@
 
     "network": {
         "format": "{ifname}",
-        "format-wifi": "",
+        "format-wifi": "󰖩",
         "format-ethernet": "󰈀",
         "format-disconnected": "󱘖",
         "tooltip-format": "{ifname} via {gwaddr}",
@@ -123,7 +124,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": " ",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -141,7 +142,8 @@
     "temperature": {
         "critical-threshold": 80,
         "interval": 5,
-        "format": "  {temperatureC}°C"
+        "format": "  {temperatureC}°C",
+        "tooltip": false
     },
 
     "tray": {

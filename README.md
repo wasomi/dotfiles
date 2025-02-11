@@ -4,7 +4,7 @@ i did it for me...
 
 ## required:
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi wlogout waypaper
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi wlogout waypaper nwg-look adw-gtk-theme
 ```
 
 ```
@@ -28,6 +28,5 @@ paru -S visual-studio-code-bin
 - [x] hypridle
 - [ ] wlogout
 - [ ] screenshot tool
-- [ ] auto gtk theme
 - [ ] icons
 - [ ] fastfetch

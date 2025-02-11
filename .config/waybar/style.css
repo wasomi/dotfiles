@@ -48,7 +48,7 @@
 
 /* The whole bar */
 #waybar {
-    background: @background;
+    background: #242424;
     color: white;
     font-family: "Jetbrains Mono", "Jetbrains Nerd Mono";
     font-size: 14px;
@@ -67,6 +67,9 @@
 #tray {
     padding-left: 8px;
     padding-right: 8px;
+    /* border-bottom: 1px solid white;
+    margin-left: 4px;
+    margin-right: 4px; */
 }
 
 
