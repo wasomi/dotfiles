@@ -10,9 +10,13 @@ i made these dotfiles for myself...
 - notify-daemon: `swaync`
 - shell: `fish`
 
+
+## gallery:
+
 ![screenshot](pictures/screenshots/image.png)
 
 ## required pkgs:
+
 ```
 pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland wlogout nwg-look adw-gtk-theme network-manager-applet swaync
 ```
@@ -22,6 +26,7 @@ paru -S python-pywal16 waypaper hyprshot
 ```
 
 ## optional pkgs:
+
 ```
 sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop
 ```
@@ -35,6 +40,7 @@ paru -S visual-studio-code-bin
 i will do it tomorrow, maybe...
 
 ## todo:
+
 - [x] waybar
 - [x] rofi
 - [ ] hyprland separeted configs
