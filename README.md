@@ -1,8 +1,17 @@
 # hyprland-dotfiles
 
-i did it for me...
+## about
 
-## required:
+i did it for me...
+- os: `cachyos`
+- wm: `hyprland`
+- bar: `waybar`
+- terminal: `kitty`
+- app launcher: `rofi`
+- notify-daemon: `swaync`
+- shell: `fish`
+
+## required pkgs:
 ```
 pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland wlogout nwg-look adw-gtk-theme network-manager-applet swaync
 ```
@@ -11,7 +20,7 @@ pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland wlogout
 paru -S python-pywal16 waypaper hyprshot
 ```
 
-## optional:
+## optional pkgs:
 ```
 sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop
 ```
@@ -27,6 +36,8 @@ paru -S visual-studio-code-bin
 - [x] hyprlock
 - [x] hypridle
 - [ ] wlogout
-- [ ] screenshot tool
-- [ ] icons
+- [x] screenshot
+- [x] icons
 - [ ] fastfetch
+- [ ] clipboard history
+- [ ] emoji
