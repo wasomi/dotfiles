@@ -1,8 +1,7 @@
-# hyprland-dotfiles
-
 ## about
 
-i did it for me...
+i made these dotfiles for myself...
+
 - os: `cachyos`
 - wm: `hyprland`
 - bar: `waybar`
