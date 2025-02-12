@@ -10,6 +10,8 @@ i made these dotfiles for myself...
 - notify-daemon: `swaync`
 - shell: `fish`
 
+![screenshot](pictures/screenshots/image.png)
+
 ## required pkgs:
 ```
 pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland wlogout nwg-look adw-gtk-theme network-manager-applet swaync
@@ -41,6 +43,6 @@ i will do it tomorrow, maybe...
 - [ ] wlogout
 - [x] screenshot
 - [x] icons
-- [ ] fastfetch
+- [x] fastfetch
 - [ ] clipboard history
 - [ ] emoji
