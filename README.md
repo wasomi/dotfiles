@@ -4,11 +4,11 @@ i did it for me...
 
 ## required:
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi wlogout waypaper nwg-look adw-gtk-theme
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland wlogout nwg-look adw-gtk-theme network-manager-applet swaync
 ```
 
 ```
-paru -S python-pywal16 python-pywalfox python2
+paru -S python-pywal16 waypaper hyprshot
 ```
 
 ## optional:
@@ -22,7 +22,7 @@ paru -S visual-studio-code-bin
 
 ## todo:
 - [x] waybar
-- [ ] rofi
+- [x] rofi
 - [ ] hyprland separeted configs
 - [x] hyprlock
 - [x] hypridle
