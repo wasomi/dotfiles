@@ -1,0 +1,5 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+window {
+    width: 30%;
+}
