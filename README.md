@@ -28,6 +28,10 @@ sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent
 paru -S visual-studio-code-bin
 ```
 
+## install:
+
+i will do it tomorrow, maybe...
+
 ## todo:
 - [x] waybar
 - [x] rofi
