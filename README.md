@@ -6,10 +6,9 @@ i made these dotfiles for myself...
 - wm: `hyprland`
 - bar: `waybar`
 - terminal: `kitty`
+- shell: `fish`
 - app launcher: `rofi`
 - notify-daemon: `swaync`
-- shell: `fish`
-
 
 ## gallery:
 
@@ -18,7 +17,7 @@ i made these dotfiles for myself...
 ## required pkgs:
 
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland wlogout nwg-look adw-gtk-theme network-manager-applet swaync
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme network-manager-applet swaync
 ```
 
 ```
@@ -46,7 +45,7 @@ i will do it tomorrow, maybe...
 - [ ] hyprland separeted configs
 - [x] hyprlock
 - [x] hypridle
-- [ ] wlogout
+- [x] power menu
 - [x] screenshot
 - [x] icons
 - [x] fastfetch

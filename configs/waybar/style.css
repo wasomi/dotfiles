@@ -48,7 +48,7 @@
 
 /* The whole bar */
 #waybar {
-    background: #242424;
+    background: #282828;
     color: white;
     font-family: "Jetbrains Mono", "Jetbrains Nerd Mono";
     font-size: 14px;
@@ -64,12 +64,13 @@
 #network,
 #pulseaudio,
 #temperature,
-#tray {
+#tray,
+#backlight {
     padding-left: 8px;
     padding-right: 8px;
-    /* border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     margin-left: 4px;
-    margin-right: 4px; */
+    margin-right: 4px;
 }
 
 
