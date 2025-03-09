@@ -12,7 +12,7 @@ i made these dotfiles for myself...
 
 ## gallery:
 
-![screenshot](pictures/screenshots/image.png)
+![screenshot](Pictures/Screenshots/image.png)
 
 ## required pkgs:
 
