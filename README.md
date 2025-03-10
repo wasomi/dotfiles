@@ -50,4 +50,6 @@ i will do it tomorrow, maybe...
 - [x] icons
 - [x] fastfetch
 - [ ] clipboard history
-- [ ] emoji
+- [ ] emoji menu
+- [ ] remove pywal
+- [ ] make gruvbox colorscheme for everything
