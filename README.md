@@ -51,5 +51,3 @@ i will do it tomorrow, maybe...
 - [x] fastfetch
 - [ ] clipboard history
 - [ ] emoji menu
-- [ ] remove pywal
-- [ ] make gruvbox colorscheme for everything
