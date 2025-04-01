@@ -12,16 +12,16 @@ i made these dotfiles for myself...
 
 ## gallery:
 
-![screenshot](Pictures/Screenshots/image.png)
+![Screenshot](Pictures/Screenshots/image.png)
 
 ## required pkgs:
 
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme network-manager-applet blueman swaync
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme network-manager-applet blueman swaync nemo brightnessctl loupe swww
 ```
 
 ```
-paru -S python-pywal16 waypaper hyprshot
+paru -S matugen-bin hyprshot rofi-greenclip
 ```
 
 ## optional pkgs:
@@ -36,18 +36,25 @@ paru -S visual-studio-code-bin
 
 ## install:
 
-i will do it tomorrow, maybe...
+```
+git clone https://github.com/wasomi/dotfiles .dotfiles
+```
+and make ln -s for all folders in .dotfiles/.config
 
 ## todo:
 
-- [x] waybar
-- [x] rofi
-- [ ] hyprland separeted configs
-- [x] hyprlock
+- [x] hyprland separeted configs
 - [x] hypridle
 - [x] power menu
 - [x] screenshot
 - [x] icons
 - [x] fastfetch
-- [ ] clipboard history
-- [ ] emoji menu
+- [x] clipboard history
+- [x] emoji menu
+- [x] swap to matugen
+- [x] gtk theme 
+- [ ] qt theme
+- [ ] swaync
+- [ ] hyprlock
+- [ ] waybar
+- [ ] rofi

@@ -20,3 +20,39 @@ btop++ needs an interactive shell to run.
 
 2025/03/08 (22:31:26) | ===> btop++ v.1.4.0
 2025/03/08 (22:31:26) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/16 (20:32:04) | ===> btop++ v.1.4.0
+2025/03/16 (20:32:04) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/17 (10:27:25) | ===> btop++ v.1.4.0
+2025/03/17 (10:27:25) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/18 (12:15:54) | ===> btop++ v.1.4.0
+2025/03/18 (12:15:54) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/18 (12:15:57) | ===> btop++ v.1.4.0
+2025/03/18 (12:15:57) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/18 (12:15:57) | ===> btop++ v.1.4.0
+2025/03/18 (12:15:57) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/18 (12:16:24) | ===> btop++ v.1.4.0
+2025/03/18 (12:16:24) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+2025/03/18 (15:05:36) | ERROR: Stall in Runner thread, restarting!
+2025/03/18 (15:05:36) | ERROR: Stall in Runner thread, restarting!
+2025/03/18 (15:05:36) | ERROR: Stall in Runner thread, restarting!
+
+2025/03/19 (12:12:05) | ===> btop++ v.1.4.0
+2025/03/19 (12:12:05) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/20 (14:55:49) | ===> btop++ v.1.4.0
+2025/03/20 (14:55:49) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/03/21 (12:29:09) | ===> btop++ v.1.4.0
+2025/03/21 (12:29:09) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/04/01 (14:21:00) | ===> btop++ v.1.4.0
+2025/04/01 (14:21:00) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/04/01 (23:18:22) | ===> btop++ v.1.4.0
+2025/04/01 (23:18:22) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported

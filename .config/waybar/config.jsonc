@@ -16,26 +16,31 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 26,
+    "height": 28,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
 
     "modules-left": [
         "hyprland/workspaces"
     ],
+
     "modules-center": [
-        "hyprland/window"
+        "temperature",
+        "memory",
+        "cpu"
     ],
+
     "modules-right": [
         "tray",
         "pulseaudio",
         "backlight",
-        // "memory",
-        // "cpu",
-        // "temperature",
         "hyprland/language",
         "battery",
-        "clock"
+        "clock",
+        "custom/notifications",
+        "custom/power"
     ],
-
 
     // -------------------------------------------------------------------------
     // Modules
@@ -47,15 +52,14 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
-        "format-alt": "{icon} {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-charging": "󰠠 {capacity}%",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "clock": {
-        "format": " {:%R}",
-        "format-alt": " {:%A, %b %d, %Y}",
+        "format": "{:%R}",
+        "format-alt": "{:%A, %b %d, %Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
                     "mode-mon-col"  : 3,
@@ -67,45 +71,13 @@
                         "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
                         }
                     },
-        "actions":  {
-                    "on-click-right": "mode"
-                    }
-    },
-
-    "cpu": {
-        "interval": 5,
-        "format": "  {usage}%", 
-        "states": {
-            "warning": 70,
-            "critical": 90
-        }
+        "actions":  {"on-click-right": "mode"}
     },
 
     "hyprland/language": {
-        "format-en": "🇺🇸",
-        "format-ru": "🇷🇺",
+        "format-en": "us",
+        "format-ru": "ru",
         "on-click": "hyprctl switchxkblayout all next"
-    },
-
-    "memory": {
-        "interval": 5,
-        "format": "  {}%",
-        "states": {
-            "warning": 70,
-            "critical": 90
-        }
-    },
-
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": "󰖩",
-        "format-ethernet": "󰈀",
-        "format-disconnected": "󱘖",
-        "tooltip-format": "{ifname} via {gwaddr}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
-        "tooltip-format-disconnected": "disconnected",
-        "on-click": "kitty nmtui"
     },
 
     "hyprland/window": {
@@ -125,7 +97,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": " 󰝟 ",
+        "format-muted": "󰝟",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -139,24 +111,42 @@
         "scroll-step": 1,
         "on-click": "pavucontrol"
     },
-
-    "temperature": {
-        "critical-threshold": 80,
-        "interval": 5,
-        "format": "  {temperatureC}°C",
-        "tooltip": false
-    },
-
     "tray": {
         "icon-size": 14,
-        "spacing": 8
+        "spacing": 8,
+        "reverse-direction": true
     },
 
     "backlight": {
-        // "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": ["󰃜", "󰃛", "󰃚"],
         "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "  {}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "  {used:0.1f} GiB",
+        "max-length": 10
+    },
+
+    "temperature": {
+        "format": "󰜗 {temperatureC}°C"
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "~/.dotfiles/.config/rofi/scripts/powermenu.sh"
+    },
+
+    "custom/notifications": {
+        "format": "󰂚",
+        "on-click": "swaync-client -op"
     }
 
 }
