@@ -14,6 +14,9 @@ i made these dotfiles for myself...
 
 ![Screenshot](Pictures/Screenshots/image.png)
 
+> [!WARNING]
+> The showcase may be outdated and look differently.
+
 ## required pkgs:
 
 ```
@@ -52,9 +55,9 @@ and make ln -s for all folders in .dotfiles/.config
 - [x] clipboard history
 - [x] emoji menu
 - [x] swap to matugen
-- [x] gtk theme 
-- [ ] qt theme
-- [ ] swaync
-- [ ] hyprlock
-- [ ] waybar
-- [ ] rofi
+- [x] gtk theme mathces matugen color scheme
+- [x] qt theme mathces matugen color scheme
+- [ ] swaync theme
+- [ ] hyprlock theme
+- [ ] waybar theme
+- [ ] rofi theme

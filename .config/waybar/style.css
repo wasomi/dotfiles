@@ -1,14 +1,21 @@
 @import "./colors.css";
 
 * {
-    font-family: "Jetbrains Mono Nerd Font";
-	font-size: 14px;
+    font-family: "Jetbrains Mono Nerd Font", monospace;
+	font-size: 13px;
 	font-weight: bold;
 }
 
-#waybar {
-	background-color: alpha(@background,.6);;
+tooltip {
+    background-color: alpha(@secondary_container,.5);
+    border: unset;
 	color: white;
+	border-radius: 8px;
+}
+
+#waybar {
+	background-color: alpha(@background,.5);
+	color: @on_secondary_container;
 	border-radius: 8px;
 }
 
@@ -22,8 +29,7 @@
 #backlight,
 #temperature,
 #tray,
-#custom-notifications,
-#custom-power {
+#custom-notifications {
     background: @secondary_container;
     padding: 0 12px;
     border-radius: 6px;
@@ -32,16 +38,36 @@
 
 #workspaces button {
     background: @secondary_container;
+    color: @on_secondary_container;
     padding: 0 12px;
     border-radius: 6px;
     margin: 2px;
+    transition: all .2s ease;
+}
+
+#workspaces button:hover {
+    background-color: @primary_container;
+    color: @on_primary_container;
+    transition: all .2s ease;
 }
 
 #workspaces button.active {
     background-color: @primary;
-    color: white;
+    color: @on_primary;
 }
 
-#window {
-	margin: 0 10px;
+#workspaces button.empty {
+    background-color: @tertiary_container;
+    color: @on_tertiary_container;
+}
+
+#workspaces button.empty.active {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+#workspaces button.empty:hover {
+    background-color: @primary_container;
+    color: @on_primary_container;
+    transition: all .2s ease;
 }
