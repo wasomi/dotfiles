@@ -20,7 +20,7 @@ i made these dotfiles for myself...
 ## required pkgs:
 
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme network-manager-applet blueman swaync nemo brightnessctl loupe swww
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme network-manager-applet blueman swaync nemo brightnessctl loupe swww ttf-jetbrains-mono-nerd 
 ```
 
 ```
