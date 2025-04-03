@@ -15,7 +15,7 @@ i made these dotfiles for myself...
 ![Screenshot](Pictures/Screenshots/image.png)
 
 > [!WARNING]
-> The showcase may be outdated and look differently.
+> the showcase may be outdated and look differently
 
 ## required pkgs:
 
