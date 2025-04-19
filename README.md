@@ -1,7 +1,7 @@
-## about
-
 > [!warning]
 > work in progress
+
+## about
 
 - os: `cachyos`
 - wm: `hyprland`
