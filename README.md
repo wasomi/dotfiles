@@ -1,5 +1,7 @@
 > [!warning]
 > work in progress
+> 
+> i made this dotfiles for my device, if you have problems i will try to help you
 
 ## about
 
@@ -10,6 +12,7 @@
 - shell: `fish`
 - app launcher: `rofi`
 - notify-daemon: `swaync`
+- wallpaper-daemon: `swww`
 
 ## gallery
 
