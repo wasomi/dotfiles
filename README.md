@@ -21,32 +21,30 @@
 ![powerMenu](Pictures/Screenshots/powerMenu.png)
 ![wallpaperChanger](Pictures/Screenshots/wallpaperChanger.png)
 
-## required pkgs
+## install
 
-```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme blueman swaync nemo brightnessctl loupe vlc swww otf-codenewroman-nerd
-```
+1. `git clone https://github.com/wasomi/dotfiles .dotfiles`
+2. `pacman -S - < pkgList`
+3. `paru -S - < aurPkgList`
+4. `ln -s` for all folders in .dotfiles/.config
 
-```
-paru -S matugen-bin hyprshot rofi-greenclip checkupdates-with-aur
-```
+    example: `ln -s ~/.dotfiles/.config/hyprland/ ~/.config/`
+
+5. `ln -s ~/.dotfiles/.local/bin/ ~/.local/`
+6. start hyprland <3
+
 
 ## optional pkgs
 
+> i'm just using these packages
+
 ```
-pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop steam prismlauncher discord xdg-desktop-portal-hyprland
+pacman -S - < optionalPkgList
 ```
 
 ```
-paru -S visual-studio-code-bin spotify
+paru -S - < optionalAurPkgList
 ```
-
-## install
-
-```
-git clone https://github.com/wasomi/dotfiles .dotfiles
-```
-and make ln -s for all folders in .dotfiles/.config
 
 ## todo
 
