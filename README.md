@@ -28,7 +28,7 @@ pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-loo
 ```
 
 ```
-paru -S matugen-bin hyprshot rofi-greenclip waybar-updates
+paru -S matugen-bin hyprshot rofi-greenclip
 ```
 
 ## optional pkgs

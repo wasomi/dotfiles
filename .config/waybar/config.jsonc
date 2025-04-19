@@ -34,7 +34,6 @@
 
     "modules-right": [
         "tray",
-        "custom/pacman",
         "custom/vpn",
         "custom/tailscale",
         "bluetooth",
@@ -182,16 +181,5 @@
         "format": "{}",
         "exec": "ip add show | grep -qF wasomi && echo 󰌆 || echo ",
         "tooltip-format": "VPN is connected"
-    },
-
-    "custom/pacman": {
-        "format": "{icon}{0}",
-        "return-type": "json",
-        "format-icons": {
-            "pending-updates": "",
-            "updated": ""
-        },
-        "exec-if": "which waybar-updates",
-        "exec": "waybar-updates"
     }
 }

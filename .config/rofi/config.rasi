@@ -11,4 +11,9 @@
 
 window {
     width: 30%;
+    height: 30%;
+}
+
+listview {
+    scrollbar: false;
 }

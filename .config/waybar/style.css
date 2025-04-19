@@ -18,16 +18,14 @@
 }
 
 tooltip {
-    background-color: @background;
-    border: unset;
+    background-color: alpha(@background,.5);
+    border: solid 2px @primary;
 	color: white;
-	/* border-radius: 8px; */
 }
 
 #waybar {
 	background-color: alpha(@background,.5);
 	color: @on_secondary_container;
-	/* border-radius: 8px; */
 }
 
 #language,
@@ -42,12 +40,10 @@ tooltip {
 #temperature,
 #tray,
 #custom-notifications,
-#custom-vpn,
-#custom-pacman {
+#custom-vpn {
     /* background: alpha(@secondary_container,.6); */
     /* border-bottom: solid 2px @on_secondary_container; */
     padding: 4px 8px;
-    /* border-radius: 6px; */
     margin: 0px 2px;
 }
 
