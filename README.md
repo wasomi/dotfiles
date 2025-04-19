@@ -1,6 +1,7 @@
 ## about
 
-i made these dotfiles for myself...
+> [!warning]
+> work in progress
 
 - os: `cachyos`
 - wm: `hyprland`
@@ -12,29 +13,32 @@ i made these dotfiles for myself...
 
 ## gallery:
 
-![Screenshot](Pictures/Screenshots/image.png)
-
 > [!warning]
-> the showcase may be outdated and look differently
+> the gallery may be outdated and look differently
+
+![main](Pictures/Screenshots/main.png)
+![rofi](Pictures/Screenshots/rofi.png)
+![powerMenu](Pictures/Screenshots/powerMenu.png)
+![wallpaperChanger](Pictures/Screenshots/wallpaperChanger.png)
 
 ## required pkgs:
 
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme network-manager-applet blueman swaync nemo brightnessctl loupe swww ttf-jetbrains-mono-nerd 
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme blueman swaync nemo brightnessctl loupe swww otf-codenewroman-nerd
 ```
 
 ```
-paru -S matugen-bin hyprshot rofi-greenclip
+paru -S matugen-bin hyprshot rofi-greenclip waybar-updates
 ```
 
 ## optional pkgs:
 
 ```
-sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop
+sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop steam prismlauncher xdg-desktop-portal-hyprland
 ```
 
 ```
-paru -S visual-studio-code-bin
+paru -S visual-studio-code-bin spotify
 ```
 
 ## install:
@@ -50,14 +54,28 @@ and make ln -s for all folders in .dotfiles/.config
 - [x] hypridle
 - [x] power menu
 - [x] screenshot
-- [x] icons
+- [x] system icons
 - [x] fastfetch
 - [x] clipboard history
 - [x] emoji menu
 - [x] swap to matugen
 - [x] gtk theme mathces matugen color scheme
 - [x] qt theme mathces matugen color scheme
-- [ ] swaync theme
-- [ ] hyprlock theme
-- [ ] waybar theme
-- [ ] rofi theme
+- [x] gamemode
+- [ ] swaync
+- [x] hyprlock
+- [x] waybar
+- [x] rofi
+- [ ] satty
+- [x] new animations
+- [ ] spotify theme
+
+## thanks to:
+
+- [zproger](https://github.com/Zproger/) for the [rofi scripts](https://github.com/Zproger/bspwm-dotfiles/tree/main/bin)
+- [sane1090](https://www.youtube.com/@sane1090x) for the [theme switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
+- [wallhaven](https://wallhaven.cc) for the wallpapers
+- [mylinuxtowork](https://github.com/mylinuxforwork) for the [hyprland animations](https://github.com/mylinuxforwork/dotfiles/tree/main/share/dotfiles/.config/hypr/conf/animations)
+- [abhra00](https://github.com/Abhra00) for the [swaync matugen theme](https://github.com/Abhra00/Matuprland/tree/main/swaync/themes/matugen-nc)
+- [dylanaraps](https://github.com/dylanaraps) for the [rofi theme](https://github.com/dylanaraps/pywal/blob/master/pywal/templates/colors-rofi-dark.rasi)
+- ai bots for providing useful examples

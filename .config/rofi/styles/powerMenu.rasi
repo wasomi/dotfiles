@@ -1,0 +1,28 @@
+//     ____  ____ _      _____  _____   ____ ___  ___  ____  __  __
+//    / __ \/ __ \ | /| / / _ \/ ___/  / __ `__ \/ _ \/ __ \/ / / /
+//   / /_/ / /_/ / |/ |/ /  __/ /     / / / / / /  __/ / / / /_/ / 
+//  / .___/\____/|__/|__/\___/_/     /_/ /_/ /_/\___/_/ /_/\__,_/  
+// /_/                                                             
+// 
+// ----------------------------------------------------------------
+
+@theme "theme.rasi"
+
+configuration {
+    show-icons: true;
+}
+
+listview {
+    lines: 1;
+    columns: 4;
+    scrollbar: false;
+}
+
+element {
+    orientation: horizontal;
+    children: [ element-text ];
+}
+
+element-icon {
+    size: 256px;
+}

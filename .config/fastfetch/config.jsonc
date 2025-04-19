@@ -13,62 +13,62 @@
         "format": "{6} {7} {8}"
       },
       "break",
-      {
-        "type": "os",
-        "key": "  󰣇",
-        "format": "{2}",
-        "keyColor": "red"
-      },
-      {
-        "type": "kernel",
-        "key": "  ",
-        "format": "{2}",
-        "keyColor": "red"
-      },
+      // {
+      //   "type": "os",
+      //   "key": "  󰣇",
+      //   "format": "{2}",
+      //   "keyColor": "red"
+      // },
+      // {
+      //   "type": "kernel",
+      //   "key": "  ",
+      //   "format": "{2}",
+      //   "keyColor": "red"
+      // },
       {
         "type": "packages",
         "key": "  󰏗",
         "keyColor": "green"
       },
-      {
-        "type": "display",
-        "key": "  󰍹",
-        "format": "{1}x{2} @ {3}Hz [{7}]",
-        "keyColor": "green"
-      },
-      {
-        "type": "terminal",
-        "key": "  ",
-        "keyColor": "yellow"
-      },
-      {
-        "type": "wm",
-        "key": "  󱗃",
-        "format": "{2}",
-        "keyColor": "yellow"
-      },
+      // {
+      //   "type": "display",
+      //   "key": "  󰍹",
+      //   "format": "{1}x{2} @ {3}Hz [{7}]",
+      //   "keyColor": "green"
+      // },
+      // {
+      //   "type": "terminal",
+      //   "key": "  ",
+      //   "keyColor": "yellow"
+      // },
+      // {
+      //   "type": "wm",
+      //   "key": "  󱗃",
+      //   "format": "{2}",
+      //   "keyColor": "yellow"
+      // },
       "break",
-      {
-        "type": "memory",
-        "key": "  ",
-        "keyColor": "magenta"
-      },
+      // {
+      //   "type": "memory",
+      //   "key": "  ",
+      //   "keyColor": "magenta"
+      // },
       {
         "type": "command",
         "key": "  󱦟",
-        "keyColor": "red",
+        "keyColor": "blue",
         "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
       },
       {
         "type": "uptime",
-        "key": "  󱫐",
+        "key": "  󱎫",
         "keyColor": "red"
       },
       "break",
       {
         "type": "colors",
         "paddingLeft": 2,
-        "symbol": "circle"
+        "symbol": "square"
       },
       "break"
     ]

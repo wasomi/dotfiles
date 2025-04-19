@@ -1,4 +1,14 @@
+//                _____               __               
+//    _________  / __(_)  _________  / /___  __________
+//   / ___/ __ \/ /_/ /  / ___/ __ \/ / __ \/ ___/ ___/
+//  / /  / /_/ / __/ /  / /__/ /_/ / / /_/ / /  (__  ) 
+// /_/   \____/_/ /_/   \___/\____/_/\____/_/  /____/  
+// 
+//               generated with matugen
+// ----------------------------------------------------
+
 * {
+    background: {{colors.background.default.hex}}99;
     primary: {{colors.primary.default.hex}};
     primary-fixed: {{colors.primary_fixed.default.hex}};
     primary-fixed-dim: {{colors.primary_fixed_dim.default.hex}};
@@ -13,7 +23,7 @@
     on-secondary: {{colors.on_secondary.default.hex}};
     on-secondary-fixed: {{colors.on_secondary_fixed.default.hex}};
     on-secondary-fixed-variant: {{colors.on_secondary_fixed_variant.default.hex}};
-    secondary-container: {{colors.secondary_container.default.hex}};
+    secondary-container: {{colors.secondary_container.default.hex}}99;
     on-secondary-container: {{colors.on_secondary_container.default.hex}};
     tertiary: {{colors.tertiary.default.hex}};
     tertiary-fixed: {{colors.tertiary_fixed.default.hex}};

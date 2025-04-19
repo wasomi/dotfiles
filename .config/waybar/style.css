@@ -1,22 +1,33 @@
 @import "./colors.css";
 
+@keyframes blink-critical {
+    70% {
+      color: @on_secondary_container;
+    }
+
+    to {
+        color: @error;
+    }
+}
+
 * {
-    font-family: "Jetbrains Mono Nerd Font", monospace;
-	font-size: 13px;
+    font-family: "CodeNewRoman Nerd Font Propo";
+	font-size: 14px;
 	font-weight: bold;
+    border-radius: unset;
 }
 
 tooltip {
-    background-color: alpha(@secondary_container,.5);
+    background-color: @background;
     border: unset;
 	color: white;
-	border-radius: 8px;
+	/* border-radius: 8px; */
 }
 
 #waybar {
 	background-color: alpha(@background,.5);
 	color: @on_secondary_container;
-	border-radius: 8px;
+	/* border-radius: 8px; */
 }
 
 #language,
@@ -25,23 +36,59 @@ tooltip {
 #battery,
 #pulseaudio,
 #network,
+#bluetooth,
 #clock,
 #backlight,
 #temperature,
 #tray,
-#custom-notifications {
-    background: @secondary_container;
-    padding: 0 12px;
-    border-radius: 6px;
-    margin: 2px;
+#custom-notifications,
+#custom-vpn,
+#custom-pacman {
+    /* background: alpha(@secondary_container,.6); */
+    /* border-bottom: solid 2px @on_secondary_container; */
+    padding: 4px 8px;
+    /* border-radius: 6px; */
+    margin: 0px 2px;
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#cpu.critical {
+    color: @error;
+}
+
+#memory.critical {
+    color: @error
+}
+
+/* #custom-notifications:hover,
+#network:hover,
+#pulseaudio:hover,
+#language:hover,
+#clock:hover,
+#bluetooth:hover {
+    background-color: @primary_container;
+    color: @on_primary_container;
+    transition: all .2s ease;
+} */
+
+#workspaces {
+    /* background: alpha(@secondary_container,.6); */
+    /* border-bottom: solid 2px @on_secondary_container; */
+    margin: 0px 2px;
 }
 
 #workspaces button {
-    background: @secondary_container;
     color: @on_secondary_container;
-    padding: 0 12px;
-    border-radius: 6px;
-    margin: 2px;
     transition: all .2s ease;
 }
 
@@ -57,8 +104,7 @@ tooltip {
 }
 
 #workspaces button.empty {
-    background-color: @tertiary_container;
-    color: @on_tertiary_container;
+    color: @tertiary;
 }
 
 #workspaces button.empty.active {

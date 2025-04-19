@@ -6,17 +6,17 @@
   "control-center-layer": "top",
   "layer-shell": true,
   "cssPriority": "application",
-  "control-center-width": 350,
-  "control-center-margin-top": 8,
-  "control-center-margin-bottom": 8,
-  "control-center-margin-right": 0,
-  "control-center-margin-left": 8,
+  "control-center-width": 480,
+  "control-center-margin-top": 6,
+  "control-center-margin-bottom": 6,
+  "control-center-margin-right": 6,
+  "control-center-margin-left": 6,
   "notification-2fa-action": true,
   "notification-inline-replies": true,
-  "notification-window-width": 350,
-  "notification-icon-size": 60,
-  "notification-body-image-height":  180,
-  "notification-body-image-width": 200,
+  "notification-window-width": 320,
+  "notification-icon-size": 48,
+  "notification-body-image-height":  240,
+  "notification-body-image-width": 240,
   "timeout": 12,
   "timeout-low": 6,
   "timeout-critical": 1,
@@ -30,9 +30,8 @@
   "widgets": [
       "mpris",
       "title",
+      "dnd",
       "notifications",
-      "volume",
-      "backlight",
       "buttons-grid"
   ],
   "widget-config": {
@@ -45,18 +44,9 @@
           "max-lines":1,
           "text": "Notification Center!"
       },
-
       "mpris": {
           "image-size": 80,
           "image-radius": 0
-      },
-      "volume": {
-            "label": " 󰕾 "
-      },
-      "backlight": {
-            "label": " 󰃟 ",
-            "subsystem": "backlight",
-            "device": "amdgpu_bl1"
       },
       "buttons-grid": {
           "actions": [
@@ -69,13 +59,8 @@
                   "command": "blueman-manager"
               },
               {
-                  "label":"󰂯",
-                  "command": "swaync-client -d",
-                  "type":"toggle"
-              },
-              {
                   "label":"⏻",
-                  "command": "shutdown now"
+                  "command": "/home/wasomi/.dotfiles/.config/rofi/scripts/powermenu.sh"
               }
 
           ]
