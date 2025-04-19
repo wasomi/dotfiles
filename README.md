@@ -23,7 +23,7 @@
 
 ## install
 
-1. `git clone https://github.com/wasomi/dotfiles .dotfiles`
+1. `git clone https://github.com/wasomi/dotfiles ~/.dotfiles`
 2. `pacman -S - < pkgList`
 3. `paru -S - < aurPkgList`
 4. `ln -s` for all folders in .dotfiles/.config
