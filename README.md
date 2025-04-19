@@ -52,6 +52,7 @@ paru -S - < optionalAurPkgList
 
 - [ ] swaync
 - [ ] satty
+- [ ] hotkeys list in readme.md / rofi hotkey list
 
 ## thanks to
 
