@@ -24,7 +24,7 @@
 ## required pkgs
 
 ```
-pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme blueman swaync nemo brightnessctl loupe swww otf-codenewroman-nerd
+pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme blueman swaync nemo brightnessctl loupe vlc swww otf-codenewroman-nerd
 ```
 
 ```
