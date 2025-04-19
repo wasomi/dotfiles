@@ -10,7 +10,7 @@
 # credits: https://github.com/Zproger
 # ----------------------------------------------------------------
 
-choice=$(printf "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu  -p "Power Menu" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
+choice=$(printf "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu -p "Power Menu" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
 
 case "$choice" in
   Lock) hyprlock ;;

@@ -13,6 +13,7 @@
 
 configuration {
     font: "CodeNewRoman Nerd Font Propo 13";
+    display-drun: "Apps";
 }
 
 * {
