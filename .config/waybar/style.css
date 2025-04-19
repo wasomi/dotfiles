@@ -18,7 +18,7 @@
 }
 
 tooltip {
-    background-color: alpha(@background,.5);
+    background-color: alpha(@background,.8);
     border: solid 2px @primary;
 	color: white;
 }
