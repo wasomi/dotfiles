@@ -51,7 +51,6 @@ and make ln -s for all folders in .dotfiles/.config
 ## todo
 
 - [ ] swaync
-- [ ] check update & system update scripts
 - [ ] satty
 
 ## thanks to
