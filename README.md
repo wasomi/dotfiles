@@ -33,7 +33,9 @@
     
     example: `ln -s ~/.dotfiles/.config/hyprland/ ~/.config/`
 5. `ln -s ~/.dotfiles/.local/bin/ ~/.local/`
-6. start hyprland <3
+6. `ln -s ~/.dotfiles/Pictures/Wallpapers/ ~/Pictures/`
+7. reboot your device
+8. start hyprland <3
 
 
 ## optional pkgs
