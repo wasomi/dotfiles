@@ -34,7 +34,7 @@ paru -S matugen-bin hyprshot rofi-greenclip waybar-updates
 ## optional pkgs
 
 ```
-sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop steam prismlauncher xdg-desktop-portal-hyprland
+pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop steam prismlauncher discord xdg-desktop-portal-hyprland
 ```
 
 ```
