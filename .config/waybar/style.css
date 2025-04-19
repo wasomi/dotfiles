@@ -111,9 +111,3 @@ tooltip {
     background-color: @primary;
     color: @on_primary;
 }
-
-#workspaces button.empty:hover {
-    background-color: @primary_container;
-    color: @on_primary_container;
-    transition: all .2s ease;
-}
