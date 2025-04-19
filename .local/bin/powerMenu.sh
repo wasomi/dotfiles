@@ -6,9 +6,7 @@
 #  / .___/\____/|__/|__/\___/_/     /_/ /_/ /_/\___/_/ /_/\__,_/  
 # /_/                                                             
 # 
-# ----------------------------------------------------------------
 # credits: https://github.com/Zproger
-# ----------------------------------------------------------------
 
 choice=$(printf "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu -p "Power Menu" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
 

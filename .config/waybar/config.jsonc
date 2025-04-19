@@ -5,15 +5,11 @@
 // |__/|__/\__,_/\__, /_.___/\__,_/_/     
 //              /____/                    
 // 
-// ---------------------------------------
 
 {
-    // ---------------------------------------
     // global configuration
-    // ---------------------------------------
 
     "layer": "top",
-
     "position": "top",
 
     // "height": 34,
@@ -21,33 +17,11 @@
     // "margin-left": 6,
     // "margin-right": 6,
 
-    "modules-left": [
-        "clock",
-        "hyprland/workspaces"
-    ],
+    "modules-left": [ "clock", "hyprland/workspaces" ],
+    "modules-center": [ "temperature", "memory", "cpu" ],
+    "modules-right": [ "tray", "custom/update", "custom/vpn", "bluetooth", "network", "pulseaudio", "backlight", "battery", "hyprland/language", "custom/notifications" ],
 
-    "modules-center": [
-        "temperature",
-        "memory",
-        "cpu"
-    ],
-
-    "modules-right": [
-        "tray",
-        "custom/vpn",
-        "custom/tailscale",
-        "bluetooth",
-        "network",
-        "pulseaudio",
-        "backlight",
-        "battery",
-        "hyprland/language",
-        "custom/notifications"
-    ],
-
-    // ---------------------------------------
     // modules
-    // ---------------------------------------
 
     "battery": {
         "interval": 2,
@@ -95,7 +69,7 @@
         "disable-scroll": true,
         "format": "{name}",
         "persistent-workspaces": {
-             "*": 5
+            "*": 5
        }
     },
 
@@ -146,12 +120,6 @@
         "tooltip": false
     },
 
-    "custom/notifications": {
-        "format": "",
-        "on-click": "swaync-client -t -sw",
-        "tooltip": false
-    },
-
     "network": {
         "format-wifi": "{icon} {essid}",
         "format-ethernet": "󰈀",
@@ -181,5 +149,21 @@
         "format": "{}",
         "exec": "ip add show | grep -qF wasomi && echo 󰌆 || echo ",
         "tooltip-format": "VPN is connected"
+    },
+
+    "custom/notifications": {
+        "format": "",
+        "on-click": "swaync-client -t -sw",
+        "tooltip": false
+    },
+
+    "custom/update": {
+        "format": "󰅢 {}",
+        "interval": 86400, // once every day
+        "exec": "~/.local/bin/checkUpdates.sh",
+        "exec-if": "exit 1",
+        "on-click": "kitty ~/.local/bin/systemUpdate.sh",
+        "signal": 8,
+        "tooltip": false
     }
 }

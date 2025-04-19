@@ -7,9 +7,7 @@
 #  \__, /\__,_/_/ /_/ /_/\___/_/ /_/ /_/\____/\__,_/\___/ 
 # /____/                                                  
 # 
-# --------------------------------------------------------
 # credits: https://wiki.hyprland.org/
-# --------------------------------------------------------
 
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 if [ "$HYPRGAMEMODE" = 1 ] ; then

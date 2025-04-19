@@ -40,7 +40,8 @@ tooltip {
 #temperature,
 #tray,
 #custom-notifications,
-#custom-vpn {
+#custom-vpn,
+#custom-update {
     /* background: alpha(@secondary_container,.6); */
     /* border-bottom: solid 2px @on_secondary_container; */
     padding: 4px 8px;

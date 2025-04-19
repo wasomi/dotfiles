@@ -50,25 +50,9 @@ and make ln -s for all folders in .dotfiles/.config
 
 ## todo
 
-- [x] hyprland separeted configs
-- [x] hypridle
-- [x] power menu
-- [x] screenshot
-- [x] system icons
-- [x] fastfetch
-- [x] clipboard history
-- [x] emoji menu
-- [x] swap to matugen
-- [x] gtk theme mathces matugen color scheme
-- [x] qt theme mathces matugen color scheme
-- [x] gamemode
 - [ ] swaync
-- [x] hyprlock
-- [x] waybar
-- [x] rofi
+- [ ] check update & system update scripts
 - [ ] satty
-- [x] new animations
-- [ ] spotify theme
 
 ## thanks to
 

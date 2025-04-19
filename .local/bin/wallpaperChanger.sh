@@ -11,10 +11,8 @@
 # \___/_/ /_/\__,_/_/ /_/\__, /\___/_/            
 #                       /____/                    
 # 
-# ------------------------------------------------
 # credits: https://www.youtube.com/@sane1090x
 # edited by: wasomi
-# ------------------------------------------------
 
 # directory containing wallpapers
 WALL_DIR="$HOME/Pictures/Wallpapers"
