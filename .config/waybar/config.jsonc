@@ -1,21 +1,21 @@
-// =============================================================================
-//
-// Waybar configuration
-//
-// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
-//
-// =============================================================================
+//                        __              
+//  _      ______ ___  __/ /_  ____ ______
+// | | /| / / __ `/ / / / __ \/ __ `/ ___/
+// | |/ |/ / /_/ / /_/ / /_/ / /_/ / /    
+// |__/|__/\__,_/\__, /_.___/\__,_/_/     
+//              /____/                    
+// 
+// ---------------------------------------
 
 {
-    // -------------------------------------------------------------------------
-    // Global configuration
-    // -------------------------------------------------------------------------
+    // ---------------------------------------
+    // global configuration
+    // ---------------------------------------
 
     "layer": "top",
 
     "position": "top",
 
-    // If height property would be not present, it'd be calculated dynamically
     // "height": 34,
     // "margin-top": 6,
     // "margin-left": 6,
@@ -46,9 +46,9 @@
         "custom/notifications"
     ],
 
-    // -------------------------------------------------------------------------
-    // Modules
-    // -------------------------------------------------------------------------
+    // ---------------------------------------
+    // modules
+    // ---------------------------------------
 
     "battery": {
         "interval": 2,
@@ -156,7 +156,7 @@
     "network": {
         "format-wifi": "{icon} {essid}",
         "format-ethernet": "󰈀",
-        "format-disconnected": "󰤮", //An empty format will hide the module.
+        "format-disconnected": "󰤮", 
         "tooltip-format-disconnected": "Disconnected",
         "tooltip-format-wifi": "{ipaddr}/{cidr} ",
         "tooltip-format-ethernet": "{ipaddr}/{cidr} ",
