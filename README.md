@@ -46,7 +46,7 @@
 
 ## todo
 
-- [ ] swaync
+- [ ] switch to dunst
 - [ ] satty
 - [ ] hotkeys list in readme.md / rofi hotkey list
 
