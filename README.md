@@ -11,7 +11,7 @@
 - app launcher: `rofi`
 - notify-daemon: `swaync`
 
-## gallery:
+## gallery
 
 > [!warning]
 > the gallery may be outdated and look differently
@@ -21,7 +21,7 @@
 ![powerMenu](Pictures/Screenshots/powerMenu.png)
 ![wallpaperChanger](Pictures/Screenshots/wallpaperChanger.png)
 
-## required pkgs:
+## required pkgs
 
 ```
 pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-look adw-gtk-theme blueman swaync nemo brightnessctl loupe swww otf-codenewroman-nerd
@@ -31,7 +31,7 @@ pacman -S hyprland hyprpaper hyprlock hypridle kitty waybar rofi-wayland nwg-loo
 paru -S matugen-bin hyprshot rofi-greenclip waybar-updates
 ```
 
-## optional pkgs:
+## optional pkgs
 
 ```
 sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent syncthing tailscale virt-manager qemu-desktop steam prismlauncher xdg-desktop-portal-hyprland
@@ -41,14 +41,14 @@ sudo pacman -S telegram-desktop obsidian keepassxc libreoffice-fresh qbittorrent
 paru -S visual-studio-code-bin spotify
 ```
 
-## install:
+## install
 
 ```
 git clone https://github.com/wasomi/dotfiles .dotfiles
 ```
 and make ln -s for all folders in .dotfiles/.config
 
-## todo:
+## todo
 
 - [x] hyprland separeted configs
 - [x] hypridle
@@ -70,7 +70,7 @@ and make ln -s for all folders in .dotfiles/.config
 - [x] new animations
 - [ ] spotify theme
 
-## thanks to:
+## thanks to
 
 - [zproger](https://github.com/Zproger/) for the [rofi scripts](https://github.com/Zproger/bspwm-dotfiles/tree/main/bin)
 - [sane1090](https://www.youtube.com/@sane1090x) for the [theme switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
