@@ -40,13 +40,9 @@
 
 > i'm just using these packages
 
-```
-pacman -S - < optionalPkgList
-```
+- `pacman -S - < optionalPkgList`
 
-```
-paru -S - < optionalAurPkgList
-```
+- `paru -S - < optionalAurPkgList`
 
 ## todo
 
