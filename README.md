@@ -27,9 +27,8 @@
 2. `pacman -S - < pkgList`
 3. `paru -S - < aurPkgList`
 4. `ln -s` for all folders in .dotfiles/.config
-
+    
     example: `ln -s ~/.dotfiles/.config/hyprland/ ~/.config/`
-
 5. `ln -s ~/.dotfiles/.local/bin/ ~/.local/`
 6. start hyprland <3
 
