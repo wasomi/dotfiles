@@ -46,10 +46,13 @@
 
 - `paru -S - < optionalAurPkgList`
 
+## hotkeys
+
+
+
 ## todo
 
-- [ ] satty
-- [ ] hotkeys list in readme.md / rofi hotkey list
+- [ ] hotkeys list in readme.md
 
 ## thanks to
 

@@ -10,11 +10,13 @@
 echo ":: System update started"
 echo
 
-paru -Syu
+if paru -Syu; then
+    echo -e "\n:: System update completed successfully"
+else
+    echo -e "\n:: System update failed"
+fi
 
-echo
-echo ":: System update complete"
-echo ":: Press enter to exit"
+echo ":: Press enter to exit..."
 read
 
 pkill -SIGRTMIN+8 waybar 2>/dev/null
