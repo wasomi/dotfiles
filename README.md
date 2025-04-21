@@ -50,7 +50,6 @@
 
 - [ ] satty
 - [ ] hotkeys list in readme.md / rofi hotkey list
-- [ ] microphone module for waybar
 
 ## thanks to
 

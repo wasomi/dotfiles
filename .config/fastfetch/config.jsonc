@@ -1,75 +1,52 @@
+//     ____           __  ____     __       __       
+//    / __/___ ______/ /_/ __/__  / /______/ /_      
+//   / /_/ __ `/ ___/ __/ /_/ _ \/ __/ ___/ __ \     
+//  / __/ /_/ (__  ) /_/ __/  __/ /_/ /__/ / / /     
+// /_/  \__,_/____/\__/_/__\___/\__/\___/_/ /_/      
+//   _________  ____  / __(_)___ _                   
+//  / ___/ __ \/ __ \/ /_/ / __ `/                   
+// / /__/ /_/ / / / / __/ / /_/ /                    
+// \___/\____/_/ /_/_/ /_/\__, /                     
+//                       /____/                      
+
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-      "type": "small"
+      	"type": "small"
     },
     "display": {
-      "separator": "  "
+      	"separator": "  "
     },
     "modules": [
-      {
-        "type": "title",
-        "key": "  ",
-        "format": "{6} {7} {8}"
-      },
-      "break",
-      // {
-      //   "type": "os",
-      //   "key": "  󰣇",
-      //   "format": "{2}",
-      //   "keyColor": "red"
-      // },
-      // {
-      //   "type": "kernel",
-      //   "key": "  ",
-      //   "format": "{2}",
-      //   "keyColor": "red"
-      // },
-      {
-        "type": "packages",
-        "key": "  󰏗",
-        "keyColor": "green"
-      },
-      // {
-      //   "type": "display",
-      //   "key": "  󰍹",
-      //   "format": "{1}x{2} @ {3}Hz [{7}]",
-      //   "keyColor": "green"
-      // },
-      // {
-      //   "type": "terminal",
-      //   "key": "  ",
-      //   "keyColor": "yellow"
-      // },
-      // {
-      //   "type": "wm",
-      //   "key": "  󱗃",
-      //   "format": "{2}",
-      //   "keyColor": "yellow"
-      // },
-      "break",
-      // {
-      //   "type": "memory",
-      //   "key": "  ",
-      //   "keyColor": "magenta"
-      // },
-      {
-        "type": "command",
-        "key": "  󱦟",
-        "keyColor": "blue",
-        "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
-      },
-      {
-        "type": "uptime",
-        "key": "  󱎫",
-        "keyColor": "red"
-      },
-      "break",
-      {
-        "type": "colors",
-        "paddingLeft": 2,
-        "symbol": "square"
-      },
-      "break"
+		{
+			"type": "title",
+			"key": "  ",
+			"format": "{6} {7} {8}"
+		},
+		"break",
+		{
+			"type": "packages",
+			"key": "  󰏗",
+			"keyColor": "green"
+		},
+		"break",
+		{
+			"type": "command",
+			"key": "  󱦟",
+			"keyColor": "blue",
+			"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+		},
+		{
+			"type": "uptime",
+			"key": "  󱎫",
+			"keyColor": "red"
+		},
+		"break",
+		{
+			"type": "colors",
+			"paddingLeft": 2,
+			"symbol": "square"
+		},
+		"break"
     ]
   }
