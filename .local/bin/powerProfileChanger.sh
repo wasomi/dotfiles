@@ -22,12 +22,12 @@ if [ -n "$choice" ]; then
   case "$choice" in
     Performance)
       powerprofilesctl set performance
-      notify-send "Power Profile" "Performance mode activated" ;;
+      notify-send -i emblem-information "Power Profile" "Performance mode activated" ;;
     Balanced)
       powerprofilesctl set balanced
-      notify-send "Power Profile" "Balanced mode activated" ;;
+      notify-send -i emblem-information "Power Profile" "Balanced mode activated" ;;
     "Power Saver")
       powerprofilesctl set power-saver
-      notify-send "Power Profile" "Power Saver mode activated" ;;
+      notify-send -i emblem-information "Power Profile" "Power Saver mode activated" ;;
   esac
 fi

@@ -32,14 +32,14 @@ SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n" ; done | ro
 if [ -n "$SELECTED_WALL" ]; then
 
     # send notification
-    notify-send "Changing Theme" "Applying new wallpaper and updating colors, please wait until confirmation..."
+    notify-send -i emblem-synchronizing "Changing Theme" "Applying new wallpaper and updating colors, please wait until confirmation..."
 
     # use Matugen to generate Material You colors
     matugen image "$SELECTED_WALL"
 
-    # refresh swaync
-    pkill swaync
-    swaync -c "~/.dotfiles/.config/swaync/config.jsonc" -s "~/.dotfiles/.config/swaync/style.css" > /dev/null 2>&1 &
+    # refresh dunst
+    pkill dunst
+    dunst > /dev/null 2>&1 &
 
     # refresh waybar
     pkill waybar
@@ -48,7 +48,7 @@ if [ -n "$SELECTED_WALL" ]; then
     # refresh kitty
     # kitty @ set-colors --all ~/.dotfiles/.config/kitty/colors.conf
 
-    notify-send "Theme Applied" "Wallpaper and theme updated successfully!"
+    notify-send -i checkmark "Theme Applied" "Wallpaper and theme updated successfully!"
 fi
 
 # go back to where you came from

@@ -27,10 +27,6 @@ output_path = "~/.dotfiles/.config/rofi/colors.rasi"
 input_path = "./templates/colors.css"
 output_path = "~/.dotfiles/.config/waybar/colors.css"
 
-[templates.swaync]
-input_path = "./templates/colors.css"
-output_path = "~/.dotfiles/.config/swaync/colors.css"
-
 [templates.gtk3]
 input_path = "./templates/gtk-colors.css"
 output_path = "~/.dotfiles/.config/gtk-3.0/colors.css"
@@ -38,4 +34,8 @@ output_path = "~/.dotfiles/.config/gtk-3.0/colors.css"
 [templates.gtk4]
 input_path = "./templates/gtk-colors.css"
 output_path = "~/.dotfiles/.config/gtk-4.0/colors.css"
+
+[templates.dunst]
+input_path = './templates/dunstrc-colors'
+output_path = '~/.dotfiles/.config/dunst/dunstrc'
 

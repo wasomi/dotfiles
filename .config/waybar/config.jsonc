@@ -19,7 +19,7 @@
 
     "modules-left": [ "clock", "hyprland/workspaces" ],
     "modules-center": [ "temperature", "memory", "cpu" ],
-    "modules-right": [ "tray", "custom/update", "custom/vpn", "bluetooth", "network", "pulseaudio", "backlight", "battery", "hyprland/language", "custom/notifications" ],
+    "modules-right": [ "tray", "custom/update", "custom/vpn", "bluetooth", "network", "pulseaudio", "backlight", "battery", "hyprland/language" ],
 
     // modules
 
@@ -40,7 +40,7 @@
         // "locale": "ru_RU.UTF-8",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
-                    "mode"          : "months",
+                    "mode"          : "month",
                     "mode-mon-col"  : 3,
                     "on-scroll"     : 1,
                     "format": {
@@ -151,18 +151,17 @@
         "tooltip-format": "VPN is connected"
     },
 
-    "custom/notifications": {
-        "format": "",
-        "on-click": "swaync-client -t -sw",
-        "tooltip": false
-    },
+    // "custom/notifications": {
+    //     "format": "",
+    //     "on-click": "swaync-client -t -sw",
+    //     "tooltip": false
+    // },
 
     "custom/update": {
         "format": "󰅢 {}",
         "interval": 86400, // once every day
-        "exec": "~/.local/bin/checkUpdates.sh",
-        "exec-if": "exit 1",
-        "on-click": "kitty ~/.local/bin/systemUpdate.sh",
+        "exec": "checkUpdates.sh",
+        "on-click": "kitty systemUpdate.sh",
         "signal": 8,
         "tooltip": false
     }

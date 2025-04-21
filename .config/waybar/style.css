@@ -17,15 +17,23 @@
     border-radius: unset;
 }
 
+#waybar {
+	background-color: alpha(@background,.5);
+	color: @on_secondary_container;
+}
+
 tooltip {
     background-color: alpha(@background,.8);
     border: solid 2px @primary;
 	color: white;
 }
 
-#waybar {
-	background-color: alpha(@background,.5);
-	color: @on_secondary_container;
+.modules-left:first-child {
+    margin-left: 2px;
+}
+
+.modules-right:last-child {
+    margin-right: 2px;
 }
 
 #language,
@@ -42,8 +50,7 @@ tooltip {
 #custom-notifications,
 #custom-vpn,
 #custom-update {
-    /* background: alpha(@secondary_container,.6); */
-    /* border-bottom: solid 2px @on_secondary_container; */
+    /* border-bottom: solid 2px @on_secondary_container; */ /* its needed for tests */
     padding: 4px 8px;
     margin: 0px 2px;
 }
@@ -79,8 +86,6 @@ tooltip {
 } */
 
 #workspaces {
-    /* background: alpha(@secondary_container,.6); */
-    /* border-bottom: solid 2px @on_secondary_container; */
     margin: 0px 2px;
 }
 

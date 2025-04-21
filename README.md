@@ -48,9 +48,9 @@
 
 ## todo
 
-- [ ] switch to dunst
 - [ ] satty
 - [ ] hotkeys list in readme.md / rofi hotkey list
+- [ ] microphone module for waybar
 
 ## thanks to
 
@@ -58,6 +58,5 @@
 - [sane1090](https://www.youtube.com/@sane1090x) for the [theme switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
 - [wallhaven](https://wallhaven.cc) for the wallpapers
 - [mylinuxtowork](https://github.com/mylinuxforwork) for the [hyprland animations](https://github.com/mylinuxforwork/dotfiles/tree/main/share/dotfiles/.config/hypr/conf/animations)
-- [abhra00](https://github.com/Abhra00) for the [swaync matugen theme](https://github.com/Abhra00/Matuprland/tree/main/swaync/themes/matugen-nc)
 - [dylanaraps](https://github.com/dylanaraps) for the [rofi theme](https://github.com/dylanaraps/pywal/blob/master/pywal/templates/colors-rofi-dark.rasi)
 - ai bots for providing useful examples
