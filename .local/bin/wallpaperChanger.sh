@@ -24,6 +24,11 @@ IFS=$'\n'
 # grab the user-selected wallpaper
 SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -dmenu -show-icons -p "Select Wallpaper" -config ~/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi)
 
+THEME="adw-gtk3-dark"
+ICONS="Papirus-Dark"
+FONT="CodeNewRoman Nerd Font Propo 12"
+CURSOR="Bibata-Modern-Ice"
+
 # if not empty, pass to backend
 if [ -n "$SELECTED_WALL" ]; then
 
@@ -43,6 +48,11 @@ if [ -n "$SELECTED_WALL" ]; then
 
     # refresh kitty
     # kitty @ set-colors --all ~/.dotfiles/.config/kitty/colors.conf
+
+    gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
+    gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
+    gsettings set org.gnome.desktop.interface font-name "$FONT"
+    gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"
 
     notify-send -i checkmark "Theme Applied" "Wallpaper and theme updated successfully!"
 fi
