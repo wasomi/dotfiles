@@ -34,8 +34,10 @@
     example: `ln -s ~/.dotfiles/.config/hyprland/ ~/.config/`
 5. `ln -s ~/.dotfiles/.local/bin/ ~/.local/`
 6. `ln -s ~/.dotfiles/Pictures/Wallpapers/ ~/Pictures/`
-7. start hyprland
-8. select wallpaper
+7. download [papirus icons with grey folders](https://www.gnome-look.org/p/1166289/) & place in `~/.local/share/icons`
+8. download [bibata modern ice cursor](https://www.gnome-look.org/p/1197198) & plcae in `~/.local/share/icons`
+9. start hyprland
+10. select wallpaper
 
 
 ## optional pkgs
@@ -48,11 +50,12 @@
 
 ## hotkeys
 
-
+> i'll write it someday...
 
 ## todo
 
 - [ ] hotkeys list in readme.md
+- [ ] config for greenclip
 
 ## thanks to
 

@@ -48,7 +48,7 @@ if [ -n "$SELECTED_WALL" ]; then
 
     # refresh kitty
     # kitty @ set-colors --all ~/.dotfiles/.config/kitty/colors.conf
-
+h
     gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
     gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
     gsettings set org.gnome.desktop.interface font-name "$FONT"
