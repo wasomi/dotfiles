@@ -9,7 +9,7 @@
 * generated with matugen
 */
 
-@define-color accent_color #9ed49d;
+/* @define-color accent_color #9ed49d;
 @define-color accent_fg_color #002107;
 @define-color accent_bg_color #9ed49d;
 @define-color window_bg_color #101410;
@@ -25,4 +25,47 @@
 @define-color sidebar_bg_color @window_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
 @define-color sidebar_border_color @window_bg_color;
-@define-color sidebar_backdrop_color @window_bg_color;
+@define-color sidebar_backdrop_color @window_bg_color; */
+
+@define-color accent_color #9ed49d;
+@define-color accent_bg_color #205026;
+@define-color accent_fg_color #b9f0b7;
+@define-color destructive_color #ffb4ab;
+@define-color destructive_bg_color #93000a;
+@define-color destructive_fg_color #ffdad6;
+@define-color success_color #b9ccb5;
+@define-color success_bg_color #3a4b39;
+@define-color success_fg_color #d4e8d0;
+@define-color warning_color #a1ced6;
+@define-color warning_bg_color #1f4d53;
+@define-color warning_fg_color #bcebf2;
+@define-color error_color #ffb4ab;
+@define-color error_bg_color #93000a;
+@define-color error_fg_color #ffdad6;
+@define-color window_bg_color #101410;
+@define-color window_fg_color #e0e4db;
+@define-color view_bg_color #101410;
+@define-color view_fg_color #e0e4db;
+@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_fg_color @window_fg_color;
+@define-color headerbar_border_color @window_bg_color;
+@define-color headerbar_backdrop_color @window_bg_color;
+@define-color headerbar_shade_color @window_bg_color;
+@define-color card_bg_color #272b26;
+@define-color card_fg_color #e0e4db;
+@define-color card_shade_color rgba(0, 0, 0, 0.07);
+@define-color dialog_bg_color @card_bg_color;
+@define-color dialog_fg_color @card_fg_color;
+@define-color popover_bg_color @card_bg_color;
+@define-color popover_fg_color @card_fg_color;
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(139, 145, 152, 0.5);
+@define-color sidebar_bg_color #181d18;
+@define-color secondary_sidebar_bg_color @sidebar_bg_color;
+@define-color sidebar_backdrop_color @sidebar_bg_color;
+@define-color secondary_sidebar_backdrop_color @sidebar_bg_color;
+
+.navigation-sidebar {
+	background-color: @sidebar_bg_color;
+	color: @window_fg_color;
+}
