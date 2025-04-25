@@ -161,15 +161,9 @@
     "custom/vpn": {
         "interval": 2,
         "format": "{}",
-        "exec": "ip add show | grep -qF wasomi && echo 󰌆 || echo ",
+        "exec": "ip add show | grep -qF vpn && echo 󰌆 || echo ",
         "tooltip-format": "VPN is connected"
     },
-
-    // "custom/notifications": {
-    //     "format": "",
-    //     "on-click": "swaync-client -t -sw",
-    //     "tooltip": false
-    // },
 
     "custom/update": {
         "format": "󰏗 {}",

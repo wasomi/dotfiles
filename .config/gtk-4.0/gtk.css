@@ -1,5 +1,6 @@
 @import "colors.css";
 
 * {
-    border-radius: unset;
+	border-radius: unset;
+	outline-radius: unset;
 }
