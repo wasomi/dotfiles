@@ -19,3 +19,4 @@ slurp
 wtype
 wl-clipboard
 jq
+polkit-gnome

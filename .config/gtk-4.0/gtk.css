@@ -2,5 +2,5 @@
 
 * {
 	border-radius: unset;
-	outline-radius: unset;
+	-gtk-outline-radius: unset;
 }
