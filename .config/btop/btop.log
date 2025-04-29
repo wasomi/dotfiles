@@ -161,3 +161,6 @@ btop++ needs an interactive shell to run.
 
 2025/04/28 (13:45:32) | ===> btop++ v.1.4.0
 2025/04/28 (13:45:32) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
+
+2025/04/29 (13:59:35) | ===> btop++ v.1.4.0
+2025/04/29 (13:59:35) | WARNING: NVML: Failed to get maximum GPU power draw, defaulting to 225W: Not Supported
