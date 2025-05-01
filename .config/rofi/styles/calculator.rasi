@@ -10,7 +10,7 @@
 @theme "theme.rasi"
 
 window {
-    width: 30%;
+    width: 40%;
     height: 30%;
 }
 

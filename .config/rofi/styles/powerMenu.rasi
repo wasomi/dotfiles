@@ -9,10 +9,6 @@
 
 @theme "theme.rasi"
 
-configuration {
-    show-icons: true;
-}
-
 listview {
     lines: 1;
     columns: 4;

@@ -10,8 +10,8 @@
 @theme "theme.rasi"
 
 window {
-    width: 70%;
-    height: 50%;
+    width: 50%;
+    height: 40%;
 }
 
 listview {

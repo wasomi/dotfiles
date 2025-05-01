@@ -24,6 +24,12 @@
 ![powerMenu](Pictures/Screenshots/powerMenu.png)
 ![wallpaperChanger](Pictures/Screenshots/wallpaperChanger.png)
 
+## docs
+
+- [install guide](Docs/install.md)
+- [keybinds](Docs/keybinds.md)
+- [features](Docs/features.md)
+
 ## todo
 
 - [ ] write features
