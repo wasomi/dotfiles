@@ -39,7 +39,7 @@
         "format": "󰥔 {:%R}",
         "format-alt": " {:%A, %b %d, %Y}",
         // "locale": "ru_RU.UTF-8",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
                     "mode"          : "month",
                     "mode-mon-col"  : 3,
