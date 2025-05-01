@@ -24,42 +24,13 @@
 ![powerMenu](Pictures/Screenshots/powerMenu.png)
 ![wallpaperChanger](Pictures/Screenshots/wallpaperChanger.png)
 
-## install
-
-1. `git clone https://github.com/wasomi/dotfiles ~/.dotfiles`
-2. `pacman -S - < pkgList`
-3. `paru -S - < aurPkgList`
-4. `ln -s` for all folders in .dotfiles/.config
-    
-    example: `ln -s ~/.dotfiles/.config/hypr/ ~/.config/`
-5. `ln -s ~/.dotfiles/.local/bin/ ~/.local/`
-6. `ln -s ~/.dotfiles/Pictures/Wallpapers/ ~/Pictures/`
-7. download [papirus icons with grey folders](https://www.gnome-look.org/p/1166289/) & place in `~/.local/share/icons`
-8. download [bibata modern ice cursor](https://www.gnome-look.org/p/1197198) & place in `~/.local/share/icons`
-9. start hyprland
-10. select wallpaper
-
-## optional pkgs
-
-> i'm just using these packages
-
-- `pacman -S - < optionalPkgList`
-
-- `paru -S - < optionalAurPkgList`
-
-## hotkeys
-
-> i'll write it someday...
-
-## features
-
-> i'll write it someday...
-
 ## todo
 
 - [ ] write features
-- [ ] hotkey list in readme.md
+- [ ] keybinds list
 - [ ] add all needed pkgs
+- [ ] update install guide
+- [ ] update gallery
 
 ## thanks to
 

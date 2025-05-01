@@ -13,8 +13,8 @@ origin = top-center
 offset = (0, 16)
 dmenu = rofi -dmenu -p "Select action" -config "~/.dotfiles/.config/rofi/styles/notificationMenu.rasi"
 
-icon_theme = "Papirus"
-icon_path = "~/.local/share/icons/Papirus-Dark/32x32/devices:~/.local/share/icons/Papirus-Dark/32x32/actions:~/.local/share/icons/Papirus-Dark/32x32/apps:~/.local/share/icons/Papirus-Dark/32x32/categories:~/.local/share/icons/Papirus-Dark/32x32/emblems:~/.local/share/icons/Papirus-Dark/32x32/emotes:~/.local/share/icons/Papirus-Dark/32x32/mimetypes:~/.local/share/icons/Papirus-Dark/32x32/panel:~/.local/share/icons/Papirus-Dark/32x32/places:~/.local/share/icons/Papirus-Dark/32x32/status"
+icon_theme = "Papirus-Dark"
+icon_path = "/usr/share/icons/Papirus-Dark/32x32/devices:/usr/share/icons/Papirus-Dark/32x32/actions:/usr/share/icons/Papirus-Dark/32x32/apps:/usr/share/icons/Papirus-Dark/32x32/categories:/usr/share/icons/Papirus-Dark/32x32/emblems:/usr/share/icons/Papirus-Dark/32x32/emotes:/usr/share/icons/Papirus-Dark/32x32/mimetypes:/usr/share/icons/Papirus-Dark/32x32/panel:/usr/share/icons/Papirus-Dark/32x32/places:/usr/share/icons/Papirus-Dark/32x32/status"
 font = CodeNewRoman Nerd Font Propo 12
 
 notification_limit = 8

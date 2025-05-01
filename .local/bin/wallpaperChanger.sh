@@ -19,8 +19,8 @@ IFS=$'\n'
 SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -dmenu -show-icons -p "Select Wallpaper" -config ~/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi)
 THEME="adw-gtk3-dark"
 ICONS="Papirus-Dark"
-FONT="CodeNewRoman Nerd Font Propo 12"
-CURSOR="Bibata-Modern-Ice"
+FONT="CodeNewRoman Nerd Font Mono 12"
+CURSOR="Bibata-Modern-Classic"
 
 if [ -n "$SELECTED_WALL" ]; then
 
