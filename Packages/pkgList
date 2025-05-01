@@ -7,9 +7,13 @@ rofi-emoji
 rofi-calc
 
 adw-gtk-theme
-noto-fonts-emoji
 papirus-icon-theme
 otf-codenewroman-nerd
+
+noto-fonts
+noto-fonts-cjk
+noto-fonst-extra
+noto-fonts-emoji
 
 kitty
 waybar
