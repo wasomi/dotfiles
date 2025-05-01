@@ -34,6 +34,8 @@ if [ -n "$SELECTED_WALL" ]; then
     pkill waybar
     waybar > /dev/null 2>&1 &
 
+    pkill -SIGUSR1 kitty
+
     gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
     gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
     gsettings set org.gnome.desktop.interface font-name "$FONT"
