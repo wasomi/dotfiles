@@ -5,7 +5,7 @@
 
 ## about
 
-- os: `cachyos`
+- os: `arch`
 - wm: `hyprland`
 - bar: `waybar`
 - terminal: `kitty`
@@ -59,6 +59,7 @@
 
 - [ ] write features
 - [ ] hotkey list in readme.md
+- [ ] add all needed pkgs
 
 ## thanks to
 
