@@ -13,39 +13,55 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
       	"type": "small"
+		// "padding": {"top": 1}
     },
     "display": {
-      	"separator": "  "
+      	"separator": " > "
     },
     "modules": [
 		{
 			"type": "title",
-			"key": "  ",
 			"format": "{6} {7} {8}"
 		},
 		"break",
 		{
+			"type": "os",
+			"key": "os  ",
+			"keyColor": "magenta",
+			"format": "{id}"
+		},
+		{
+			"type": "kernel",
+			"key": "krn ",
+			"keyColor": "cyan",
+			"format": "{release}"
+		},
+		// {
+		// 	"type": "wm",
+		// 	"key": "wm  ",
+		// 	"keyColor": "yellow",
+		// 	"format": "{process-name}"
+		// },
+		// {
+		// 	"type": "shell",
+		// 	"key": "sh  ",
+		// 	"format": "{pretty-name}"
+		// },
+		{
 			"type": "packages",
-			"key": "  󰏗",
+			"key": "pkgs",
 			"keyColor": "green"
 		},
-		"break",
 		{
 			"type": "command",
-			"key": "  󱦟",
+			"key": "age ",
 			"keyColor": "blue",
 			"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
 		},
 		{
 			"type": "uptime",
-			"key": "  󱎫",
+			"key": "up  ",
 			"keyColor": "red"
-		},
-		"break",
-		{
-			"type": "colors",
-			"paddingLeft": 2,
-			"symbol": "square"
 		},
 		"break"
     ]
