@@ -12,7 +12,7 @@ otf-codenewroman-nerd
 
 noto-fonts
 noto-fonts-cjk
-noto-fonst-extra
+noto-fonts-extra
 noto-fonts-emoji
 
 kitty
@@ -34,3 +34,6 @@ qt6-wayland
 fastfetch
 pavucontrol
 fish
+eza
+btop
+systemd-resolvconf
