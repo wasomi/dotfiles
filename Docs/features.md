@@ -1,3 +1,3 @@
-## features
+# features
 
 > i'll write it someday...

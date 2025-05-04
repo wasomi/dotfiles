@@ -33,9 +33,6 @@
 ## todo
 
 - [ ] write features
-- [ ] keybinds list
-- [ ] add all needed pkgs
-- [ ] update install guide
 - [ ] update gallery
 
 ## thanks to
