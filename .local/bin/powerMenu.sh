@@ -8,13 +8,14 @@
 # /_/                                                                                                                                
 # 
 # credits: https://github.com/Zproger
+# edited by: wasomi
 
-choice=$(printf "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu -p "Power Menu" -matching fuzzy -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
+choice=$(printf "  Lock\n 󰩈 Logout\n 󰤄 Suspend\n  Reboot\n  Shutdown" | rofi -dmenu -p "Power Menu" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
 
 case "$choice" in
-  Lock) hyprlock ;;
-  # Logout) pkill -KILL -u "$USER" ;;
-  Suspend) systemctl suspend;;
-  Reboot) systemctl reboot ;;
-  Shutdown) systemctl poweroff ;;
+  "  Lock") hyprlock ;;
+  " 󰩈 Logout") pkill -KILL -u "$USER" ;;
+  " 󰤄 Suspend") systemctl suspend;;
+  "  Reboot") systemctl reboot ;;
+  "  Shutdown") systemctl poweroff ;;
 esac

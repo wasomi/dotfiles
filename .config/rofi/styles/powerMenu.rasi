@@ -9,9 +9,12 @@
 
 @theme "theme.rasi"
 
+window {
+    width: 15%;
+}
+
 listview {
-    lines: 1;
-    columns: 4;
+    lines: 5;
     scrollbar: false;
 }
 

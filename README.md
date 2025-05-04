@@ -1,6 +1,4 @@
 > [!warning]
-> work in progress
-> 
 > i made this dotfiles for my device, if you have problems i will try to help you
 
 ## about
@@ -20,9 +18,10 @@
 > the gallery may be outdated and look differently
 
 ![main](Pictures/Screenshots/main.png)
-![rofi](Pictures/Screenshots/rofi.png)
+![rofi](Pictures/Screenshots/appLauncher.png)
 ![powerMenu](Pictures/Screenshots/powerMenu.png)
 ![wallpaperChanger](Pictures/Screenshots/wallpaperChanger.png)
+![gtkAndBtop](Pictures/Screenshots/gtkAndBtop.png)
 
 ## docs
 
@@ -33,7 +32,6 @@
 ## todo
 
 - [ ] write features
-- [ ] update gallery
 
 ## thanks to
 
