@@ -1,5 +1,5 @@
 > [!warning]
-> i made this dotfiles for my device, if you have problems i will try to help you
+> i made this dotfiles for my device, if you will have any problems i will try to help you
 
 ## about
 
