@@ -17,7 +17,7 @@
 - `super + period` - open emoji menu
 - `super + v` - open clipboard history
 - `ctrl + alt + delete` - open power menu
-- `super + shift + w` - open wallpapaer changer menu
+- `super + shift + w` - open wallpaper changer menu
 
 ## windows & workspaces
 
@@ -28,4 +28,4 @@
 - `super + [0-9]` - switch workspaces
 - `super + shift + [0-9]` - move active window to a workspace
 - `super + s` - special workspace
-- `super + shift + s` - move active window to special workpspace
+- `super + shift + s` - move active window to special workspace
