@@ -9,7 +9,7 @@
 - terminal: `kitty`
 - shell: `fish`
 - app launcher: `rofi`
-- notify-daemon: `swaync`
+- notify-daemon: `dunst`
 - wallpaper-daemon: `swww`
 
 ## gallery
