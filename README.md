@@ -11,6 +11,7 @@
 - app launcher: `rofi`
 - notify-daemon: `dunst`
 - wallpaper-daemon: `swww`
+- color generator tool: `matugen`
 
 ## gallery
 
