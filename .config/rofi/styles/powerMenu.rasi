@@ -10,19 +10,35 @@
 @theme "theme.rasi"
 
 window {
-    width: 15%;
+    // width: 20%;
 }
 
 listview {
-    lines: 5;
+    lines: 1;
+    columns: 5;
     scrollbar: false;
+    flow: horizontal;
+    border: 0;
 }
 
 element {
     orientation: horizontal;
     children: [ element-text ];
+    padding: 30px 10px;
+    expand: true;
 }
 
-element-icon {
-    size: 256px;
+element-text {
+    font: "CodeNewRoman Nerd Font Propo 32";
+    horizontal-align: 0.5;
+    background-color: transparent;
 }
+
+inputbar {
+    enabled: false;
+}
+
+message {
+    border: 0;
+}
+

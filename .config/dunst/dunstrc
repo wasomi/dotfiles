@@ -8,6 +8,7 @@
 # generated with matugen
 
 [global]
+follow = mouse
 width = 320
 origin = top-center
 offset = (0, 16)

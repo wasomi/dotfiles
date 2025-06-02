@@ -11,7 +11,7 @@
 
 configuration {
     font: "CodeNewRoman Nerd Font Propo 13";
-    display-drun: "Apps";
+    display-drun: "apps";
 }
 
 * {
@@ -65,7 +65,7 @@ textbox {
 
 inputbar {
     background-color: @background;
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    children: [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 
 textbox-prompt-colon {
@@ -80,7 +80,7 @@ listview {
     border: 2px 0px 0px;
     border-color: @border-color;
     spacing: 2px;
-    scrollbar: true;
+    scrollbar: false;
     padding: 2px 0px 0px;
 }
 

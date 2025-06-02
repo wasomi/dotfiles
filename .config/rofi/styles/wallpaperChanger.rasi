@@ -19,17 +19,20 @@ window {
 
 listview {
     lines: 2;
-    columns: 4;
-    scrollbar: false;
+    columns: 5;
+    flow: horizontal;
+    border: 0;
 }
 
 element {
     orientation: vertical;
     children: [ element-icon, element-text ];
+    expand: true;
 }
 
 element-icon {
     size: 32%;
+    expand: false;
 }
 
 element-text {
@@ -39,4 +42,8 @@ element-text {
 
 element-text.selected.normal {
     border-color: @selected-normal-foreground;
+}
+
+inputbar {
+    enabled: false;
 }

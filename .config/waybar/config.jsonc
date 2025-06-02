@@ -6,23 +6,54 @@
 //              /____/                                           /____/   
 // 
 
-
 {
     // global configuration
 
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
+    "output": "eDP-1",
 
-    // "height": 34,
     // "margin-top": 6,
-    // "margin-left": 6,
-    // "margin-right": 6,
+    // "margin-left": 128,
+    // "margin-right": 128,
+    // "margin-bottom": 4, 
 
-    "modules-left": [ "clock", "hyprland/workspaces" ],
-    "modules-center": [ "temperature", "memory", "cpu" ],
-    "modules-right": [ "tray", "custom/update", "custom/vpn", "bluetooth", "network", "pulseaudio", "backlight", "battery", "hyprland/language" ],
+    "modules-left": [ "clock", "group/hardware" ],
+    "modules-center": [ "hyprland/workspaces" ],
+    "modules-right": [ "group/settings", "custom/update", "custom/vpn", "network", "battery", "hyprland/language" ],
 
-    // modules
+    // group
+
+    "group/settings": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 400,
+            "click-to-reveal": true
+        },
+        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio", "pulseaudio#microphone", "backlight"]
+    },
+
+    "custom/settings-wrap": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 400,
+            "transition-left-to-right": false,
+            "click-to-reveal": true
+        },
+        "modules": ["custom/hardware-wrap", "temperature", "memory", "cpu", "disk" ]
+    },
+
+    "custom/hardware-wrap": {
+        "format": "",
+        "tooltip": false
+    },
+
+    // module settings
 
     "battery": {
         "interval": 2,
@@ -38,7 +69,6 @@
     "clock": {
         "format": "󰥔 {:%R}",
         "format-alt": " {:%A, %b %d, %Y}",
-        // "locale": "ru_RU.UTF-8",
         "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
                     "mode"          : "month",
@@ -61,23 +91,29 @@
         "keyboard-name": "at-translated-set-2-keyboard"
     },
 
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 56
-    },
+    // "hyprland/window": {
+    //     "format": "{}",
+    //     "max-length": 56
+    // },
 
     "hyprland/workspaces": {
         "all-outputs": false,
         "disable-scroll": true,
-        "format": "{name}",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "empty": ""
+        },
         "persistent-workspaces": {
-            "*": 5
+            "eDP-1": [1, 2, 3, 4, 5],
+            "HDMI-A-1": [6, 7, 8, 9, 10]
        }
     },
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth": " {icon} {volume}%",
         "format-muted": "󰝟",
         "format-icons": {
             "headphone": "",
@@ -101,19 +137,19 @@
 
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["󰃜", "󰃛", "󰃚"],
+        "format-icons": ["󰃜", "󰃛", "󰃚"], 
         "tooltip": false
     },
 
     "tray": {
-        "icon-size": 14,
+        "icon-size": 12,
         "spacing": 8,
         "reverse-direction": true
     },
 
     "cpu": {
         "interval": 2,
-        "format": " {:0.1f}%",
+        "format": " {usage}%",
         "states": {
           "critical": 90
         }
@@ -134,18 +170,23 @@
         "tooltip": false
     },
 
+    "disk": {
+        "interval": 30,
+        "format": " {used} of {total}",
+        "tooltip": false
+    },
+
     "network": {
-        "format-wifi": "{icon} {essid}",
+        "format-wifi": "{icon}",
         "format-ethernet": "󰈀",
         "format-disconnected": "󰤮", 
         "tooltip-format-disconnected": "Disconnected",
-        "tooltip-format-wifi": "{ipaddr}/{cidr} ",
+        "tooltip-format-wifi": "{essid}\n\n{ipaddr}/{cidr} ",
         "tooltip-format-ethernet": "{ipaddr}/{cidr} ",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "max-length": 18,
-        "on-click": "kitty nmtui"
+        "on-click": "nmcli device wifi rescan && hyprctl dispatch exec '[float; center; pin; size: 800 600] kitty nmtui'"
     },
-
+    
     "bluetooth": {
         "format": "",
         "format-connected": " {device_alias}",
@@ -158,6 +199,8 @@
         "on-click": "blueman-manager"
     },
 
+    // custom module settings
+
     "custom/vpn": {
         "interval": 2,
         "format": "{}",
@@ -169,7 +212,7 @@
         "format": "󰏗 {}",
         "interval": 86400, // once every day
         "exec": "checkUpdates.sh",
-        "on-click": "kitty systemUpdate.sh",
+        "on-click": "hyprctl dispatch exec '[float; center; size: 1000 600] kitty systemUpdate.sh'",
         "signal": 8,
         "tooltip": false
     }

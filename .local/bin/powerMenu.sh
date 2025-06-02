@@ -10,12 +10,14 @@
 # credits: https://github.com/Zproger
 # edited by: wasomi
 
-choice=$(printf "  Lock\n 󰩈 Logout\n 󰤄 Suspend\n  Reboot\n  Shutdown" | rofi -dmenu -p "Power Menu" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
+uptime="`uptime -p | sed -e 's/up //g'`"
+splash="`hyprctl splash`"
+choice=$(printf "\n󰤄\n󰩈\n\n" | rofi -dmenu -mesg "uptime: $uptime \ $splash" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
 
 case "$choice" in
-  "  Lock") hyprlock ;;
-  " 󰩈 Logout") pkill -KILL -u "$USER" ;;
-  " 󰤄 Suspend") systemctl suspend;;
-  "  Reboot") systemctl reboot ;;
-  "  Shutdown") systemctl poweroff ;;
+    "") hyprlock ;;
+    "󰤄") systemctl suspend;;
+    "󰩈") pkill -KILL -u "$USER" ;;
+    "") systemctl reboot ;;
+    "") systemctl poweroff ;;
 esac

@@ -14,6 +14,11 @@ window {
     height: 30%;
 }
 
-listview {
-    scrollbar: false;
+message {
+    border: 0;
+    background-color: @normal-background;
+}
+
+inputbar {
+    children: [ entry ];
 }

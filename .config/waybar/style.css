@@ -12,7 +12,7 @@
 
 @keyframes blink-critical {
     70% {
-      color: @on_secondary_container;
+        color: @on_secondary_container;
     }
 
     to {
@@ -49,6 +49,7 @@ tooltip {
 #language,
 #cpu,
 #memory,
+#disk,
 #battery,
 #pulseaudio,
 #network,
@@ -57,11 +58,13 @@ tooltip {
 #backlight,
 #temperature,
 #tray,
-#custom-notifications,
 #custom-vpn,
-#custom-update {
+#custom-update,
+#custom-settings-wrap,
+#custom-hardware-wrap {
     /* border-bottom: solid 2px @on_secondary_container; */ /* its needed for tests */
-    padding: 4px 8px;
+    /* padding: 4px 8px; */
+    padding: 2px 8px;
     margin: 0px 2px;
 }
 
@@ -84,30 +87,20 @@ tooltip {
     color: @error
 }
 
-/* #custom-notifications:hover,
-#network:hover,
-#pulseaudio:hover,
-#language:hover,
-#clock:hover,
-#bluetooth:hover {
-    background-color: @primary_container;
-    color: @on_primary_container;
-    transition: all .2s ease;
-} */
-
 #workspaces {
     margin: 0px 2px;
 }
 
 #workspaces button {
     color: @on_secondary_container;
-    transition: all .2s ease;
+    transition: all .3s ease;
+    padding: 2px 8px;
 }
 
 #workspaces button:hover {
     background-color: @primary_container;
     color: @on_primary_container;
-    transition: all .2s ease;
+    transition: all .3s ease;
 }
 
 #workspaces button.active {

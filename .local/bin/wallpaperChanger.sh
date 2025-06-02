@@ -16,7 +16,7 @@ CWD="$(pwd)"
 cd "$WALL_DIR" || exit
 
 IFS=$'\n'
-SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -dmenu -show-icons -p "Select Wallpaper" -config ~/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi)
+SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -dmenu -show-icons -p "select wallpaper" -config ~/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi)
 THEME="adw-gtk3-dark"
 ICONS="Papirus-Dark"
 FONT="CodeNewRoman Nerd Font Mono 12"
@@ -24,9 +24,16 @@ CURSOR="Bibata-Modern-Classic"
 
 if [ -n "$SELECTED_WALL" ]; then
 
-    notify-send -i emblem-synchronizing "Changing Theme" "Applying new wallpaper and updating colors, please wait until confirmation..."
+    notify-send -i emblem-synchronizing "changing theme" "applying new wallpaper and updating colors, please wait until confirmation..."
+
+    sleep 1
 
     matugen image "$SELECTED_WALL"
+
+    gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
+    gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
+    gsettings set org.gnome.desktop.interface font-name "$FONT"
+    gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"
 
     pkill dunst
     dunst > /dev/null 2>&1 &
@@ -36,12 +43,10 @@ if [ -n "$SELECTED_WALL" ]; then
 
     pkill -SIGUSR1 kitty
 
-    gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
-    gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
-    gsettings set org.gnome.desktop.interface font-name "$FONT"
-    gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"
+    pkill polkit-gnome-au
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 > /dev/null 2>&1 &
 
-    notify-send -i checkmark "Theme Applied" "Wallpaper and theme updated successfully!"
+    notify-send -i checkmark "theme applied" "wallpaper and theme updated successfully!"
 fi
 
 cd "$CWD" || exit
