@@ -101,9 +101,9 @@
         "disable-scroll": true,
         "format": "{icon}",
         "format-icons": {
-            "default": "",
-            "active": "",
-            "empty": ""
+            "default": "󰨐",
+            "active": "󰜋",
+            "empty": "󱓜"
         },
         "persistent-workspaces": {
             "eDP-1": [1, 2, 3, 4, 5],

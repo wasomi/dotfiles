@@ -12,9 +12,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
 noto-fonts-emoji
-satty
-grim
-slurp
 kitty
 fish
 eza
@@ -34,3 +31,4 @@ qt5-wayland
 qt6-wayland
 pavucontrol
 systemd-resolvconf
+cliphist

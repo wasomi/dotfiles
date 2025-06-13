@@ -24,10 +24,6 @@ CURSOR="Bibata-Modern-Classic"
 
 if [ -n "$SELECTED_WALL" ]; then
 
-    notify-send -i emblem-synchronizing "changing theme" "applying new wallpaper and updating colors, please wait until confirmation..."
-
-    sleep 1
-
     matugen image "$SELECTED_WALL"
 
     gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
@@ -46,7 +42,7 @@ if [ -n "$SELECTED_WALL" ]; then
     pkill polkit-gnome-au
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 > /dev/null 2>&1 &
 
-    notify-send -i checkmark "theme applied" "wallpaper and theme updated successfully!"
+    notify-send -i checkmark "Theme applied" "Wallpaper and theme updated successfully!"
 fi
 
 cd "$CWD" || exit

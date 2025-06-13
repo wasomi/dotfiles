@@ -93,19 +93,19 @@ tooltip {
 
 #workspaces button {
     color: @on_secondary_container;
-    transition: all .3s ease;
+    transition: all .1s ease;
     padding: 2px 8px;
 }
 
-#workspaces button:hover {
+#workspaces button:hover, #workspaces button.active:hover {
     background-color: @primary_container;
     color: @on_primary_container;
-    transition: all .3s ease;
+    transition: all .1s ease;
 }
 
 #workspaces button.active {
-    background-color: @primary;
-    color: @on_primary;
+    /* background-color: @primary; */
+    color: @primary;
 }
 
 #workspaces button.empty {
@@ -113,6 +113,6 @@ tooltip {
 }
 
 #workspaces button.empty.active {
-    background-color: @primary;
-    color: @on_primary;
+    /* background-color: @primary; */
+    color: @primary;
 }

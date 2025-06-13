@@ -11,8 +11,7 @@
 # edited by: wasomi
 
 uptime="`uptime -p | sed -e 's/up //g'`"
-splash="`hyprctl splash`"
-choice=$(printf "\n󰤄\n󰩈\n\n" | rofi -dmenu -mesg "uptime: $uptime \ $splash" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
+choice=$(printf "\n󰤄\n󰩈\n\n" | rofi -dmenu -mesg "Uptime: $uptime" -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
 
 case "$choice" in
     "") hyprlock ;;

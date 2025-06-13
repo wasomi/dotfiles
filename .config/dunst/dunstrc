@@ -10,7 +10,7 @@
 [global]
 follow = mouse
 width = 320
-origin = top-center
+origin = bottom-center
 offset = (0, 16)
 dmenu = rofi -dmenu -p "Select action" -config "~/.dotfiles/.config/rofi/styles/notificationMenu.rasi"
 
@@ -83,13 +83,13 @@ per_monitor_dpi = false
 timeout = 3
 background = "#13140d99"
 foreground = "#e4e3d7"
-highlight = "#404c09"
+highlight = "#bfce7f"
 
 [urgency_normal]
 timeout = 6
 background = "#13140d99"
 foreground = "#e4e3d7"
-highlight = "#404c09"
+highlight = "#bfce7f"
 
 [urgency_critical]
 timeout = 0
