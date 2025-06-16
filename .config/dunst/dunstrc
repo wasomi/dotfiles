@@ -29,9 +29,9 @@ progress_bar_max_width = 320
 indicate_hidden = yes
 
 separator_height = 2
-padding = 8
-horizontal_padding = 8
-text_icon_padding = 8
+padding = 16
+horizontal_padding = 16
+text_icon_padding = 16
 frame_width = 2
 line_height = 0
 corner_radius = 0
@@ -52,8 +52,8 @@ hide_duplicate_count = false
 show_indicators = yes
 
 icon_position = left
-min_icon_size = 0
-max_icon_size = 32
+min_icon_size = 48
+max_icon_size = 48
 
 sticky_history = yes
 history_length = 20
@@ -72,28 +72,28 @@ mouse_left_click = context, close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
 
-frame_color = "#bfce7f"
-highlight = "#bfce7f"
-separator_color= "#919283"
+frame_color = "#bfc2ff"
+highlight = "#bfc2ff"
+separator_color= "#918f9a"
 
 [experimental]
 per_monitor_dpi = false
 
 [urgency_low]
 timeout = 3
-background = "#13140d99"
-foreground = "#e4e3d7"
-highlight = "#bfce7f"
+background = "#13131899"
+foreground = "#e4e1e9"
+highlight = "#bfc2ff"
 
 [urgency_normal]
 timeout = 6
-background = "#13140d99"
-foreground = "#e4e3d7"
-highlight = "#bfce7f"
+background = "#13131899"
+foreground = "#e4e1e9"
+highlight = "#bfc2ff"
 
 [urgency_critical]
 timeout = 0
-background = "#13140d99"
-foreground = "#e4e3d7"
+background = "#13131899"
+foreground = "#e4e1e9"
 highlight = "#ffb4ab"
 

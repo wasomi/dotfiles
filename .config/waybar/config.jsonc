@@ -215,5 +215,13 @@
         "on-click": "hyprctl dispatch exec '[float; center; size: 1000 600] kitty systemUpdate.sh'",
         "signal": 8,
         "tooltip": false
+    },
+
+    "custom/currentsong": {
+        "format": "󰎇 {}",
+        "interval": 2,
+        "exec": "playerctl metadata --format '{{xesam:title}} - {{xesam:artist}}'",
+        "on-click": "playerctl play-pause",
+        "tooltip": false
     }
 }

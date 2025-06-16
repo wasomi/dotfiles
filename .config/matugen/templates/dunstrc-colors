@@ -29,9 +29,9 @@ progress_bar_max_width = 320
 indicate_hidden = yes
 
 separator_height = 2
-padding = 8
-horizontal_padding = 8
-text_icon_padding = 8
+padding = 16
+horizontal_padding = 16
+text_icon_padding = 16
 frame_width = 2
 line_height = 0
 corner_radius = 0
@@ -52,8 +52,8 @@ hide_duplicate_count = false
 show_indicators = yes
 
 icon_position = left
-min_icon_size = 0
-max_icon_size = 32
+min_icon_size = 48
+max_icon_size = 48
 
 sticky_history = yes
 history_length = 20

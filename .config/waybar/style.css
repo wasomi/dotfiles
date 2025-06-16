@@ -61,7 +61,8 @@ tooltip {
 #custom-vpn,
 #custom-update,
 #custom-settings-wrap,
-#custom-hardware-wrap {
+#custom-hardware-wrap,
+#custom-currentsong {
     /* border-bottom: solid 2px @on_secondary_container; */ /* its needed for tests */
     /* padding: 4px 8px; */
     padding: 2px 8px;
