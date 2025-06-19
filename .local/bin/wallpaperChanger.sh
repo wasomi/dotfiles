@@ -16,7 +16,7 @@ CWD="$(pwd)"
 cd "$WALL_DIR" || exit
 
 IFS=$'\n'
-SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -dmenu -show-icons -p "select wallpaper" -config ~/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi)
+SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -dmenu -show-icons -config ~/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi)
 THEME="adw-gtk3-dark"
 ICONS="Papirus-Dark"
 FONT="CodeNewRoman Nerd Font Mono 12"
@@ -24,7 +24,7 @@ CURSOR="Bibata-Modern-Classic"
 
 if [ -n "$SELECTED_WALL" ]; then
 
-    matugen image "$SELECTED_WALL"
+    matugen image "$SELECTED_WALL" -m "dark"
 
     gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
     gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
@@ -42,7 +42,7 @@ if [ -n "$SELECTED_WALL" ]; then
     pkill polkit-gnome-au
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 > /dev/null 2>&1 &
 
-    notify-send -i checkmark "Theme applied" "Wallpaper and theme updated successfully!"
+    notify-send -i checkmark "Theme applied" "Wallpaper and theme updated successfully!" -r 8 -t 1000
 fi
 
 cd "$CWD" || exit

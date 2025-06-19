@@ -28,7 +28,7 @@ change_brightness() {
     local current_bright=$(brightnessctl get)
     local new_bright=$(( (current_bright * 100) / max_bright ))
 
-    notify-send -i "$ICON_PATH/brightness.svg" "Brightness" "Level: ${new_bright}%" -h "int:value:${new_bright}" -r 8 -t 8000
+    notify-send -i "$ICON_PATH/brightness.svg" "Brightness" "Level: ${new_bright}%" -h "int:value:${new_bright}" -r 8 -t 800
 }
 
 case "$ACTION" in

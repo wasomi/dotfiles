@@ -9,7 +9,7 @@
 
 [global]
 follow = mouse
-width = 320
+width = 480
 origin = bottom-center
 offset = (0, 16)
 dmenu = rofi -dmenu -p "Select action" -config "~/.dotfiles/.config/rofi/styles/notificationMenu.rasi"
@@ -21,10 +21,10 @@ font = CodeNewRoman Nerd Font Propo 12
 notification_limit = 8
 
 progress_bar = true
-progress_bar_height = 10
-progress_bar_frame_width = 1
-progress_bar_min_width = 160
-progress_bar_max_width = 320
+progress_bar_height = 16
+progress_bar_frame_width = 2
+progress_bar_min_width = 0
+progress_bar_max_width = 480
 
 indicate_hidden = yes
 

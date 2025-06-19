@@ -80,7 +80,7 @@ change_volume() {
     fi
     local icon=$(choose_volume_icon "$new_vol")
 
-    notify-send -i "$icon" "$notification_text" "Level: ${new_vol}%" -h "int:value:${new_vol}" -r 8 -t 8000
+    notify-send -i "$icon" "$notification_text" "Level: ${new_vol}%" -h "int:value:${new_vol}" -r 8 -t 800
 }
 
 toggle_mute() {
@@ -104,7 +104,7 @@ toggle_mute() {
         else
             icon="$ICON_PATH/mic-ready.svg"
         fi
-        notify-send -i "$icon" "$notification_text" "Unmuted" -r 8 -t 8000
+        notify-send -i "$icon" "$notification_text" "Unmuted" -r 8 -t 800
     else
         wpctl set-mute "$target" 1
         if [ "$DEVICE" = "--sound" ]; then
@@ -112,7 +112,7 @@ toggle_mute() {
         else
             icon="$ICON_PATH/mic-volume-muted.svg"
         fi
-        notify-send -i "$icon" "$notification_text" "Muted" -r 8 -t 8000
+        notify-send -i "$icon" "$notification_text" "Muted" -r 8 -t 800
     fi
 }
 

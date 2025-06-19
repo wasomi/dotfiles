@@ -11,7 +11,7 @@
 
     "layer": "top",
     "position": "bottom",
-    "output": "eDP-1",
+    // "output": "eDP-1",
 
     // "margin-top": 6,
     // "margin-left": 128,
