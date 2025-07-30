@@ -9,8 +9,8 @@
 - terminal: `kitty`
 - shell: `fish`
 - app launcher: `rofi`
-- notify-daemon: `dunst`
-- wallpaper-daemon: `swww`
+- notify daemon: `dunst`
+- wallpaper daemon: `swww`
 - color generator tool: `matugen`
 
 ## gallery
