@@ -10,7 +10,7 @@
     // global configuration
 
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     // "output": "eDP-1",
 
     // "margin-top": 6,
@@ -96,11 +96,6 @@
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
         "keyboard-name": "at-translated-set-2-keyboard"
     },
-
-    // "hyprland/window": {
-    //     "format": "{}",
-    //     "max-length": 56
-    // },
 
     "hyprland/workspaces": {
         "all-outputs": false,

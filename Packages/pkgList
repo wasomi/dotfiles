@@ -31,5 +31,8 @@ polkit-gnome
 qt5-wayland
 qt6-wayland
 pavucontrol
-systemd-resolvconf
 cliphist
+bat
+power-profiles-daemon
+loupe
+vlc
