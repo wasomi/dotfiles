@@ -16,13 +16,7 @@
 ## gallery
 
 > [!warning]
-> the gallery may be outdated and look differently
-
-![main](Pictures/Screenshots/main.png)
-![rofi](Pictures/Screenshots/appLauncher.png)
-![powerMenu](Pictures/Screenshots/powerMenu.png)
-![wallpaperChanger](Pictures/Screenshots/wallpaperChanger.png)
-![gtkAndBtop](Pictures/Screenshots/gtkAndBtop.png)
+> need to update
 
 ## docs
 
