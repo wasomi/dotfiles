@@ -58,11 +58,11 @@ tooltip {
 #backlight,
 #temperature,
 #tray,
+#power-profiles-daemon,
 #custom-vpn,
 #custom-update,
 #custom-settings-wrap,
-#custom-hardware-wrap,
-#custom-currentsong {
+#custom-hardware-wrap {
     /* border-bottom: solid 2px @on_secondary_container; */ /* its needed for tests */
     /* padding: 4px 8px; */
     padding: 2px 8px;
@@ -98,7 +98,18 @@ tooltip {
     padding: 2px 8px;
 }
 
-#workspaces button:hover, #workspaces button.active:hover {
+#language:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#clock:hover,
+#power-profiles-daemon:hover,
+#custom-update:hover,
+#custom-settings-wrap:hover,
+#custom-hardware-wrap:hover,
+#workspaces button:hover, 
+#workspaces button.active:hover {
     background-color: @primary_container;
     color: @on_primary_container;
     transition: all .1s ease;

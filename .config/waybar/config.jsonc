@@ -20,7 +20,7 @@
 
     "modules-left": [ "clock", "group/hardware" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "group/settings", "custom/update", "custom/vpn", "network", "battery", "hyprland/language" ],
+    "modules-right": [ "group/settings", "custom/update", "custom/vpn", "network", "battery", "power-profiles-daemon", "hyprland/language" ],
 
     // group
 
@@ -197,6 +197,17 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
         "on-click": "blueman-manager"
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+    }
     },
 
     // custom module settings

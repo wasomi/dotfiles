@@ -7,50 +7,63 @@
 #  /_.___/_/  /_/\__, /_/ /_/\__/_/ /_/\___/____/____/\____/\____/_/ /_/\__/_/   \____/_/  (_)  /____/_/ /_/ 
 #               /____/                                                                                       
 
-if [ "$#" -lt 1 ]; then
-    echo "Usage: $0 [--set|--inc|--dec] [percent]"
-    exit 1
-fi
+icon_dir="/usr/share/icons/Papirus/16x16/symbolic/status"
+default_step=5
 
-ICON_PATH="/usr/share/icons/Papirus/16x16/apps"
+# --- Dependency check ---
+for cmd in brightnessctl awk; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "Error: '$cmd' is required but not installed."
+        exit 1
+    fi
+done
 
-ACTION=$1
-PERCENT=$2
-PERCENT=${PERCENT//%/}
+action="$1"
+percent="${2//%/}"
+percent="${percent:-$default_step}"
 
-change_brightness() {
-    case "$ACTION" in
-        --set)
-            brightnessctl set "${PERCENT}%"
-        ;;
-        --inc)
-            brightnessctl set "+${PERCENT}%"
-        ;;
-        --dec)
-            brightnessctl set "${PERCENT}%-"
-        ;;
-    esac
-
-    local max_bright=$(brightnessctl max)
-    local current_bright=$(brightnessctl get)
-    local new_bright=$(( (current_bright * 100) / max_bright ))
-
-    notify-send -i "$ICON_PATH/brightness.svg" "Brightness" "Level: ${new_bright}%" -h "int:value:${new_bright}" -r 8 -t 800
-}
-
-case "$ACTION" in
+# --- Input validation ---
+case "$action" in
     --set|--inc|--dec)
-        case "$PERCENT" in
-            ''|*[!0-9]*)
-                echo "Error: percentage must be a number"
-                exit 1
-                ;;
-        esac
-        change_brightness
-    ;;
+        if ! [[ "$percent" =~ ^[0-9]+$ ]]; then
+            echo "Error: percentage must be a number"
+            exit 1
+        fi
+        ;;
     *)
-        echo "Invalid flag: $ACTION"
+        echo "Usage: $0 [--set|--inc|--dec] [percent]"
         echo "Valid flags: --set, --inc, --dec"
         exit 1
-    ;;
+        ;;
 esac
+
+# --- Icon selection based on brightness ---
+choose_icon() {
+    local brightness="$1"
+    if (( brightness <= 10 )); then
+        echo "$icon_dir/brightness-low-symbolic.svg"
+    elif (( brightness <= 50 )); then
+        echo "$icon_dir/brightness-medium-symbolic.svg"
+    else
+        echo "$icon_dir/brightness-high-symbolic.svg"
+    fi
+}
+
+# --- Main logic ---
+change_brightness() {
+    case "$action" in
+        --set) brightnessctl set "${percent}%" ;;
+        --inc) brightnessctl set "+${percent}%" ;;
+        --dec) brightnessctl set "${percent}%-" ;;
+    esac
+
+    local max=$(brightnessctl max)
+    local current=$(brightnessctl get)
+    local level=$(awk -v curr="$current" -v max="$max" 'BEGIN { printf "%d", (curr * 100 / max) + 0.5 }')
+
+    local icon=$(choose_icon "$level")
+
+    notify-send -i "$icon" "Brightness" "Level: ${level}%" -h "int:value:$level" -r 8 -t 800
+}
+
+change_brightness

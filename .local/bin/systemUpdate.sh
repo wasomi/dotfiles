@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #                      __                 __  __          __      __                    __  
 #     _______  _______/ /____  ____ ___  / / / /___  ____/ /___ _/ /____          _____/ /_ 
@@ -7,20 +7,34 @@
 #  /____/\__, /____/\__/\___/_/ /_/ /_/\____/ .___/\__,_/\__,_/\__/\___/  (_)  /____/_/ /_/ 
 #       /____/                             /_/                                              
 
-RED="\e[1;31m"
-YELLOW="\e[1;34m"
-ENDCOLOR="\e[0m"
+icon_dir="/usr/share/icons/Papirus/16x16/status"
 
-echo -e "${YELLOW}::${ENDCOLOR} System update started"
+red=$(tput setaf 1; tput bold)
+yellow=$(tput setaf 3; tput bold)
+green=$(tput setaf 2; tput bold)
+reset=$(tput sgr0)
+
+for cmd in paru; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo -e "${red}:: Error:${reset} Required command '$cmd' not found..."
+        exit 1
+    fi
+done
+
+echo -e "${yellow}::${reset} Starting system update..."
 echo
 
 if paru -Syu; then
-    echo -e "\n${YELLOW}::${ENDCOLOR} System update completed successfully"
+    echo -e "\n${green}::${reset} System update completed successfully!"
+    notify-send -i "$icon_dir/package-install.svg" "System Update" "Packages updated successfully!" -t 2500 2>/dev/null
 else
-    echo -e "\n${RED}::${ENDCOLOR} System update failed"
+    echo -e "\n${red}::${reset} System update failed..."
+    notify-send -i "$icon_dir/package-purge.svg" "System Update" "An error occurred during update..." -t 2500 2>/dev/null
 fi
 
-echo -e "${YELLOW}::${ENDCOLOR} Press enter to exit..."
-read
+if pgrep -x waybar >/dev/null; then
+    pkill -SIGRTMIN+8 waybar
+fi
 
-pkill -SIGRTMIN+8 waybar 2>/dev/null
+echo -e "${yellow}::${reset} Press Enter to exit..."
+read

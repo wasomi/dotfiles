@@ -30,6 +30,8 @@ swww
 polkit-gnome
 qt5-wayland
 qt6-wayland
+qt5ct
+qt6ct
 pavucontrol
 cliphist
 bat

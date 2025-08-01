@@ -10,7 +10,7 @@
 [global]
 follow = mouse
 width = 480
-origin = bottom-center
+origin = top-center
 offset = (0, 16)
 dmenu = rofi -dmenu -p "Select action" -config "~/.dotfiles/.config/rofi/styles/notificationMenu.rasi"
 

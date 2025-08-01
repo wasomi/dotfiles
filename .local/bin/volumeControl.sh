@@ -7,147 +7,99 @@
 #  |___/\____/_/\__,_/_/ /_/ /_/\___/\____/\____/_/ /_/\__/_/   \____/_/  (_)  /____/_/ /_/ 
 #                                                                                                                                                                                    
 
-if [ "$#" -lt 2 ]; then
+icon_dir="/usr/share/icons/Papirus/16x16/panel"
+default_step=5
+
+for cmd in wpctl; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "Error: '$cmd' is required but not installed."
+        exit 1
+    fi
+done
+
+if [[ $# -lt 2 ]]; then
     echo "Usage: $0 [--sound|--mic] [--set|--inc|--dec|--mute] [percent]"
     exit 1
 fi
 
-ICON_PATH="/usr/share/icons/Papirus/16x16/panel"
+device="$1"
+action="$2"
+percent="${3//%/}"
+percent="${percent:-$default_step}"
 
-DEVICE=$1
-ACTION=$2
-PERCENT=$3
-PERCENT=${PERCENT//%/}
+if [[ "$device" == "--sound" ]]; then
+    target="@DEFAULT_AUDIO_SINK@"
+    label="Volume"
+    icon_prefix="audio-volume"
+    ready_icon="audio-ready.svg"
+    muted_icon="audio-volume-muted.svg"
+else
+    target="@DEFAULT_AUDIO_SOURCE@"
+    label="Microphone"
+    icon_prefix="microphone-sensitivity"
+    ready_icon="mic-ready.svg"
+    muted_icon="mic-volume-muted.svg"
+fi
 
-get_mute_status() {
-    if [ "$DEVICE" = "--sound" ]; then
-        wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "MUTED" && echo "yes" || echo "no"
-    else
-        wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q "MUTED" && echo "yes" || echo "no"
-    fi
+get_volume() {
+    wpctl get-volume "$target" | awk '{printf "%.0f", $2 * 100}'
 }
 
-choose_volume_icon() {
+get_mute_status() {
+    wpctl get-volume "$target" | grep -q MUTED && echo "yes" || echo "no"
+}
+
+choose_icon() {
     local vol=$1
-    if [ "$(get_mute_status)" = "yes" ] || [ "$vol" -eq 0 ]; then
-        if [ "$DEVICE" = "--sound" ]; then
-            echo "$ICON_PATH/audio-volume-muted.svg"
-        else
-            echo "$ICON_PATH/microphone-sensitivity-muted.svg"
-        fi
-    elif [ "$vol" -le 30 ]; then
-        if [ "$DEVICE" = "--sound" ]; then
-            echo "$ICON_PATH/audio-volume-low.svg"
-        else
-            echo "$ICON_PATH/microphone-sensitivity-low.svg"
-        fi
-    elif [ "$vol" -le 70 ]; then
-        if [ "$DEVICE" = "--sound" ]; then
-            echo "$ICON_PATH/audio-volume-medium.svg"
-        else
-            echo "$ICON_PATH/microphone-sensitivity-medium.svg"
-        fi
+    if [[ "$(get_mute_status)" == "yes" || "$vol" -eq 0 ]]; then
+        echo "$icon_dir/$muted_icon"
+    elif [[ $vol -le 30 ]]; then
+        echo "$icon_dir/${icon_prefix}-low.svg"
+    elif [[ $vol -le 70 ]]; then
+        echo "$icon_dir/${icon_prefix}-medium.svg"
     else
-        if [ "$DEVICE" = "--sound" ]; then
-            echo "$ICON_PATH/audio-volume-high.svg"
-        else
-            echo "$ICON_PATH/microphone-sensitivity-high.svg"
-        fi
+        echo "$icon_dir/${icon_prefix}-high.svg"
     fi
 }
 
 change_volume() {
-    local target
-    local notification_text
-    if [ "$DEVICE" = "--sound" ]; then
-        target="@DEFAULT_AUDIO_SINK@"
-        notification_text="Volume"
-    else
-        target="@DEFAULT_AUDIO_SOURCE@"
-        notification_text="Microphone Volume"
-    fi
-
-    case "$ACTION" in
-        --set)
-            wpctl set-volume "$target" "${PERCENT}%"
-        ;;
-        --inc)
-            wpctl set-volume "$target" "${PERCENT}%+"
-        ;;
-        --dec)
-            wpctl set-volume "$target" "${PERCENT}%-"
-        ;;
+    case "$action" in
+        --set) wpctl set-volume "$target" "${percent}%" ;;
+        --inc) wpctl set-volume "$target" "${percent}%+" ;;
+        --dec) wpctl set-volume "$target" "${percent}%-" ;;
+        *) echo "Invalid action: $action"; exit 1 ;;
     esac
 
-    local new_vol
-    if [ "$DEVICE" = "--sound" ]; then
-        new_vol=$(wpctl get-volume "$target" | awk '{print int($2 * 100)}')
-    else
-        new_vol=$(wpctl get-volume "$target" | awk '{print int($2 * 100)}')
-    fi
-    local icon=$(choose_volume_icon "$new_vol")
+    local new_vol=$(get_volume)
+    local icon=$(choose_icon "$new_vol")
 
-    notify-send -i "$icon" "$notification_text" "Level: ${new_vol}%" -h "int:value:${new_vol}" -r 8 -t 800
+    notify-send -i "$icon" "$label" "Level: ${new_vol}%" -h "int:value:$new_vol" -r 8 -t 800
 }
 
 toggle_mute() {
-    local muted=$(get_mute_status)
-    local target
-    local notification_text
-    local icon
-
-    if [ "$DEVICE" = "--sound" ]; then
-        target="@DEFAULT_AUDIO_SINK@"
-        notification_text="Volume"
-    else
-        target="@DEFAULT_AUDIO_SOURCE@"
-        notification_text="Microphone"
-    fi
-
-    if [ "$muted" = "yes" ]; then
+    if [[ "$(get_mute_status)" == "yes" ]]; then
         wpctl set-mute "$target" 0
-        if [ "$DEVICE" = "--sound" ]; then
-            icon="$ICON_PATH/audio-ready.svg"
-        else
-            icon="$ICON_PATH/mic-ready.svg"
-        fi
-        notify-send -i "$icon" "$notification_text" "Unmuted" -r 8 -t 800
+        notify-send -i "$icon_dir/$ready_icon" "$label" "Unmuted" -r 8 -t 800
     else
         wpctl set-mute "$target" 1
-        if [ "$DEVICE" = "--sound" ]; then
-            icon="$ICON_PATH/audio-volume-muted.svg"
-        else
-            icon="$ICON_PATH/mic-volume-muted.svg"
-        fi
-        notify-send -i "$icon" "$notification_text" "Muted" -r 8 -t 800
+        notify-send -i "$icon_dir/$muted_icon" "$label" "Muted" -r 8 -t 800
     fi
 }
 
-case "$DEVICE" in
-    --sound|--mic)
-        case "$ACTION" in
-            --set|--inc|--dec)
-                case "$PERCENT" in
-                    ''|*[!0-9]*)
-                        echo "Error: percentage must be a number"
-                        exit 1
-                        ;;
-                esac
-                change_volume
-            ;;
-            --mute)
-                toggle_mute
-            ;;
-            *)
-                echo "Invalid action: $ACTION"
-                echo "Valid actions: --set, --inc, --dec, --mute"
-                exit 1
-            ;;
-        esac
-    ;;
+case "$action" in
+    --set|--inc|--dec)
+        if [[ -z "$percent" || "$percent" =~ [^0-9] ]]; then
+            echo "Error: percentage must be a number"
+            exit 1
+        fi
+        change_volume
+        ;;
+    --mute)
+        toggle_mute
+        ;;
     *)
-        echo "Invalid device: $DEVICE"
-        echo "Valid devices: --sound, --mic"
+        echo "Invalid action: $action"
+        echo "Valid actions: --set, --inc, --dec, --mute"
         exit 1
-    ;;
+        ;;
 esac
