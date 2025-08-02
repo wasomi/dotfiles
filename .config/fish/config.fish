@@ -12,7 +12,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# Replace ls with eza
 alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
 alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='eza -l --color=always --group-directories-first --icons'  # long format

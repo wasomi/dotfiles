@@ -72,28 +72,28 @@ mouse_left_click = context, close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
 
-frame_color = "#aad291"
-highlight = "#aad291"
-separator_color= "#8d9286"
+frame_color = "#81d3e0"
+highlight = "#81d3e0"
+separator_color= "#899294"
 
 [experimental]
 per_monitor_dpi = false
 
 [urgency_low]
 timeout = 3
-background = "#11140e99"
-foreground = "#e1e4d9"
-highlight = "#aad291"
+background = "#0e141599"
+foreground = "#dee3e4"
+highlight = "#81d3e0"
 
 [urgency_normal]
 timeout = 6
-background = "#11140e99"
-foreground = "#e1e4d9"
-highlight = "#aad291"
+background = "#0e141599"
+foreground = "#dee3e4"
+highlight = "#81d3e0"
 
 [urgency_critical]
 timeout = 0
-background = "#11140e99"
-foreground = "#e1e4d9"
+background = "#0e141599"
+foreground = "#dee3e4"
 highlight = "#ffb4ab"
 

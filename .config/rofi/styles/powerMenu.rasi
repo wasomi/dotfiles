@@ -9,10 +9,6 @@
 
 @theme "theme.rasi"
 
-window {
-    // width: 20%;
-}
-
 listview {
     lines: 1;
     columns: 5;

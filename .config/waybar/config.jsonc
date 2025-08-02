@@ -20,7 +20,7 @@
 
     "modules-left": [ "clock", "group/hardware" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "group/settings", "custom/update", "custom/vpn", "network", "battery", "power-profiles-daemon", "hyprland/language" ],
+    "modules-right": [ "group/settings", "custom/update", "custom/vpn", "network", "battery", "hyprland/language" ],
 
     // group
 
@@ -30,7 +30,7 @@
             "transition-duration": 400,
             "click-to-reveal": true
         },
-        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio", "pulseaudio#microphone", "backlight"]
+        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio", "pulseaudio#microphone", "backlight", "power-profiles-daemon"]
     },
 
     "custom/settings-wrap": {
@@ -225,14 +225,6 @@
         "exec": "checkUpdates.sh",
         "on-click": "hyprctl dispatch exec '[float; center; size: 1000 600] kitty systemUpdate.sh'",
         "signal": 8,
-        "tooltip": false
-    },
-
-    "custom/currentsong": {
-        "format": "󰎇 {}",
-        "interval": 2,
-        "exec": "playerctl metadata --format '{{xesam:title}} - {{xesam:artist}}'",
-        "on-click": "playerctl play-pause",
         "tooltip": false
     }
 }

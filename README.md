@@ -13,27 +13,23 @@
 - wallpaper daemon: `swww`
 - color generator tool: `matugen`
 
-## gallery
-
-> [!warning]
-> need to update
-
 ## docs
 
 - [install guide](Docs/install.md)
 - [keybinds](Docs/keybinds.md)
 - [features](Docs/features.md)
+- [gallery](Docs/gallery.md)
 
 ## todo
 
-- [ ] write features
+- [ ] video?
 
 ## thanks to
 
-- [zproger](https://github.com/Zproger/) for the [rofi scripts](https://github.com/Zproger/bspwm-dotfiles/tree/main/bin)
+- [zproger](https://github.com/Zproger/) for the [power menu script](https://github.com/Zproger/bspwm-dotfiles/tree/main/bin)
 - [sane1090](https://www.youtube.com/@sane1090x) for the [theme switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
 - [wallhaven](https://wallhaven.cc) for the wallpapers
-- [mylinuxtowork](https://github.com/mylinuxforwork) for the [hyprland animations](https://github.com/mylinuxforwork/dotfiles/tree/main/share/dotfiles/.config/hypr/conf/animations)
+- [mylinuxtowork](https://github.com/mylinuxforwork) for the [hyprland animations config](https://github.com/mylinuxforwork/dotfiles/tree/main/share/dotfiles/.config/hypr/conf/animations)
 - [dylanaraps](https://github.com/dylanaraps) for the [rofi theme](https://github.com/dylanaraps/pywal/blob/master/pywal/templates/colors-rofi-dark.rasi)
 - [abhra00](https://github.com/Abhra00) for the [matugen gtk css](https://github.com/Abhra00/Matuprland/blob/main/matugen/templates/matugen-gtk.css)
-- ai bots for providing useful examples
+- ai bots for providing useful examples and scripts

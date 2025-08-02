@@ -10,10 +10,9 @@
 icon_dir="/usr/share/icons/Papirus/16x16/symbolic/status"
 default_step=5
 
-# --- Dependency check ---
-for cmd in brightnessctl awk; do
+for cmd in brightnessctl; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' is required but not installed."
+        echo "Error: '$cmd' is required but not installed..."
         exit 1
     fi
 done
@@ -37,7 +36,6 @@ case "$action" in
         ;;
 esac
 
-# --- Icon selection based on brightness ---
 choose_icon() {
     local brightness="$1"
     if (( brightness <= 10 )); then
@@ -49,7 +47,6 @@ choose_icon() {
     fi
 }
 
-# --- Main logic ---
 change_brightness() {
     case "$action" in
         --set) brightnessctl set "${percent}%" ;;

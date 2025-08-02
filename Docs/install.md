@@ -5,11 +5,10 @@
 3. make symbolic link for folders
    1. `ln -s` for all folders in .dotfiles/.config, example: `ln -s ~/.dotfiles/.config/hypr/ ~/.config/`
    2. `ln -s ~/.dotfiles/.local/bin/ ~/.local/`
-   3. `ln -s ~/.dotfiles/.local/share/icons/ ~/.local/`
-   4. `ln -s ~/.dotfiles/Pictures/Wallpapers/ ~/Pictures/`
+   3. `ln -s ~/.dotfiles/Pictures/Wallpapers/ ~/Pictures/`
 4. `chsh -s $(which fish)`
-5. reboot arch
-6. start hyprland
+5. reboot system
+6. start hyprland via command `h`
 7. change the wallpaper using keybind `super + shift + w`
 
 ## optional pkgs

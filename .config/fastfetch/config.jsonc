@@ -31,17 +31,6 @@
 			"keyColor": "cyan",
 			"format": "{release}"
 		},
-		// {
-		// 	"type": "wm",
-		// 	"key": "wm  ",
-		// 	"keyColor": "yellow",
-		// 	"format": "{process-name}"
-		// },
-		// {
-		// 	"type": "shell",
-		// 	"key": "sh  ",
-		// 	"format": "{pretty-name}"
-		// },
 		{
 			"type": "packages",
 			"key": "pkgs",

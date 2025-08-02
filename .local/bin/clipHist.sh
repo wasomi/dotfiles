@@ -7,6 +7,13 @@
 #  \___/_/_/ .___/_/ /_/_/____/\__/  (_)  /____/_/ /_/ 
 #         /_/                                          
 
+for cmd in cliphist; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "Error: '$cmd' is required but not installed."
+        exit 1
+    fi
+done
+
 tmp_dir="/tmp/cliphist"
 rm -rf "$tmp_dir"
 
