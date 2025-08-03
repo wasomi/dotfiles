@@ -1,11 +1,11 @@
 [Default Applications]
 x-scheme-handler/tg=userapp-AyuGram Desktop-K01PA3.desktop
 x-scheme-handler/tonsite=userapp-AyuGram Desktop-9R7PA3.desktop
-image/jpeg=org.gnome.Loupe.desktop
-image/png=org.gnome.Loupe.desktop
+image/jpeg=imv.desktop
+image/png=imv.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-AyuGram Desktop-K01PA3.desktop;
 x-scheme-handler/tonsite=userapp-AyuGram Desktop-9R7PA3.desktop;
-image/jpeg=org.gnome.Loupe.desktop;
-image/png=org.gnome.Loupe.desktop;
+image/jpeg=imv.desktop;
+image/png=imv.desktop;
