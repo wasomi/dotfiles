@@ -4,7 +4,7 @@
 //  / /  / /_/ / __/ /  / /__/ /_/ / / /_/ / /  (__  ) 
 // /_/   \____/_/ /_/   \___/\____/_/\____/_/  /____/  
 // 
-// generated with matugen
+// Generated with matugen
 
 * {
     background: {{colors.background.default.hex}}99;

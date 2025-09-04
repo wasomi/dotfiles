@@ -7,8 +7,8 @@
 #   / .___/\____/|__/|__/\___/_/  /_/  /_/\___/_/ /_/\__,_/  (_)  /____/_/ /_/ 
 #  /_/                                                                                                                                                                                      
 # 
-# credits: https://github.com/Zproger
-# edited by: wasomi
+# Credits: https://github.com/Zproger
+# Edited by: wasomi
 
 for cmd in rofi; do
     if ! command -v "$cmd" >/dev/null 2>&1; then

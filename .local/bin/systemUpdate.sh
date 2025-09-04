@@ -7,8 +7,8 @@
 #  /____/\__, /____/\__/\___/_/ /_/ /_/\____/ .___/\__,_/\__,_/\__/\___/  (_)  /____/_/ /_/ 
 #       /____/                             /_/   
 #
-# credits: ai
-# edited by: wasomi
+# Credits: ai
+# Edited by: wasomi
 
 icon_dir="/usr/share/icons/Papirus/16x16/status"
 

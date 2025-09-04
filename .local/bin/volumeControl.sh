@@ -6,8 +6,8 @@
 #  | |/ / /_/ / / /_/ / / / / / /  __/ /___/ /_/ / / / / /_/ /  / /_/ / /  _    (__  ) / / /
 #  |___/\____/_/\__,_/_/ /_/ /_/\___/\____/\____/_/ /_/\__/_/   \____/_/  (_)  /____/_/ /_/ 
 #                                                 
-# credits: ai
-# edited by: wasomi
+# Credits: ai
+# Edited by: wasomi
 
 
 icon_dir="/usr/share/icons/Papirus/16x16/panel"

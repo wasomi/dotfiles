@@ -7,8 +7,8 @@
 #  \___/_/ /_/\___/\___/_/|_|\____/ .___/\__,_/\__,_/\__/\___/____/  (_)  /____/_/ /_/ 
 #                                /_/                                                   
 #
-# credits: ai
-# edited by: wasomi
+# Credits: ai
+# Edited by: wasomi
 
 for cmd in checkupdates-with-aur; do
     if ! command -v "$cmd" >/dev/null 2>&1; then

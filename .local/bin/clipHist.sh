@@ -7,8 +7,8 @@
 #  \___/_/_/ .___/_/ /_/_/____/\__/  (_)  /____/_/ /_/ 
 #         /_/   
 #
-# credits: idk
-# edited by: wasomi
+# Credits: idk
+# Edited by: wasomi
 
 
 for cmd in cliphist; do

@@ -7,8 +7,8 @@
 #  |__/|__/\__,_/_/_/ .___/\__,_/ .___/\___/_/   \____/_/ /_/\__,_/_/ /_/\__, /\___/_/     (_)  /____/_/ /_/ 
 #                  /_/         /_/                                      /____/                               
 #
-# credits: https://www.youtube.com/@sane1090x
-# edited by: wasomi
+# Credits: https://www.youtube.com/@sane1090x
+# Edited by: wasomi
 
 wall_dir="$HOME/Pictures/Wallpapers"
 rofi_config="$HOME/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi"

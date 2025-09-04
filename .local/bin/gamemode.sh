@@ -7,8 +7,8 @@
 #   \__, /\__,_/_/ /_/ /_/\___/_/ /_/ /_/\____/\__,_/\___/  (_)  /____/_/ /_/ 
 #  /____/                                                                        
 # 
-# credits: https://wiki.hyprland.org/
-# edited by: wasomi
+# Credits: https://wiki.hyprland.org/
+# Edited by: wasomi
 
 
 for cmd in hyprctl; do
