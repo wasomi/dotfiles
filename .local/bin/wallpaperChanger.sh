@@ -43,6 +43,7 @@ if [ -n "$selected_wall" ]; then
 
     matugen image "$WALL_PATH" -m "dark"
 
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     gsettings set org.gnome.desktop.interface gtk-theme ""
     gsettings set org.gnome.desktop.interface gtk-theme "$theme"
     gsettings set org.gnome.desktop.interface icon-theme "$icons"
