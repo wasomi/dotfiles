@@ -5,13 +5,13 @@
 // /_/   \____/_/ /_/   \___/\____/_/ /_/_/ /_/\__, /  
 //                                            /____/   
 //    
-// for calculator
+// for emoji menu
 
 @theme "theme.rasi"
 
 window {
-    width: 40%;
-    height: 40%;
+    width: 32%;
+    height: 32%;
 }
 
 listview {

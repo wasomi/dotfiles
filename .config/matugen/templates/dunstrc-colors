@@ -12,7 +12,7 @@ follow = mouse
 width = 480
 origin = top-center
 offset = (0, 16)
-dmenu = rofi -dmenu -p "Select action" -config "~/.dotfiles/.config/rofi/styles/notificationMenu.rasi"
+dmenu = rofi -dmenu -config "~/.dotfiles/.config/rofi/styles/notificationMenu.rasi"
 
 icon_theme = "Papirus-Dark"
 icon_path = "/usr/share/icons/Papirus-Dark/32x32/devices:/usr/share/icons/Papirus-Dark/32x32/actions:/usr/share/icons/Papirus-Dark/32x32/apps:/usr/share/icons/Papirus-Dark/32x32/categories:/usr/share/icons/Papirus-Dark/32x32/emblems:/usr/share/icons/Papirus-Dark/32x32/emotes:/usr/share/icons/Papirus-Dark/32x32/mimetypes:/usr/share/icons/Papirus-Dark/32x32/panel:/usr/share/icons/Papirus-Dark/32x32/places:/usr/share/icons/Papirus-Dark/32x32/status"
@@ -28,11 +28,11 @@ progress_bar_max_width = 480
 
 indicate_hidden = yes
 
-separator_height = 2
+separator_height = 3
 padding = 16
 horizontal_padding = 16
 text_icon_padding = 16
-frame_width = 2
+frame_width = 3
 line_height = 0
 corner_radius = 0
 alignment = left

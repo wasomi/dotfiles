@@ -11,7 +11,9 @@
 
 configuration {
     font: "CodeNewRoman Nerd Font Propo 13";
-    display-drun: "apps";
+    display-drun: "Search";
+    display-emoji: "Search";
+    display-clipboard: "Search";
 }
 
 * {
@@ -44,7 +46,7 @@ configuration {
 
 window {
     background-color: @background;
-    border: 2;
+    border: 3;
     padding: 2.5ch; 
 }
 

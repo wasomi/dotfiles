@@ -9,6 +9,10 @@
 
 @theme "theme.rasi"
 
+mainbox {
+    children: [ message, listview ];
+}
+
 listview {
     lines: 1;
     columns: 5;
@@ -20,7 +24,7 @@ listview {
 element {
     orientation: horizontal;
     children: [ element-text ];
-    padding: 30px 10px;
+    padding: 32px 16px;
     expand: true;
 }
 
@@ -28,10 +32,6 @@ element-text {
     font: "CodeNewRoman Nerd Font Propo 32";
     horizontal-align: 0.5;
     background-color: transparent;
-}
-
-inputbar {
-    enabled: false;
 }
 
 message {

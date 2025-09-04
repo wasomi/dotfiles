@@ -63,5 +63,5 @@ if [ -n "$selected_wall" ]; then
     notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
         "Wallpaper and theme updated successfully!" -r 8 -t 1000
 else
-    echo "No wallpaper selected." >&2
+    echo "No wallpaper selected..." >&2
 fi

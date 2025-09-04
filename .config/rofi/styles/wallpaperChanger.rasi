@@ -9,12 +9,12 @@
 
 @theme "theme.rasi"
 
-configuration {
-    show-icons: true;
+window {
+    width: 96%;
 }
 
-window {
-    width: 90%;
+mainbox {
+    children: [ listview ];
 }
 
 listview {

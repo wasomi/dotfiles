@@ -33,8 +33,8 @@
 }
 
 tooltip {
-    background-color: alpha(@background,.8);
-    border: solid 2px @primary;
+    background-color: @background;
+    border: solid 3px @primary;
 	color: white;
 }
 
@@ -59,7 +59,7 @@ tooltip {
 #temperature,
 #tray,
 #power-profiles-daemon,
-#custom-vpn,
+#custom-powermenu,
 #custom-update,
 #custom-settings-wrap,
 #custom-hardware-wrap {
@@ -67,6 +67,17 @@ tooltip {
     /* padding: 4px 8px; */
     padding: 2px 8px;
     margin: 0px 2px;
+}
+
+#custom-powermenu {
+    background-color: @error_container;
+    color: @on_error_container;
+}
+
+#custom-powermenu:hover {
+    background-color: @error;
+    color: @on_error;
+    transition: all .1s ease;
 }
 
 #battery {
@@ -99,7 +110,7 @@ tooltip {
 }
 
 #language:hover,
-#battery:hover,
+#battery:hover, 
 #pulseaudio:hover,
 #network:hover,
 #bluetooth:hover,

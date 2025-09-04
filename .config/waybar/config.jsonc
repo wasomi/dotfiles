@@ -20,7 +20,7 @@
 
     "modules-left": [ "clock", "group/hardware" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "group/settings", "custom/update", "custom/vpn", "network", "battery", "hyprland/language" ],
+    "modules-right": [ "group/settings", "custom/update", "power-profiles-daemon", "network", "battery", "hyprland/language", "custom/powermenu" ],
 
     // group
 
@@ -30,7 +30,7 @@
             "transition-duration": 400,
             "click-to-reveal": true
         },
-        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio", "pulseaudio#microphone", "backlight", "power-profiles-daemon"]
+        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio", "pulseaudio#microphone", "backlight"]
     },
 
     "custom/settings-wrap": {
@@ -62,7 +62,7 @@
         },
         "format": "{icon}",
         "format-alt": "{icon} {capacity}%",
-        "format-charging": "󱐋 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
@@ -157,7 +157,7 @@
 
     "memory": {
         "interval": 2,
-        "format": " {used:0.1f} GiB",
+        "format": " {used:0.1f}GiB",
         "tooltip": false,
         "states": {
           "critical": 90
@@ -204,20 +204,13 @@
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "performance": "󱐋",
+        "balanced": "󰗑",
+        "power-saver": "󰌪"
     }
     },
 
     // custom module settings
-
-    "custom/vpn": {
-        "interval": 2,
-        "format": "{}",
-        "exec": "ip add show | grep -qF vpn && echo 󰌆 || echo ",
-        "tooltip-format": "VPN is connected"
-    },
 
     "custom/update": {
         "format": "󰏗 {}",
@@ -225,6 +218,12 @@
         "exec": "checkUpdates.sh",
         "on-click": "hyprctl dispatch exec '[float; center; size: 1000 600] kitty systemUpdate.sh'",
         "signal": 8,
+        "tooltip": false
+    },
+
+    "custom/powermenu": {
+        "format": "󰐥",
+        "on-click": "powerMenu.sh",
         "tooltip": false
     }
 }

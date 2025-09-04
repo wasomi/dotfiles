@@ -21,30 +21,30 @@
 		"break",
 		{
 			"type": "os",
-			"key": "os  ",
+			"key": "OS      ",
 			"keyColor": "magenta",
-			"format": "{id}"
+			"format": "{pretty-name}"
 		},
 		{
 			"type": "kernel",
-			"key": "krn ",
+			"key": "Kernel  ",
 			"keyColor": "cyan",
 			"format": "{release}"
 		},
 		{
 			"type": "packages",
-			"key": "pkgs",
+			"key": "Packages",
 			"keyColor": "green"
 		},
 		{
 			"type": "command",
-			"key": "age ",
+			"key": "Age     ",
 			"keyColor": "blue",
 			"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
 		},
 		{
 			"type": "uptime",
-			"key": "up  ",
+			"key": "Uptime  ",
 			"keyColor": "red"
 		},
 		"break"

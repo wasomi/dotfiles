@@ -10,8 +10,8 @@
 @theme "theme.rasi"
 
 window {
-    width: 40%;
-    height: 30%;
+    width: 24%;
+    height: 16%;
 }
 
 message {

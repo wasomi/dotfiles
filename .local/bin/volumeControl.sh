@@ -64,9 +64,9 @@ choose_icon() {
 
 change_volume() {
     case "$action" in
-        --set) wpctl set-volume "$target" "${percent}%" ;;
-        --inc) wpctl set-volume "$target" "${percent}%+" ;;
-        --dec) wpctl set-volume "$target" "${percent}%-" ;;
+        --set) wpctl set-volume -l 1.0 "$target" "${percent}%" ;;
+        --inc) wpctl set-volume -l 1.0 "$target" "${percent}%+" ;;
+        --dec) wpctl set-volume -l 1.0 "$target" "${percent}%-" ;;
         *) echo "Invalid action: $action"; exit 1 ;;
     esac
 
