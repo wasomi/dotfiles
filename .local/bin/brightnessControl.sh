@@ -6,13 +6,16 @@
 #   / /_/ / /  / / /_/ / / / / /_/ / / /  __(__  |__  ) /___/ /_/ / / / / /_/ /  / /_/ / /  _    (__  ) / / /
 #  /_.___/_/  /_/\__, /_/ /_/\__/_/ /_/\___/____/____/\____/\____/_/ /_/\__/_/   \____/_/  (_)  /____/_/ /_/ 
 #               /____/                                                                                       
+#
+# credits: ai
+# edited by: wasomi
 
 icon_dir="/usr/share/icons/Papirus/16x16/symbolic/status"
 default_step=5
 
 for cmd in brightnessctl; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' is required but not installed..."
+        echo "Error: '$cmd' not found..." >&2
         exit 1
     fi
 done
@@ -21,7 +24,6 @@ action="$1"
 percent="${2//%/}"
 percent="${percent:-$default_step}"
 
-# --- Input validation ---
 case "$action" in
     --set|--inc|--dec)
         if ! [[ "$percent" =~ ^[0-9]+$ ]]; then

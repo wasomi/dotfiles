@@ -8,6 +8,16 @@
 #  /____/                                                                        
 # 
 # credits: https://wiki.hyprland.org/
+# edited by: wasomi
+
+
+for cmd in hyprctl; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "Error: '$cmd' not found..." >&2
+        exit 1
+    fi
+done
+
 
 hyprgamemode=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 icon="/usr/share/icons/Papirus/16x16/symbolic/categories/applications-games-symbolic.svg"

@@ -5,7 +5,10 @@
 #    / ___/ / / / ___/ __/ _ \/ __ `__ \/ / / / __ \/ __  / __ `/ __/ _ \        / ___/ __ \
 #   (__  ) /_/ (__  ) /_/  __/ / / / / / /_/ / /_/ / /_/ / /_/ / /_/  __/  _    (__  ) / / /
 #  /____/\__, /____/\__/\___/_/ /_/ /_/\____/ .___/\__,_/\__,_/\__/\___/  (_)  /____/_/ /_/ 
-#       /____/                             /_/                                              
+#       /____/                             /_/   
+#
+# credits: ai
+# edited by: wasomi
 
 icon_dir="/usr/share/icons/Papirus/16x16/status"
 
@@ -16,7 +19,7 @@ reset=$(tput sgr0)
 
 for cmd in paru; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo -e "${red}:: Error:${reset} Required command '$cmd' not found..."
+        echo "Error: '$cmd' not found..." >&2
         exit 1
     fi
 done

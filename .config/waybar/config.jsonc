@@ -20,7 +20,7 @@
 
     "modules-left": [ "clock", "group/hardware" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "group/settings", "custom/update", "power-profiles-daemon", "network", "battery", "hyprland/language", "custom/powermenu" ],
+    "modules-right": [ "group/settings", "custom/update", "idle_inhibitor", "power-profiles-daemon", "network", "battery", "hyprland/language", "custom/powermenu" ],
 
     // group
 
@@ -30,7 +30,7 @@
             "transition-duration": 400,
             "click-to-reveal": true
         },
-        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio", "pulseaudio#microphone", "backlight"]
+        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight"]
     },
 
     "custom/settings-wrap": {
@@ -62,7 +62,8 @@
         },
         "format": "{icon}",
         "format-alt": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
@@ -71,16 +72,16 @@
         "format-alt": " {:%A, %b %d, %Y}",
         "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
-                    "mode"          : "month",
-                    "mode-mon-col"  : 3,
-                    "on-scroll"     : 1,
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
+            "mode"          : "month",
+            "mode-mon-col"  : 3,
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<b>{}</b>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },  
         "actions": {
             "on-click-right": "mode",
             "on-click-forward": "tz_up",
@@ -113,14 +114,20 @@
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": " {icon} {volume}%",
+        // "format-bluetooth": " {icon} {volume}%",
         "format-muted": "󰝟",
         "format-icons": {
             "headphone": "",
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
         },
-        "scroll-step": 1,
-        "on-click": "pavucontrol"
+        // "tooltip-format": "{icon} {desc}",
+        "scroll-step": 5,
+        "on-click": "pavucontrol -t 3"
     },
 
     "pulseaudio#microphone": {
@@ -128,16 +135,16 @@
         "format-source": "󰍬 {volume}%",
         "format-source-muted": "󰍭",
         "on-click": "pavucontrol -t 4",
-        "tooltip": false,
         "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
         "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
-        "scroll-step": 1,
+        // "tooltip-format": "{format_source} {source_desc}",
+        "scroll-step": 5,
         "max-volume": 100
     },
 
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["󰃜", "󰃛", "󰃚"], 
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip": false
     },
 
@@ -148,7 +155,7 @@
     },
 
     "cpu": {
-        "interval": 2,
+        "interval": 10,
         "format": " {usage}%",
         "states": {
           "critical": 90
@@ -156,12 +163,12 @@
     },
 
     "memory": {
-        "interval": 2,
-        "format": " {used:0.1f}GiB",
-        "tooltip": false,
+        "interval": 30,
+        "format": " {used}GiB",
         "states": {
           "critical": 90
-        }
+        },
+        "tooltip-format": "Memory usage: {percentage}%\nUsed: {used:0.2f}GB / {total:0.2f}GB\nSwap used: {swapUsed:0.2f}GB / {swapTotal:0.2f}GB ({swapPercentage}%)"
     },
 
     "temperature": {
@@ -181,8 +188,9 @@
         "format-ethernet": "󰈀",
         "format-disconnected": "󰤮", 
         "tooltip-format-disconnected": "Disconnected",
-        "tooltip-format-wifi": "{essid}\n\n{ipaddr}/{cidr} ",
-        "tooltip-format-ethernet": "{ipaddr}/{cidr} ",
+        // "tooltip-format": "Network: <b>{essid}</b>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "tooltip-format-wifi": "Network: <b>{essid}</b>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "tooltip-format-ethernet": "Interface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "on-click": "nmcli device wifi rescan && hyprctl dispatch exec '[float; center; pin; size: 800 600] kitty nmtui'"
     },
@@ -192,8 +200,8 @@
         "format-connected": " {device_alias}",
         "format-connected-battery": " {device_alias} {device_battery_percentage}%",
         "format-disabled": "󰂲",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n{num_connections} connected\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
         "on-click": "blueman-manager"
@@ -204,10 +212,55 @@
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
-        "performance": "󱐋",
-        "balanced": "󰗑",
-        "power-saver": "󰌪"
-    }
+            "default": "󱐋",
+            "performance": "󱐋",
+            "balanced": "󰗑",
+            "power-saver": "󰌪"
+        }
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰅶",
+            "deactivated": "󰾪"
+        },
+        "tooltip-format-activated": "󰅶 Caffeine Mode Active",
+        "tooltip-format-deactivated": "󰾪 Caffeine Mode Inactive"
+    },
+
+    "privacy": {
+        "icon-spacing": 8,
+        "icon-size": 14,
+        "transition-duration": 100,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ],
+        "ignore-monitor": false,
+        "ignore": [
+            {
+                "type": "audio-in",
+                "name": "cava"
+            },
+            {
+                "type": "screenshare",
+                "name": "obs"
+            }
+        ]
     },
 
     // custom module settings

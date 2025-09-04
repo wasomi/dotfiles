@@ -20,7 +20,7 @@ icon_dir="/usr/share/icons/Papirus/16x16/status"
 
 for cmd in rofi matugen dunst waybar kitty; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found." >&2
+        echo "Error: '$cmd' not found..." >&2
         exit 1
     fi
 done

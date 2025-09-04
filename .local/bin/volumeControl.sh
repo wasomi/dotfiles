@@ -5,14 +5,17 @@
 #  | | / / __ \/ / / / / __ `__ \/ _ \/ /   / __ \/ __ \/ __/ ___/ __ \/ /       / ___/ __ \
 #  | |/ / /_/ / / /_/ / / / / / /  __/ /___/ /_/ / / / / /_/ /  / /_/ / /  _    (__  ) / / /
 #  |___/\____/_/\__,_/_/ /_/ /_/\___/\____/\____/_/ /_/\__/_/   \____/_/  (_)  /____/_/ /_/ 
-#                                                                                                                                                                                    
+#                                                 
+# credits: ai
+# edited by: wasomi
+
 
 icon_dir="/usr/share/icons/Papirus/16x16/panel"
 default_step=5
 
 for cmd in wpctl; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' is required but not installed."
+        echo "Error: '$cmd' not found..." >&2
         exit 1
     fi
 done
