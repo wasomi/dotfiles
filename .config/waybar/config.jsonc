@@ -63,7 +63,6 @@
         "format": "{icon}",
         "format-alt": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
@@ -225,8 +224,8 @@
             "activated": "󰅶",
             "deactivated": "󰾪"
         },
-        "tooltip-format-activated": "󰅶 Caffeine Mode Active",
-        "tooltip-format-deactivated": "󰾪 Caffeine Mode Inactive"
+        "tooltip-format-activated": "Caffeine Mode Active",
+        "tooltip-format-deactivated": "Caffeine Mode Inactive"
     },
 
     "privacy": {
