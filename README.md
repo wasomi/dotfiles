@@ -22,7 +22,8 @@
 
 ## todo
 
-- [ ] video?
+- [ ] gestures
+- [ ] showcase video?
 
 ## thanks to
 
