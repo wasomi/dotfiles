@@ -4,10 +4,10 @@
 
 - `super + q` - kill active app
 - `super + shift + q` - close hyprland
-- `super + shift + g` - gamemode
+- `super + g` - gamemode
 - `super + return` - open terminal
 - `super + e` - open file manager
-- `ctr + shift + esq` - open system monitor
+- `ctr + shift + esc` - open system monitor
 - `print screen` - make screenshot (screen)
 - `ctrl + print screen` - make screenshot (region)
 
@@ -18,7 +18,7 @@
 - `super + period` - open emoji menu
 - `super + v` - open clipboard history
 - `ctrl + alt + delete` - open power menu
-- `super + shift + w` - open wallpaper changer menu
+- `super + w` - open wallpaper changer menu
 
 ## windows & workspaces
 

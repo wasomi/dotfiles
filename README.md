@@ -22,13 +22,15 @@
 
 ## todo
 
+- [ ] installer on python
+- [ ] config for vscode / vscode - oss / vscodium
 - [ ] gestures
-- [ ] showcase video?
+- [ ] showcase video
 
 ## thanks to
 
-- [zproger](https://github.com/Zproger/) for the [power menu script](https://github.com/Zproger/bspwm-dotfiles/tree/main/bin)
-- [sane1090](https://www.youtube.com/@sane1090x) for the [theme switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
+- [zproger](https://github.com/Zproger/) for the [power menu script](https://github.com/Zproger/bspwm-dotfiles/blob/main/bin/powermenu)
+- [sane1090](https://www.youtube.com/@sane1090x) for the [wallpaper switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
 - [wallhaven](https://wallhaven.cc) for the wallpapers
 - [mylinuxtowork](https://github.com/mylinuxforwork) for the [hyprland animations config](https://github.com/mylinuxforwork/dotfiles/tree/main/share/dotfiles/.config/hypr/conf/animations)
 - [dylanaraps](https://github.com/dylanaraps) for the [rofi theme](https://github.com/dylanaraps/pywal/blob/master/pywal/templates/colors-rofi-dark.rasi)

@@ -52,14 +52,8 @@ if [ -n "$selected_wall" ]; then
 
     killall dunst && dunst & disown
     killall waybar && waybar & disown
+    killall polkit-gnome-au && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
     pkill -SIGUSR1 kitty
-
-    if pgrep -x polkit-gnome-au >/dev/null; then
-        pkill polkit-gnome-au
-    fi
-    if [ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ]; then
-        /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
-    fi
 
     notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
         "Wallpaper and theme updated successfully!" -r 8 -t 1000
