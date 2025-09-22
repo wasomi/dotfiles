@@ -1,6 +1,6 @@
 # install
 
-1. clone repo: `git clone https://github.com/wasomi/dotfiles ~/.dotfiles`
+1. clone repo: `git clone https://github.com/wasomi/dotfiles ~/.dotfiles --depth 1`
 2. install needed pkgs: `pacman -S - < ~/.dotfiles/Packages/pkgList` & `paru -S - < ~/.dotfiles/Packages/aurPkgList`
 3. make symbolic link for folders
    1. `ln -s` for all folders in `.dotfiles/.config`, example: `ln -s ~/.dotfiles/.config/hypr/ ~/.config/`

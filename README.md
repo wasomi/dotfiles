@@ -24,6 +24,7 @@
 
 - [ ] installer on python
 - [ ] config for vscode / vscode - oss / vscodium
+- [ ] config for firefox
 - [ ] gestures
 - [ ] showcase video
 
