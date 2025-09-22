@@ -43,16 +43,16 @@ if [ -n "$selected_wall" ]; then
 
     matugen image "$WALL_PATH" -m "dark"
 
-    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     gsettings set org.gnome.desktop.interface gtk-theme ""
     gsettings set org.gnome.desktop.interface gtk-theme "$theme"
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     gsettings set org.gnome.desktop.interface icon-theme "$icons"
     gsettings set org.gnome.desktop.interface font-name "$font"
     gsettings set org.gnome.desktop.interface cursor-theme "$cursor"
 
     killall dunst && dunst & disown
     killall waybar && waybar & disown
-    killall polkit-gnome-au && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
+    killall polkit-gnome-authentication-agent-1 && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
     pkill -SIGUSR1 kitty
 
     notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
