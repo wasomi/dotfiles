@@ -5,7 +5,8 @@ if test -d ~/.local/bin
 end
 
 function fish_greeting
-    fastfetch
+    # fastfetch
+    kotofetch
 end
 
 if status is-interactive
@@ -18,4 +19,4 @@ alias ll='eza -l --color=always --group-directories-first --icons'  # long forma
 alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                   # show only dotfiles
 alias h="hyprland"                                                  # alias to start hyprland
-alias cat="bat"
+alias cat="bat"                                                     # alias to start bat

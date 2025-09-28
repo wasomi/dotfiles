@@ -1,6 +1,10 @@
 @import "colors.css";
 
-* {
+/* * {
 	border-radius: unset;
 	-gtk-outline-radius: unset;
+} */
+
+messagedialog {
+    border-radius: 0 0 8px 8px;
 }

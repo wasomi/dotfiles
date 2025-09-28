@@ -10,31 +10,23 @@
 @theme "theme.rasi"
 
 mainbox {
-    children: [ message, listview ];
+    children: [ listview ];
 }
 
 listview {
     lines: 1;
     columns: 5;
     scrollbar: false;
-    flow: horizontal;
-    border: 0;
 }
 
 element {
     orientation: horizontal;
     children: [ element-text ];
     padding: 32px 16px;
-    expand: true;
 }
 
 element-text {
     font: "CodeNewRoman Nerd Font Propo 32";
     horizontal-align: 0.5;
-    background-color: transparent;
-}
-
-message {
-    border: 0;
 }
 

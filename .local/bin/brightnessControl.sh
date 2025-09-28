@@ -10,7 +10,7 @@
 # Credits: ai
 # Edited by: wasomi
 
-icon_dir="/usr/share/icons/Papirus/16x16/symbolic/status"
+icon_dir="/usr/share/icons/Papirus/48x48@2x/status"
 default_step=5
 
 for cmd in brightnessctl; do
@@ -40,12 +40,14 @@ esac
 
 choose_icon() {
     local brightness="$1"
-    if (( brightness <= 10 )); then
-        echo "$icon_dir/brightness-low-symbolic.svg"
+    if (( brightness <= 25 )); then
+        echo "$icon_dir/notification-display-brightness-low.svg"
     elif (( brightness <= 50 )); then
-        echo "$icon_dir/brightness-medium-symbolic.svg"
+        echo "$icon_dir/notification-display-brightness-medium.svg"
+    elif (( brightness <= 70 )); then
+        echo "$icon_dir/notification-display-brightness-high.svg"
     else
-        echo "$icon_dir/brightness-high-symbolic.svg"
+        echo "$icon_dir/notification-display-brightness-full.svg"
     fi
 }
 

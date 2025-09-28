@@ -11,14 +11,9 @@
 
 window {
     width: 32%;
-    height: 24%;
+    height: 32%;
 }
 
-message {
-    border: 0;
-    background-color: @normal-background;
-}
-
-inputbar {
-    children: [ entry ];
+entry {
+    placeholder: "1 + 1";
 }

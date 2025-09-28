@@ -24,12 +24,13 @@
     font-family: "CodeNewRoman Nerd Font Propo";
 	font-size: 14px;
 	font-weight: bold;
-    border-radius: unset;
+    border-radius: 8px;
 }
 
 #waybar {
 	background-color: alpha(@background,.5);
 	color: @on_secondary_container;
+    border-radius: unset;
 }
 
 tooltip {
@@ -68,10 +69,10 @@ tooltip {
     /* border-bottom: solid 2px @on_secondary_container; */ /* its needed for tests */
     /* padding: 4px 8px; */
     padding: 2px 8px;
-    margin: 0px 2px;
+    margin: 2px 2px;
 }
 
-#custom-powermenu {
+/* #custom-powermenu {
     background-color: @error_container;
     color: @on_error_container;
 }
@@ -80,7 +81,7 @@ tooltip {
     background-color: @error;
     color: @on_error;
     transition: all .1s ease;
-}
+} */
 
 #battery {
     animation-timing-function: linear;
@@ -102,7 +103,7 @@ tooltip {
 }
 
 #workspaces {
-    margin: 0px 2px;
+    margin: 2px 2px;
 }
 
 #workspaces button {
@@ -122,15 +123,17 @@ tooltip {
 #custom-update:hover,
 #custom-settings-wrap:hover,
 #custom-hardware-wrap:hover,
+#custom-powermenu:hover,
 #workspaces button:hover, 
 #workspaces button.active:hover {
     background-color: @primary_container;
     color: @on_primary_container;
     transition: all .1s ease;
+    border-radius: 4px;
 }
 
 #workspaces button.active {
-    /* background-color: @primary; */
+    /* background-color: @primary_container; */
     color: @primary;
 }
 

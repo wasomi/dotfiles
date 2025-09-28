@@ -25,6 +25,7 @@ progress_bar_height = 16
 progress_bar_frame_width = 2
 progress_bar_min_width = 0
 progress_bar_max_width = 480
+progress_bar_corner_radius = 4
 
 indicate_hidden = yes
 
@@ -34,7 +35,7 @@ horizontal_padding = 16
 text_icon_padding = 16
 frame_width = 3
 line_height = 0
-corner_radius = 0
+corner_radius = 8
 alignment = left
 vertical_alignment = center
 

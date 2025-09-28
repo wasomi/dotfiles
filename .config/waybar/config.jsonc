@@ -13,13 +13,14 @@
     "position": "top",
     // "output": "eDP-1",
 
+    "height": 32,
     // "margin-top": 6,
     // "margin-left": 128,
     // "margin-right": 128,
     // "margin-bottom": 4, 
 
-    "modules-left": [ "clock", "group/hardware" ],
-    "modules-center": [ "hyprland/workspaces" ],
+    "modules-left": [ "hyprland/workspaces" ],
+    "modules-center": [ "clock" ],
     "modules-right": [ "group/settings", "custom/update", "idle_inhibitor", "power-profiles-daemon", "network", "battery", "hyprland/language", "custom/powermenu" ],
 
     // group
@@ -30,7 +31,7 @@
             "transition-duration": 400,
             "click-to-reveal": true
         },
-        "modules": ["custom/settings-wrap", "tray", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight"]
+        "modules": [ "custom/settings-wrap", "tray", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight" ]
     },
 
     "custom/settings-wrap": {
@@ -63,12 +64,13 @@
         "format": "{icon}",
         "format-alt": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
+        "format-not-charging": "",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "clock": {
-        "format": "󰥔 {:%R}",
-        "format-alt": " {:%A, %b %d, %Y}",
+        "format": "{:%e %b %H:%M}",
+        "format-alt": "{:%A, %d %B %Y %H:%M}",
         "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
             "mode"          : "month",

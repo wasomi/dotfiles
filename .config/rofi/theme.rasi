@@ -14,6 +14,8 @@ configuration {
     display-drun: "Search";
     display-emoji: "Search";
     display-clipboard: "Search";
+    icon-theme: "Papirus-Dark";
+    show-icons: true;
 }
 
 * {
@@ -48,6 +50,7 @@ window {
     background-color: @background;
     border: 3;
     padding: 2.5ch; 
+    border-radius: 8px;
 }
 
 mainbox {
@@ -56,9 +59,9 @@ mainbox {
 }
 
 message {
-    border: 2px 0px 0px;
-    border-color: @border-color;
-    padding: 1px;
+    border: 0px;
+    background-color: transparent;
+    padding: 8px;
 }
 
 textbox {
@@ -66,8 +69,13 @@ textbox {
 }
 
 inputbar {
-    background-color: @background;
-    children: [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: transparent;
+    children: [ entry,case-indicator ];
+}
+
+entry {
+    placeholder: "Search...";
+    padding: 8px;
 }
 
 textbox-prompt-colon {
@@ -79,7 +87,7 @@ textbox-prompt-colon {
 
 listview {
     fixed-height: 0;
-    border: 2px 0px 0px;
+    border: 0px;
     border-color: @border-color;
     spacing: 2px;
     scrollbar: false;
@@ -88,12 +96,21 @@ listview {
 
 element {
     border: 0;
-    padding: 1px;
+    padding: 8px;
+    border-radius: 8px;
 }
 
 element-text, element-icon {
-    background-color: inherit;
+    background-color: transparent;
     text-color: inherit;
+}
+
+element-icon {
+    padding: 0 4px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
 }
 
 element.normal.normal {

@@ -15,5 +15,8 @@
 
 > i'm just using these packages
 
-- `pacman -S - < ~/.dotfiles/Packages/optionalPkgList`
-- `paru -S - < ~/.dotfiles/Packages/optionalAurPkgList`
+- `pacman -S - < ~/.dotfiles/Packages/Optional/pkgList`
+- `paru -S - < ~/.dotfiles/Packages/Optional/aurPkgList`
+
+- `sudo usermod -aG libvirt <username>`
+- `sudo usermod -aG docker <username>`

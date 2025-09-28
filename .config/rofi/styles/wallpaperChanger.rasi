@@ -20,28 +20,17 @@ mainbox {
 listview {
     lines: 2;
     columns: 5;
-    flow: horizontal;
+    scrollbar: false;
     border: 0;
 }
 
 element {
-    orientation: vertical;
-    children: [ element-icon, element-text ];
-    expand: true;
+    orientation: horizontal;
+    children: [ element-icon ];
 }
 
 element-icon {
     size: 32%;
-    expand: false;
-}
-
-element-text {
-    horizontal-align: 0.5;
-    border: 2px 0 0 0;
-}
-
-element-text.selected.normal {
-    border-color: @selected-normal-foreground;
 }
 
 inputbar {

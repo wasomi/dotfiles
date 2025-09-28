@@ -7,11 +7,11 @@
 #  \___/_/_/ .___/_/ /_/_/____/\__/  (_)  /____/_/ /_/ 
 #         /_/   
 #
-# Credits: idk
+# Credits: https://github.com/sentriz
 # Edited by: wasomi
 
 
-for cmd in cliphist; do
+for cmd in cliphist wl-copy; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
         echo "Error: '$cmd' not found..." >&2
         exit 1

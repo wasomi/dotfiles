@@ -14,8 +14,8 @@ mainbox {
 }
 
 window {
-    width: 24%;
-    height: 16%;
+    width: 32%;
+    height: 24%;
 }
 
 listview {
