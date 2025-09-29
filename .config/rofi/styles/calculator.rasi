@@ -15,5 +15,9 @@ window {
 }
 
 entry {
-    placeholder: "1 + 1";
+    placeholder: "Solve...";
+}
+
+textbox-prompt-colon {
+    str: "";
 }

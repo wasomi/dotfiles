@@ -70,18 +70,19 @@ textbox {
 
 inputbar {
     background-color: transparent;
-    children: [ entry,case-indicator ];
+    children: [ textbox-prompt-colon, entry ];
 }
 
 entry {
     placeholder: "Search...";
     padding: 8px;
+    text-color: @normal-foreground;
 }
 
 textbox-prompt-colon {
     expand: false;
-    str: ":";
-    margin: 0px 0.3em 0em 0em;
+    str: "";
+    padding: 8px;
     text-color: @normal-foreground;
 }
 
