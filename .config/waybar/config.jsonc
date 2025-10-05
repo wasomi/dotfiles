@@ -69,7 +69,7 @@
     },
 
     "clock": {
-        "format": "{:%e %b %H:%M}",
+        "format": "{:%d %b %H:%M}",
         "format-alt": "{:%A, %d %B %Y %H:%M}",
         "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
@@ -104,9 +104,9 @@
         "disable-scroll": true,
         "format": "{icon}",
         "format-icons": {
-            "default": "󰨐",
-            "active": "󰜋",
-            "empty": "󱓜"
+            "default": "",
+            "active": "",
+            "empty": ""
         },
         "persistent-workspaces": {
             "*": 5

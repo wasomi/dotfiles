@@ -40,12 +40,10 @@ esac
 
 choose_icon() {
     local brightness="$1"
-    if (( brightness <= 25 )); then
+    if (( brightness <= 10 )); then
         echo "$icon_dir/notification-display-brightness-low.svg"
     elif (( brightness <= 50 )); then
         echo "$icon_dir/notification-display-brightness-medium.svg"
-    elif (( brightness <= 70 )); then
-        echo "$icon_dir/notification-display-brightness-high.svg"
     else
         echo "$icon_dir/notification-display-brightness-full.svg"
     fi

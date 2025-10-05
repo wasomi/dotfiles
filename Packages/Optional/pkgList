@@ -6,4 +6,5 @@ docker
 docker-compose
 virt-manager
 qemu-desktop
+dnsmasq
 discord

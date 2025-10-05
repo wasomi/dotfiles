@@ -98,7 +98,7 @@ listview {
 element {
     border: 0;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 element-text, element-icon {

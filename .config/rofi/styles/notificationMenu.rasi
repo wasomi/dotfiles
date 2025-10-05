@@ -21,3 +21,7 @@ window {
 listview {
     border: 0;
 }
+
+element {
+    children: [ element-text ];
+}

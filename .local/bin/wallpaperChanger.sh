@@ -15,7 +15,7 @@ rofi_config="$HOME/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi"
 theme="adw-gtk3-dark"
 icons="Papirus-Dark"
 font="CodeNewRoman Nerd font Mono 12"
-cursor="Bibata-Original-Classic"
+cursor="Bibata-Modern-Classic"
 icon_dir="/usr/share/icons/Papirus/16x16/status"
 
 for cmd in rofi matugen dunst waybar kitty; do

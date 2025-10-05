@@ -10,14 +10,14 @@
 # Credits: ai
 # Edited by: wasomi
 
-for cmd in paru; do
+for cmd in paru checkupdates; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
         echo "Error: '$cmd' not found..." >&2
         exit 1
     fi
 done
 
-total=$(( $(pacman -Qu | wc -l) + $(paru -Qua | wc -l) ))
+total=$(( $(checkupdates | wc -l) + $(paru -Qua | wc -l) ))
 
 if [ "$total" -gt 0 ]; then
     echo "$total"
