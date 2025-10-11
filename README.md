@@ -15,7 +15,7 @@
 
 ## docs
 
-- [install guide](Docs/install.md)
+- [installation](Docs/install.md)
 - [keybinds](Docs/keybinds.md)
 - [features](Docs/features.md)
 - [gallery](Docs/gallery.md)
@@ -23,10 +23,11 @@
 ## todo
 
 - [ ] installer on python
-- [ ] config for vscode / vscode - oss / vscodium
+- [ ] config for vscode (from aur)
 - [ ] config for firefox
 - [ ] gestures
 - [ ] showcase video
+- [ ] create envs to customize themes and other things
 
 ## thanks to
 

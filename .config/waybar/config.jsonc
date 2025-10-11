@@ -14,14 +14,14 @@
     // "output": "eDP-1",
 
     "height": 32,
-    // "margin-top": 6,
-    // "margin-left": 128,
-    // "margin-right": 128,
+    // "margin-top": 4,
+    // "margin-left": 4,
+    // "margin-right": 4,
     // "margin-bottom": 4, 
 
     "modules-left": [ "hyprland/workspaces" ],
     "modules-center": [ "clock" ],
-    "modules-right": [ "group/settings", "custom/update", "idle_inhibitor", "power-profiles-daemon", "network", "battery", "hyprland/language", "custom/powermenu" ],
+    "modules-right": [ "group/settings", "custom/update", "network", "battery", "hyprland/language", "custom/powermenu" ],
 
     // group
 
@@ -31,7 +31,7 @@
             "transition-duration": 400,
             "click-to-reveal": true
         },
-        "modules": [ "custom/settings-wrap", "tray", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight" ]
+        "modules": [ "custom/settings-wrap", "tray", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight", "idle_inhibitor", "power-profiles-daemon" ]
     },
 
     "custom/settings-wrap": {
@@ -102,7 +102,8 @@
     "hyprland/workspaces": {
         "all-outputs": false,
         "disable-scroll": true,
-        "format": "{icon}",
+        // "format": "{icon}",
+        "format": "{name}",
         "format-icons": {
             "default": "",
             "active": "",
