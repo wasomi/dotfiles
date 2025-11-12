@@ -17,9 +17,11 @@ listview {
     lines: 1;
     columns: 5;
     scrollbar: false;
+    padding: 0;
 }
 
 element {
+    orientation: vertical;
     children: [ element-text ];
     padding: 32px 16px;
 }

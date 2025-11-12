@@ -11,71 +11,55 @@
 follow = mouse
 width = 480
 origin = top-center
-offset = (0, 16)
+offset = (16, 16)
 dmenu = rofi -dmenu -config "~/.dotfiles/.config/rofi/styles/notificationMenu.rasi"
-
 icon_theme = "Papirus-Dark"
 icon_path = "/usr/share/icons/Papirus-Dark/32x32/devices:/usr/share/icons/Papirus-Dark/32x32/actions:/usr/share/icons/Papirus-Dark/32x32/apps:/usr/share/icons/Papirus-Dark/32x32/categories:/usr/share/icons/Papirus-Dark/32x32/emblems:/usr/share/icons/Papirus-Dark/32x32/emotes:/usr/share/icons/Papirus-Dark/32x32/mimetypes:/usr/share/icons/Papirus-Dark/32x32/panel:/usr/share/icons/Papirus-Dark/32x32/places:/usr/share/icons/Papirus-Dark/32x32/status"
 font = CodeNewRoman Nerd Font Propo 12
-
 notification_limit = 8
-
 progress_bar = true
 progress_bar_height = 16
 progress_bar_frame_width = 2
 progress_bar_min_width = 0
 progress_bar_max_width = 480
 progress_bar_corner_radius = 4
-
 indicate_hidden = yes
-
-separator_height = 3
+separator_height = 1
 padding = 16
 horizontal_padding = 16
 text_icon_padding = 16
-frame_width = 3
+frame_width = 0
 line_height = 0
 corner_radius = 8
 alignment = left
 vertical_alignment = center
-
 sort = yes
-
 markup = full
-
 show_age_threshold = 60
 ellipsize = middle
 ignore_newline = no
-
 stack_duplicates = true
 hide_duplicate_count = false
-
 show_indicators = yes
-
 icon_position = left
 min_icon_size = 48
 max_icon_size = 48
-
 sticky_history = yes
 history_length = 20
-
 browser = /usr/bin/xdg-open
 always_run_script = true
-
 title = Dunst
 class = Dunst
-
 ignore_dbusclose = false
 force_xwayland = false
 force_xinerama = false
-
 mouse_left_click = context, close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
-
 frame_color = "{{colors.primary.default.hex}}"
 highlight = "{{colors.primary.default.hex}}"
 separator_color= "{{colors.outline.default.hex}}"
+gap_size = 5
 
 [experimental]
 per_monitor_dpi = false

@@ -12,8 +12,9 @@
 
 wall_dir="$HOME/Pictures/Wallpapers"
 rofi_config="$HOME/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi"
-theme="adw-gtk3-dark"
-icons="Papirus-Dark"
+mode="dark"
+theme="adw-gtk3-$mode"
+icons="Papirus"
 font="CodeNewRoman Nerd font Mono 12"
 cursor="Bibata-Modern-Classic"
 icon_dir="/usr/share/icons/Papirus/16x16/status"
@@ -41,11 +42,11 @@ cd - > /dev/null || exit 1
 if [ -n "$selected_wall" ]; then
     WALL_PATH="$wall_dir/$selected_wall"
 
-    matugen image "$WALL_PATH" -m "dark"
+    matugen image "$WALL_PATH" -m "$mode"
 
     gsettings set org.gnome.desktop.interface gtk-theme ""
     gsettings set org.gnome.desktop.interface gtk-theme "$theme"
-    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    gsettings set org.gnome.desktop.interface color-scheme prefer-$mode
     gsettings set org.gnome.desktop.interface icon-theme "$icons"
     gsettings set org.gnome.desktop.interface font-name "$font"
     gsettings set org.gnome.desktop.interface cursor-theme "$cursor"
@@ -56,7 +57,7 @@ if [ -n "$selected_wall" ]; then
     pkill -SIGUSR1 kitty
 
     notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
-        "Wallpaper and theme updated successfully!" -r 8 -t 1000
+        "Wallpaper and theme updated successfully!" -r 8 -t 1500
 else
     echo "No wallpaper selected..." >&2
 fi

@@ -10,7 +10,8 @@
 @theme "theme.rasi"
 
 window {
-    width: 96%;
+    width: 100%;
+    border-radius: 0;
 }
 
 mainbox {
@@ -18,19 +19,21 @@ mainbox {
 }
 
 listview {
-    lines: 2;
+    lines: 1;
     columns: 5;
     scrollbar: false;
     border: 0;
+    padding: 0;
 }
 
 element {
-    orientation: horizontal;
+    orientation: vertical;
     children: [ element-icon ];
+    padding: 0;
 }
 
 element-icon {
-    size: 32%;
+    size: 48%;
 }
 
 inputbar {

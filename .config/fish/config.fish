@@ -6,7 +6,7 @@ end
 
 function fish_greeting
     # fastfetch
-    kotofetch
+    # kotofetch
 end
 
 if status is-interactive

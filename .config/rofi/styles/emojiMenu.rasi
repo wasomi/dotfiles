@@ -11,9 +11,13 @@
 
 window {
     width: 32%;
-    height: 32%;
 }
 
 element {
     children: [ element-text ];
+}
+
+listview {
+    lines: 9;
+    columns: 1;
 }

@@ -1,11 +1,13 @@
 [Default Applications]
 image/jpeg=imv.desktop
 image/png=imv.desktop
+image/svg+xml=imv.desktop
 x-scheme-handler/tg=userapp-AyuGram Desktop-EBO5D3.desktop
 x-scheme-handler/tonsite=userapp-AyuGram Desktop-I494D3.desktop
 
 [Added Associations]
 image/jpeg=imv.desktop;
 image/png=imv.desktop;
+image/svg+xml=imv.desktop;
 x-scheme-handler/tg=userapp-AyuGram Desktop-U30AD3.desktop;userapp-AyuGram Desktop-GDC8C3.desktop;userapp-AyuGram Desktop-EBO5D3.desktop;
 x-scheme-handler/tonsite=userapp-AyuGram Desktop-M2S9C3.desktop;userapp-AyuGram Desktop-ZKI8C3.desktop;userapp-AyuGram Desktop-I494D3.desktop;

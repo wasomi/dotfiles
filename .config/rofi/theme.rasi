@@ -48,8 +48,8 @@ configuration {
 
 window {
     background-color: @background;
-    border: 3;
-    padding: 2.5ch; 
+    border: 0;
+    padding: 24px; 
     border-radius: 8px;
 }
 
@@ -88,11 +88,11 @@ textbox-prompt-colon {
 
 listview {
     fixed-height: 0;
-    border: 0px;
+    border: 0;
     border-color: @border-color;
     spacing: 2px;
     scrollbar: false;
-    padding: 2px 0px 0px;
+    padding: 4px 0 0 0;
 }
 
 element {

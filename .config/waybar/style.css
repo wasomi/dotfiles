@@ -25,40 +25,31 @@
 	font-size: 14px;
 	font-weight: bold;
     border-radius: 8px;
+    box-shadow: none;
 }
 
 #waybar {
-	background-color: alpha(@background,.5);
-    /* background-color: transparent; */
+	/* background-color: alpha(@background,.5); */
+    /* background-color: @background; */
+    background-color: transparent;
 	color: @on_secondary_container;
     border-radius: unset;
 }
 
 tooltip {
     background-color: @background;
-    border: solid 3px @primary;
+    /* background-color: alpha(@background,.5); */
+    border: solid 1px @primary;
 	color: white;
+    border-radius: 8px;
 }
 
-/* .modules-left {
-    background-color: alpha(@background,.5);
-}
-
-.modules-right {
-    background-color: alpha(@background,.5);
-}
-
+.modules-left, 
+.modules-right,
 .modules-center {
-    background-color: alpha(@background,.5);
-} */
-
-/* .modules-left:first-child {
-    margin-left: 2px;
+    /* background-color: @background; */
+	background-color: alpha(@background,.5);
 }
-
-.modules-right:last-child {
-    margin-right: 2px;
-} */
 
 #language,
 #cpu,
@@ -79,24 +70,13 @@ tooltip {
 #custom-update,
 #custom-settings-wrap,
 #custom-hardware-wrap {
-    /* border-bottom: solid 2px @on_secondary_container; */ /* its needed for tests */
-    /* padding: 4px 8px; */
     padding: 2px 8px;
     margin: 2px 2px;
 }
 
-/* #custom-powermenu {
-    background-color: @error_container;
-    color: @on_error_container;
-}
-
-#custom-powermenu:hover {
-    background-color: @error;
-    color: @on_error;
-    transition: all .1s ease;
-} */
-
-#battery {
+#battery,
+#cpu,
+#memory {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -115,14 +95,11 @@ tooltip {
     color: @error
 }
 
-#workspaces {
-    margin: 2px 2px;
-}
-
 #workspaces button {
     color: @on_secondary_container;
-    transition: all .1s ease;
+    transition: all .2s ease;
     padding: 2px 8px;
+    margin: 2px 2px;
 }
 
 #language:hover,
@@ -138,23 +115,26 @@ tooltip {
 #custom-hardware-wrap:hover,
 #custom-powermenu:hover,
 #workspaces button:hover, 
+#workspaces button.empty:hover,
 #workspaces button.active:hover {
     background-color: @primary_container;
     color: @on_primary_container;
-    transition: all .1s ease;
+    transition: all .2s ease;
     border-radius: 6px;
 }
 
 #workspaces button.active {
-    /* background-color: @primary_container; */
-    color: @primary;
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+    border-radius: 6px;
 }
 
 #workspaces button.empty {
     color: @tertiary;
+    border-radius: 6px;
 }
 
 #workspaces button.empty.active {
-    /* background-color: @primary; */
-    color: @primary;
+    color: @on_secondary_container;
+    border-radius: 6px;
 }

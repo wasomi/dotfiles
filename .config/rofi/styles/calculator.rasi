@@ -11,7 +11,6 @@
 
 window {
     width: 32%;
-    height: 32%;
 }
 
 entry {
@@ -20,4 +19,13 @@ entry {
 
 textbox-prompt-colon {
     str: "";
+}
+
+listview {
+    lines: 4;
+    columns: 1;
+}
+
+element {
+    children: [ element-text ];
 }

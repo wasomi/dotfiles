@@ -11,17 +11,14 @@
 
     "layer": "top",
     "position": "top",
-    // "output": "eDP-1",
 
-    "height": 32,
-    // "margin-top": 4,
-    // "margin-left": 4,
-    // "margin-right": 4,
-    // "margin-bottom": 4, 
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
 
     "modules-left": [ "hyprland/workspaces" ],
-    "modules-center": [ "clock" ],
-    "modules-right": [ "group/settings", "custom/update", "network", "battery", "hyprland/language", "custom/powermenu" ],
+    "modules-center": [ "idle_inhibitor", "clock", "power-profiles-daemon" ],
+    "modules-right": [ "group/settings", "tray", "custom/update", "network", "battery", "hyprland/language" ],
 
     // group
 
@@ -31,7 +28,7 @@
             "transition-duration": 400,
             "click-to-reveal": true
         },
-        "modules": [ "custom/settings-wrap", "tray", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight", "idle_inhibitor", "power-profiles-daemon" ]
+        "modules": [ "custom/settings-wrap", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight" ]
     },
 
     "custom/settings-wrap": {
@@ -111,7 +108,7 @@
         },
         "persistent-workspaces": {
             "*": 5
-       }
+        }
     },
 
     "pulseaudio": {
@@ -268,17 +265,18 @@
     // custom module settings
 
     "custom/update": {
-        "format": "󰏗 {}",
+        "format": "󰏗 {text}",
         "interval": 86400, // once every day
         "exec": "checkUpdates.sh",
         "on-click": "hyprctl dispatch exec '[float; center; size: 1000 600] kitty systemUpdate.sh'",
         "signal": 8,
-        "tooltip": false
-    },
-
-    "custom/powermenu": {
-        "format": "󰐥",
-        "on-click": "powerMenu.sh",
-        "tooltip": false
+        "tooltip": true,
+        "return-type": "json"
     }
+
+    // "custom/powermenu": {
+    //     "format": "󰐥",
+    //     "on-click": "powerMenu.sh",
+    //     "tooltip": false
+    // }
 }

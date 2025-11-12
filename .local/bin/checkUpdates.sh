@@ -17,10 +17,12 @@ for cmd in paru checkupdates; do
     fi
 done
 
-total=$(( $(checkupdates | wc -l) + $(paru -Qua | wc -l) ))
+official=$((checkupdates | wc -l))
+aur=$((paru -Qua | wc -l))
+total=$(( $official + $aur ))
 
 if [ "$total" -gt 0 ]; then
-    echo "$total"
+    printf '{"text": "%d", "tooltip": "Official: %d\\nAUR: %d"}\n' "$total" "$official" "$aur"
 else
     exit 1
 fi

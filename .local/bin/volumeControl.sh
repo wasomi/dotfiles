@@ -76,16 +76,16 @@ change_volume() {
     local new_vol=$(get_volume)
     local icon=$(choose_icon "$new_vol")
 
-    notify-send -i "$icon" "$label" "Level: ${new_vol}%" -h "int:value:$new_vol" -r 8 -t 800
+    notify-send -i "$icon" "$label" "Level: ${new_vol}%" -h "int:value:$new_vol" -r 8 -t 1000
 }
 
 toggle_mute() {
     if [[ "$(get_mute_status)" == "yes" ]]; then
         wpctl set-mute "$target" 0
-        notify-send -i "$icon_dir/$ready_icon" "$label" "Unmuted" -r 8 -t 800
+        notify-send -i "$icon_dir/$ready_icon" "$label" "Unmuted" -r 8 -t 1000
     else
         wpctl set-mute "$target" 1
-        notify-send -i "$icon_dir/$muted_icon" "$label" "Muted" -r 8 -t 800
+        notify-send -i "$icon_dir/$muted_icon" "$label" "Muted" -r 8 -t 1000
     fi
 }
 

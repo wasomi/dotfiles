@@ -39,10 +39,11 @@ case "$action" in
 esac
 
 choose_icon() {
-    local brightness="$1"
-    if (( brightness <= 10 )); then
+    local brightness=$1
+
+    if [[ $brightness -le 30 ]]; then
         echo "$icon_dir/notification-display-brightness-low.svg"
-    elif (( brightness <= 50 )); then
+    elif [[ $brightness -le 70 ]]; then
         echo "$icon_dir/notification-display-brightness-medium.svg"
     else
         echo "$icon_dir/notification-display-brightness-full.svg"
@@ -62,7 +63,7 @@ change_brightness() {
 
     local icon=$(choose_icon "$level")
 
-    notify-send -i "$icon" "Brightness" "Level: ${level}%" -h "int:value:$level" -r 8 -t 800
+    notify-send -i "$icon" "Brightness" "${level}%" -h "int:value:$level" -r 8 -t 1000
 }
 
 change_brightness
