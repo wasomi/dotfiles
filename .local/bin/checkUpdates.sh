@@ -17,8 +17,8 @@ for cmd in paru checkupdates; do
     fi
 done
 
-official=$((checkupdates | wc -l))
-aur=$((paru -Qua | wc -l))
+official=$(checkupdates 2>/dev/null | wc -l)
+aur=$(paru -Qua 2>/dev/null | wc -l)
 total=$(( $official + $aur ))
 
 if [ "$total" -gt 0 ]; then

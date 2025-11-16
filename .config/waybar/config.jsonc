@@ -66,8 +66,9 @@
     },
 
     "clock": {
-        "format": "{:%d %b %H:%M}",
-        "format-alt": "{:%A, %d %B %Y %H:%M}",
+        "interval": 1,
+        "format": "{:%d %b %H:%M:%S}",
+        "format-alt": "{:%A, %d %B %Y %H:%M:%S}",
         "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
             "mode"          : "month",
@@ -148,7 +149,7 @@
     },
 
     "tray": {
-        "icon-size": 12,
+        "icon-size": 14,
         "spacing": 8,
         "reverse-direction": true
     },
