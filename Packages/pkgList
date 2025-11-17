@@ -2,7 +2,9 @@ hyprland
 hyprlock
 hypridle
 hyprpicker
-hyprshot
+grim
+satty
+slurp
 rofi-wayland
 rofi-emoji
 rofi-calc
@@ -41,3 +43,5 @@ imv
 mpv
 xdg-desktop-portal-hyprland
 pacman-contrib
+
+
