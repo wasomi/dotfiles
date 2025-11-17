@@ -28,6 +28,7 @@
 - [ ] gestures
 - [ ] showcase video
 - [ ] create envs to customize themes and other things
+- [ ] new screenshots
 
 ## thanks to
 
