@@ -26,6 +26,7 @@ waybar
 blueman
 dunst
 nemo
+nemo-fileroller
 swww
 polkit-gnome
 qt5-wayland
