@@ -19,11 +19,13 @@
         "hyprland/workspaces", 
         "mpd" 
     ],
+    
     "modules-center": [ 
         "idle_inhibitor", 
         "clock", 
         "power-profiles-daemon" 
     ],
+
     "modules-right": [ 
         "group/settings", 
         "tray", 
@@ -39,7 +41,13 @@
             "transition-duration": 400,
             "click-to-reveal": true
         },
-        "modules": [ "custom/settings-wrap", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight" ]
+        "modules": [ 
+            "custom/settings-wrap", 
+            "bluetooth", 
+            "pulseaudio#microphone", 
+            "pulseaudio", 
+            "backlight" 
+        ]
     },
 
     "group/hardware": {
@@ -49,7 +57,13 @@
             "transition-left-to-right": false,
             "click-to-reveal": true
         },
-        "modules": [ "custom/hardware-wrap", "temperature", "memory", "cpu", "disk" ]
+        "modules": [ 
+            "custom/hardware-wrap", 
+            "temperature", 
+            "memory", 
+            "cpu", 
+            "disk" 
+        ]
     },
 
     "include": [
