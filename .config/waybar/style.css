@@ -65,6 +65,7 @@ tooltip {
 #tray,
 #idle_inhibitor,
 #privacy,
+#mpd,
 #power-profiles-daemon,
 #custom-powermenu,
 #custom-update,
@@ -101,6 +102,7 @@ tooltip {
     margin: 2px 2px;
 }
 
+#mpd:hover,
 #language:hover,
 #battery:hover, 
 #pulseaudio:hover,

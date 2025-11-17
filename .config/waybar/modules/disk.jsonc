@@ -1,0 +1,7 @@
+{
+    "disk": {
+        "interval": 30,
+        "format": " {used} of {total}",
+        "tooltip": true
+    }
+}

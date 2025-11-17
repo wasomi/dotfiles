@@ -1,0 +1,7 @@
+{
+    "temperature": {
+        "interval": 2,
+        "format": "󰜗 {temperatureC}°C",
+        "tooltip": false
+    }
+}

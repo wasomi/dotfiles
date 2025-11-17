@@ -1,0 +1,7 @@
+{
+    "custom/powermenu": {
+        "format": "󰐥",
+        "on-click": "powerMenu.sh",
+        "tooltip": false
+    }
+}

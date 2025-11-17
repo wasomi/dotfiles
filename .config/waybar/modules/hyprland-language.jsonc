@@ -1,0 +1,8 @@
+{
+    "hyprland/language": {
+        "format-en": "us",
+        "format-ru": "ru",
+        "on-click": "hyprctl switchxkblayout juchen-usb-keyboard next",
+        "keyboard-name": "juchen-usb-keyboard"
+    }
+}

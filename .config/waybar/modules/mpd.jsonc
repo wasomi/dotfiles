@@ -1,0 +1,18 @@
+{
+    "mpd": {
+        "format": " {artist} / {title}",
+        "format-disconnected": "",
+        "format-stopped": "",
+        "interval": 1,
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": " {album}\n{stateIcon} {elapsedTime:%M:%S}/{totalTime:%M:%S}",
+        "tooltip-format-disconnected": "",
+        "on-click": "rmpc togglepause",
+        "on-right-click": "rmpc next",
+        "max-length": 32,
+        "min-length": 4
+    }
+}

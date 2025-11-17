@@ -7,7 +7,6 @@
 // 
 
 {
-    // global configuration
 
     "layer": "top",
     "position": "top",
@@ -16,11 +15,23 @@
     "margin-left": 6,
     "margin-right": 6,
 
-    "modules-left": [ "hyprland/workspaces" ],
-    "modules-center": [ "idle_inhibitor", "clock", "power-profiles-daemon" ],
-    "modules-right": [ "group/settings", "tray", "custom/update", "network", "battery", "hyprland/language" ],
-
-    // group
+    "modules-left": [ 
+        "hyprland/workspaces", 
+        "mpd" 
+    ],
+    "modules-center": [ 
+        "idle_inhibitor", 
+        "clock", 
+        "power-profiles-daemon" 
+    ],
+    "modules-right": [ 
+        "group/settings", 
+        "tray", 
+        "custom/update", 
+        "network", 
+        "battery", 
+        "hyprland/language" 
+    ],
 
     "group/settings": {
         "orientation": "horizontal",
@@ -31,11 +42,6 @@
         "modules": [ "custom/settings-wrap", "bluetooth", "pulseaudio#microphone", "pulseaudio", "backlight" ]
     },
 
-    "custom/settings-wrap": {
-        "format": "",
-        "tooltip": false
-    },
-
     "group/hardware": {
         "orientation": "horizontal",
         "drawer": {
@@ -43,241 +49,30 @@
             "transition-left-to-right": false,
             "click-to-reveal": true
         },
-        "modules": ["custom/hardware-wrap", "temperature", "memory", "cpu", "disk" ]
+        "modules": [ "custom/hardware-wrap", "temperature", "memory", "cpu", "disk" ]
     },
 
-    "custom/hardware-wrap": {
-        "format": "",
-        "tooltip": false
-    },
-
-    // module settings
-
-    "battery": {
-        "interval": 2,
-        "states": {
-            "critical": 15
-        },
-        "format": "{icon}",
-        "format-alt": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-not-charging": "",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
-
-    "clock": {
-        "interval": 1,
-        "format": "{:%d %b %H:%M:%S}",
-        "format-alt": "{:%A, %d %B %Y %H:%M:%S}",
-        "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
-        "calendar": {
-            "mode"          : "month",
-            "mode-mon-col"  : 3,
-            "on-scroll"     : 1,
-            "format": {
-                "months":     "<span color='#ffead3'><b>{}</b></span>",
-                "days":       "<b>{}</b>",
-                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        },  
-        "actions": {
-            "on-click-right": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
-    },
-
-    "hyprland/language": {
-        "format-en": "us",
-        "format-ru": "ru",
-        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
-        "keyboard-name": "at-translated-set-2-keyboard"
-    },
-
-    "hyprland/workspaces": {
-        "all-outputs": false,
-        "disable-scroll": true,
-        // "format": "{icon}",
-        "format": "{name}",
-        "format-icons": {
-            "default": "",
-            "active": "",
-            "empty": ""
-        },
-        "persistent-workspaces": {
-            "*": 5
-        }
-    },
-
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        // "format-bluetooth": " {icon} {volume}%",
-        "format-muted": "󰝟",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        // "tooltip-format": "{icon} {desc}",
-        "scroll-step": 5,
-        "on-click": "pavucontrol -t 3"
-    },
-
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": "󰍬 {volume}%",
-        "format-source-muted": "󰍭",
-        "on-click": "pavucontrol -t 4",
-        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
-        // "tooltip-format": "{format_source} {source_desc}",
-        "scroll-step": 5,
-        "max-volume": 100
-    },
-
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip": false
-    },
-
-    "tray": {
-        "icon-size": 14,
-        "spacing": 8,
-        "reverse-direction": true
-    },
-
-    "cpu": {
-        "interval": 10,
-        "format": " {usage}%",
-        "states": {
-          "critical": 90
-        }
-    },
-
-    "memory": {
-        "interval": 30,
-        "format": " {used}GiB",
-        "states": {
-          "critical": 90
-        },
-        "tooltip-format": "Memory usage: {percentage}%\nUsed: {used:0.2f}GB / {total:0.2f}GB\nSwap used: {swapUsed:0.2f}GB / {swapTotal:0.2f}GB ({swapPercentage}%)"
-    },
-
-    "temperature": {
-        "interval": 2,
-        "format": "󰜗 {temperatureC}°C",
-        "tooltip": false
-    },
-
-    "disk": {
-        "interval": 30,
-        "format": " {used} of {total}",
-        "tooltip": false
-    },
-
-    "network": {
-        "format-wifi": "{icon}",
-        "format-ethernet": "󰈀",
-        "format-disconnected": "󰤮", 
-        "tooltip-format-disconnected": "Disconnected",
-        // "tooltip-format": "Network: <b>{essid}</b>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-        "tooltip-format-wifi": "Network: <b>{essid}</b>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-        "tooltip-format-ethernet": "Interface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "on-click": "nmcli device wifi rescan && hyprctl dispatch exec '[float; center; pin; size: 800 600] kitty nmtui'"
-    },
-    
-    "bluetooth": {
-        "format": "",
-        "format-connected": " {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-        "format-disabled": "󰂲",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n{num_connections} connected\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-        "on-click": "blueman-manager"
-    },
-
-    "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
-        "format-icons": {
-            "default": "󱐋",
-            "performance": "󱐋",
-            "balanced": "󰗑",
-            "power-saver": "󰌪"
-        }
-    },
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰅶",
-            "deactivated": "󰾪"
-        },
-        "tooltip-format-activated": "Caffeine Mode Active",
-        "tooltip-format-deactivated": "Caffeine Mode Inactive"
-    },
-
-    "privacy": {
-        "icon-spacing": 8,
-        "icon-size": 14,
-        "transition-duration": 100,
-        "modules": [
-            {
-                "type": "screenshare",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            },
-            {
-                "type": "audio-out",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            },
-            {
-                "type": "audio-in",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            }
-        ],
-        "ignore-monitor": false,
-        "ignore": [
-            {
-                "type": "audio-in",
-                "name": "cava"
-            },
-            {
-                "type": "screenshare",
-                "name": "obs"
-            }
-        ]
-    },
-
-    // custom module settings
-
-    "custom/update": {
-        "format": "󰏗 {text}",
-        "interval": 86400, // once every day
-        "exec": "checkUpdates.sh",
-        "on-click": "hyprctl dispatch exec '[float; center; size: 1000 600] kitty systemUpdate.sh'",
-        "signal": 8,
-        "tooltip": true,
-        "return-type": "json"
-    }
-
-    // "custom/powermenu": {
-    //     "format": "󰐥",
-    //     "on-click": "powerMenu.sh",
-    //     "tooltip": false
-    // }
+    "include": [
+        "~/.dotfiles/.config/waybar/modules/backlight.jsonc",
+        "~/.dotfiles/.config/waybar/modules/battery.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/bluetooth.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/cpu.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/custom-hardware-wrap.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/custom-settings-wrap.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/custom-update.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/disk.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/hyprland-language.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/idle-inhibitor.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/memory.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/mpd.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/network.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/power-profiles-daemon.jsonc",
+        "~/.dotfiles/.config/waybar/modules/privacy.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/pulseaudio.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/temperature.jsonc", 
+        "~/.dotfiles/.config/waybar/modules/tray.jsonc"
+    ]
 }
