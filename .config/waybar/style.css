@@ -48,6 +48,7 @@ tooltip {
 .modules-right,
 .modules-center {
     /* background-color: @background; */
+    /* margin: 3px; */
 	background-color: alpha(@background,.5);
 }
 
