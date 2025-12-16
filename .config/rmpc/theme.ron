@@ -7,26 +7,26 @@
     draw_borders: true,
     format_tag_separator: " | ",
     browser_column_widths: [20, 38, 42],
-    background_color: "#13140c",
-    text_color: "#e5e3d6",
+    background_color: "#1a1111",
+    text_color: "#f0dede",
     header_background_color: None,
     modal_background_color: None,
-    preview_label_style: (fg: "#e5e3d6"),
-    preview_metadata_group_style: (fg: "#e5e3d6", modifiers: "Bold"),
+    preview_label_style: (fg: "#f0dede"),
+    preview_metadata_group_style: (fg: "#f0dede", modifiers: "Bold"),
     tab_bar: (
-        active_style: (fg: "#e2e993", bg: "#454a03", modifiers: "Bold"),
+        active_style: (fg: "#ffdad9", bg: "#733335", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "#c6cc7a", modifiers: "Bold"),
-    current_item_style: (fg: "#e2e993", bg: "#454a03", modifiers: "Bold"),
-    borders_style: (fg: "#c6cc7a"),
-    highlight_border_style: (fg: "#e5e3d6"),
+    highlighted_item_style: (fg: "#ffb3b3", modifiers: "Bold"),
+    current_item_style: (fg: "#ffdad9", bg: "#733335", modifiers: "Bold"),
+    borders_style: (fg: "#ffb3b3"),
+    highlight_border_style: (fg: "#f0dede"),
     symbols: (song: "", dir: "", playlist: "󰲸", marker: "󰄲 ", ellipsis: "..."),
     progress_bar: (
         symbols: ["█", "█", "█"],
-        track_style: (fg: "#47492e"),
-        elapsed_style: (fg: "#e4e5c1"),
-        thumb_style: (fg: "#e4e5c1"),
+        track_style: (fg: "#5d3f3f"),
+        elapsed_style: (fg: "#ffdad9"),
+        thumb_style: (fg: "#ffdad9"),
     ),
     scrollbar: (
         symbols: ["", "", "", ""],
@@ -79,7 +79,7 @@
         rows: [
             (
                 left: [
-                    (kind: Text(" "), style: (fg: "#c6cc7a")),
+                    (kind: Text(" "), style: (fg: "#ffb3b3")),
                     (kind: Property(Song(Title)),
                         default: (kind: Text("No Song"))
                     ),
@@ -89,17 +89,17 @@
                     ),
                 ],
                 center: [
-                    (kind: Property(Widget(ScanStatus)), style: (fg: "#e5e3d6")),
+                    (kind: Property(Widget(ScanStatus)), style: (fg: "#f0dede")),
                 ],
                 right: [
-                    (kind: Text("Volume: "), style: (fg: "#e5e3d6")),
-                    (kind: Property(Status(Volume)), style: (fg: "#e5e3d6")),
-                    (kind: Text("%"), style: (fg: "#e5e3d6"))
+                    (kind: Text("Volume: "), style: (fg: "#f0dede")),
+                    (kind: Property(Status(Volume)), style: (fg: "#f0dede")),
+                    (kind: Text("%"), style: (fg: "#f0dede"))
                 ]
             ),
             (
                 left: [
-                    (kind: Text(" "), style: (fg: "#c6cc7a")),
+                    (kind: Text(" "), style: (fg: "#ffb3b3")),
                     (kind: Property(Song(Album)),
                         default: (kind: Text("Unknown Album"))
                     )
@@ -111,7 +111,7 @@
             ),
             (
                 left: [
-                    (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "#c6cc7a")),
+                    (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "#ffb3b3")),
                     (kind: Text(" ")),
                     (kind: Property(Status(Elapsed))),
                     (kind: Text(" / ")),
@@ -123,8 +123,8 @@
                 right: [
                     (
                         kind: Property(Widget(States(
-                            active_style: (fg: "#e5e3d6", modifiers: "Bold"),
-                            separator_style: (fg: "#e5e3d6")))
+                            active_style: (fg: "#f0dede", modifiers: "Bold"),
+                            separator_style: (fg: "#f0dede")))
                         ),
                         style: (fg: "dark_gray")
                     ),

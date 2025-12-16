@@ -11,9 +11,9 @@
     "layer": "top",
     "position": "top",
 
-    "margin-top": 6,
-    "margin-left": 6,
-    "margin-right": 6,
+    // "margin-top": 6,
+    // "margin-left": 6,
+    // "margin-right": 6,
 
     "modules-left": [ 
         "hyprland/workspaces", 
@@ -38,7 +38,7 @@
     "group/settings": {
         "orientation": "horizontal",
         "drawer": {
-            "transition-duration": 400,
+            "transition-duration": 0,
             "click-to-reveal": true
         },
         "modules": [ 
@@ -53,7 +53,7 @@
     "group/hardware": {
         "orientation": "horizontal",
         "drawer": {
-            "transition-duration": 400,
+            "transition-duration": 0,
             "transition-left-to-right": false,
             "click-to-reveal": true
         },

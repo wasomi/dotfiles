@@ -2,7 +2,7 @@
     "hyprland/language": {
         "format-en": "en",
         "format-ru": "ru",
-        "on-click": "hyprctl switchxkblayout juchen-usb-keyboard next",
-        "keyboard-name": "juchen-usb-keyboard"
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+        "keyboard-name": "at-translated-set-2-keyboard"
     }
 }

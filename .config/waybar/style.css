@@ -29,9 +29,9 @@
 }
 
 #waybar {
-	/* background-color: alpha(@background,.5); */
+	background-color: alpha(@background,.5);
     /* background-color: @background; */
-    background-color: transparent;
+    /* background-color: transparent; */
 	color: @on_background;
     border-radius: unset;
 }
@@ -39,7 +39,7 @@
 tooltip {
     background-color: @background;
     /* background-color: alpha(@background,.5); */
-    border: solid 1px @primary;
+    border: solid 2px @primary;
 	color: white;
     border-radius: 8px;
 }
@@ -47,9 +47,9 @@ tooltip {
 .modules-left, 
 .modules-right,
 .modules-center {
-    /* background-color: @background; */
-    /* margin: 3px; */
-	background-color: alpha(@background,.5);
+    background-color: @background;
+    margin: 4px;
+	/* background-color: alpha(@background,.5); */
 }
 
 #language,
@@ -98,7 +98,7 @@ tooltip {
 }
 
 #workspaces button {
-    transition: all .2s ease;
+    /* transition: all .2s ease; */
     padding: 2px 8px;
     margin: 2px 2px;
 }
@@ -121,7 +121,7 @@ tooltip {
 #workspaces button.active:hover {
     background-color: @primary_container;
     color: @on_primary_container;
-    transition: all .2s ease;
+    /* transition: all .2s ease; */
     border-radius: 6px;
 }
 
