@@ -1,4 +1,6 @@
 [Default Applications]
+inode/directory=nemo.desktop
+x-directory/normal=nemo.desktop
 image/jpeg=imv.desktop
 image/png=imv.desktop
 image/svg+xml=imv.desktop
@@ -7,6 +9,8 @@ x-scheme-handler/tonsite=userapp-AyuGram Desktop-I494D3.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 
 [Added Associations]
+inode/directory=nemo.desktop
+x-directory/normal=nemo.desktop
 image/jpeg=imv.desktop;
 image/png=imv.desktop;
 image/svg+xml=imv.desktop;

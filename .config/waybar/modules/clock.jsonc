@@ -6,7 +6,7 @@
         "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
             "mode"          : "month",
-            "mode-mon-col"  : 3,
+            "mode-mon-col"  : 4,
             "on-scroll"     : 1,
             "format": {
                 "months":     "<span color='#ffead3'><b>{}</b></span>",
