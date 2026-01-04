@@ -1,16 +1,16 @@
-/* 
-*           __  __      __  __                      
-*    ____ _/ /_/ /__   / /_/ /_  ___  ____ ___  ___ 
+/*
+*           __  __      __  __
+*    ____ _/ /_/ /__   / /_/ /_  ___  ____ ___  ___
 *   / __ `/ __/ //_/  / __/ __ \/ _ \/ __ `__ \/ _ \
 *  / /_/ / /_/ ,<    / /_/ / / /  __/ / / / / /  __/
-*  \__, /\__/_/|_|   \__/_/ /_/\___/_/ /_/ /_/\___/ 
-* /____/                                                                  
+*  \__, /\__/_/|_|   \__/_/ /_/\___/_/ /_/ /_/\___/
+* /____/
 *
 * Generated with matugen
 *
 * Credits: https://github.com/Abhra00
 */
-
+/*
 @define-color accent_color #a8c8ff;
 @define-color accent_bg_color #254777;
 @define-color accent_fg_color #d6e3ff;
@@ -52,5 +52,22 @@
 .navigation-sidebar {
 	background-color: @sidebar_bg_color;
 	color: @window_fg_color;
-}
+}*/
 
+@define-color accent_color #a8c8ff;
+@define-color accent_fg_color #001b3c;
+@define-color accent_bg_color #a8c8ff;
+@define-color window_bg_color #111318;
+@define-color window_fg_color #e1e2e9;
+@define-color headerbar_bg_color #111318;
+@define-color headerbar_fg_color #e1e2e9;
+@define-color popover_bg_color #111318;
+@define-color popover_fg_color #e1e2e9;
+@define-color view_bg_color #111318;
+@define-color view_fg_color #e1e2e9;
+@define-color card_bg_color #111318;
+@define-color card_fg_color #e1e2e9;
+@define-color sidebar_bg_color @window_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_border_color @window_bg_color;
+@define-color sidebar_backdrop_color @window_bg_color;

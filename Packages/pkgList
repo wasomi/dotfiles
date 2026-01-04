@@ -25,8 +25,9 @@ brightnessctl
 waybar
 blueman
 dunst
-nemo
-nemo-fileroller
+thunar
+thunar-archive-plugin
+file-roller
 swww
 polkit-gnome
 qt5-wayland
@@ -39,6 +40,5 @@ bat
 imv
 mpv
 xdg-desktop-portal-hyprland
+xdg-dekstop-portal-gtk
 pacman-contrib
-
-
