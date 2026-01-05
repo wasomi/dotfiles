@@ -35,21 +35,29 @@ input_path = "./templates/gtk-colors.css"
 output_path = "~/.dotfiles/.config/gtk-4.0/colors.css"
 
 [templates.dunst]
-input_path = './templates/dunstrc-colors'
-output_path = '~/.dotfiles/.config/dunst/dunstrc'
+input_path = "./templates/dunstrc-colors"
+output_path = "~/.dotfiles/.config/dunst/dunstrc"
 
 [templates.qt6ct]
-input_path = './templates/qtct-colors.conf'
-output_path = '~/.dotfiles/.config/qt6ct/colors/matugen.conf'
+input_path = "./templates/qtct-colors.conf"
+output_path = "~/.dotfiles/.config/qt6ct/colors/matugen.conf"
 
 [templates.qt5ct]
-input_path = './templates/qtct-colors.conf'
-output_path = '~/.dotfiles/.config/qt5ct/colors/matugen.conf'
+input_path = "./templates/qtct-colors.conf"
+output_path = "~/.dotfiles/.config/qt5ct/colors/matugen.conf"
 
 [templates.btop]
-input_path = './templates/btop.theme'
-output_path = '~/.dotfiles/.config/btop/themes/matugen.theme'
+input_path = "./templates/btop.theme"
+output_path = "~/.dotfiles/.config/btop/themes/matugen.theme"
 
 [templates.rmpc]
 input_path = "./templates/rmpc-theme.ron"
 output_path = "~/.dotfiles/.config/rmpc/theme.ron"
+
+[templates.vesktop]
+input_path = "./templates/discord-theme.css"
+output_path = "~/.config/Vencord/themes/midnight-discord.css"
+
+[templates.vscode]
+input_path = "./templates/vscode-theme.jsonc"
+output_path = "~/.config/Code/User/settings.json"
