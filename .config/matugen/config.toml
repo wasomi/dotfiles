@@ -7,7 +7,7 @@
 
 [config.wallpaper]
 command = "swww"
-arguments = ["img", "--transition-type", "center", "--transition-fps", "60"]
+arguments = ["img", "--transition-type", "none"]
 set = true
 
 [templates.hyprland]

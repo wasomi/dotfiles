@@ -44,7 +44,8 @@ if [ -n "$selected_wall" ]; then
 
     matugen image "$WALL_PATH" -m "$mode"
 
-    gsettings set org.gnome.desktop.interface gtk-theme ""
+    gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
+    sleep 1
     gsettings set org.gnome.desktop.interface gtk-theme "$theme"
     gsettings set org.gnome.desktop.interface color-scheme prefer-$mode
     gsettings set org.gnome.desktop.interface icon-theme "$icons"
