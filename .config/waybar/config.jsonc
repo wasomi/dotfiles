@@ -6,87 +6,107 @@
 //              /____/                                           /____/   
 // 
 
-{
+[
+    {
+        "output": "HDMI-A-1",
+        "layer": "top",
+        "position": "top",
 
-    "layer": "top",
-    "position": "top",
+        "modules-left": [
+            "hyprland/workspaces",
+            "mpd"
+        ],
 
-    // "margin-top": 6,
-    // "margin-left": 6,
-    // "margin-right": 6,
+        "modules-center": [
+            "idle_inhibitor",
+            "clock",
+            "power-profiles-daemon"
+        ],
 
-    "modules-left": [ 
-        "hyprland/workspaces", 
-        "mpd" 
-    ],
-    
-    "modules-center": [ 
-        "idle_inhibitor", 
-        "clock", 
-        "power-profiles-daemon" 
-    ],
+        "modules-right": [
+            "group/settings",
+            "tray",
+            "custom/update",
+            "network",
+            "battery",
+            "hyprland/language"
+        ],
 
-    "modules-right": [ 
-        "group/settings", 
-        "tray", 
-        "custom/update", 
-        "network", 
-        "battery", 
-        "hyprland/language" 
-    ],
+        "include": [
+            "~/.dotfiles/.config/waybar/modules/backlight.jsonc",
+            "~/.dotfiles/.config/waybar/modules/battery.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/bluetooth.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/cpu.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-hardware-wrap.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-settings-wrap.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-update.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/disk.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/hyprland-language.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/idle-inhibitor.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/memory.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/mpd.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/network.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/power-profiles-daemon.jsonc",
+            "~/.dotfiles/.config/waybar/modules/privacy.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/pulseaudio.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/temperature.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/tray.jsonc"
+        ],
 
-    "group/settings": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 0,
-            "click-to-reveal": true
+        "group/settings": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 0,
+                "click-to-reveal": true
+            },
+            "modules": [ 
+                "custom/settings-wrap", 
+                "bluetooth", 
+                "pulseaudio#microphone", 
+                "pulseaudio", 
+                "backlight" 
+            ]
         },
-        "modules": [ 
-            "custom/settings-wrap", 
-            "bluetooth", 
-            "pulseaudio#microphone", 
-            "pulseaudio", 
-            "backlight" 
-        ]
+
+        "group/hardware": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 0,
+                "transition-left-to-right": false,
+                "click-to-reveal": true
+            },
+            "modules": [ 
+                "custom/hardware-wrap", 
+                "temperature", 
+                "memory", 
+                "cpu", 
+                "disk" 
+            ]
+        }
+
     },
 
-    "group/hardware": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 0,
-            "transition-left-to-right": false,
-            "click-to-reveal": true
-        },
-        "modules": [ 
-            "custom/hardware-wrap", 
-            "temperature", 
-            "memory", 
-            "cpu", 
-            "disk" 
-        ]
-    },
+    {
+        "output": "DP-3",
+        "layer": "top",
+        "position": "top",
 
-    "include": [
-        "~/.dotfiles/.config/waybar/modules/backlight.jsonc",
-        "~/.dotfiles/.config/waybar/modules/battery.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/bluetooth.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/cpu.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/custom-hardware-wrap.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/custom-settings-wrap.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/custom-update.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/disk.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/hyprland-language.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/idle-inhibitor.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/memory.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/mpd.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/network.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/power-profiles-daemon.jsonc",
-        "~/.dotfiles/.config/waybar/modules/privacy.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/pulseaudio.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/temperature.jsonc", 
-        "~/.dotfiles/.config/waybar/modules/tray.jsonc"
-    ]
-}
+        "modules-left": [
+            "hyprland/workspaces"
+        ],
+
+        "modules-right": [
+            "clock"
+        ],
+
+        "include": [
+            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
+        ]
+    }
+]
+
+

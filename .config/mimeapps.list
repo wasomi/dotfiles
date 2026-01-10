@@ -5,8 +5,9 @@ image/jpeg=imv.desktop
 image/png=imv.desktop
 image/svg+xml=imv.desktop
 audio/flac=mpv.desktop
-x-scheme-handler/tg=userapp-AyuGram Desktop-IP7GI3.desktop
-x-scheme-handler/tonsite=userapp-AyuGram Desktop-Z91GI3.desktop
+text/plain=code.desktop
+application/json=code.desktop
+application/x-shellscript=code.desktop
 
 [Added Associations]
 inode/directory=nemo.desktop;
@@ -15,5 +16,6 @@ image/jpeg=imv.desktop;
 image/png=imv.desktop;
 image/svg+xml=imv.desktop;
 audio/flac=mpv.desktop;
-x-scheme-handler/tg=userapp-AyuGram Desktop-IP7GI3.desktop;
-x-scheme-handler/tonsite=userapp-AyuGram Desktop-Z91GI3.desktop;
+text/plain=code.desktop;
+application/json=code.desktop;
+application/x-shellscript=code.desktop;
