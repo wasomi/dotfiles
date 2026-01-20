@@ -135,10 +135,12 @@ else
     print_error "Fish shell is not installed."
 fi
 
+# Docker packages
+print_info ""
 read -p "Do you want to install Docker? (y/n): " install_docker
 if [[ $install_docker =~ ^[Yy]$ ]]; then
     print_info "Installing Docker packages..."
-    sudo pacman -S --needed docker docker-compose
+    sudo pacman -S --needed  --noconfirm docker docker-compose
     
     print_info "Adding user to docker group..."
     sudo usermod -aG docker "$USER"
@@ -147,15 +149,30 @@ if [[ $install_docker =~ ^[Yy]$ ]]; then
 fi
 
 # Virtualization packages
+print_info ""
 read -p "Do you want to install virtualization tools (QEMU/KVM)? (y/n): " install_virt
 if [[ $install_virt =~ ^[Yy]$ ]]; then
     print_info "Installing virtualization packages..."
-    sudo pacman -S --needed virt-manager qemu-desktop dnsmasq
+    sudo pacman -S --needed  --noconfirm virt-manager qemu-desktop dnsmasq
     
     print_info "Adding user to libvirt group..."
     sudo usermod -aG libvirt "$USER"
     
     print_info "Virtualization tools installed successfully."
+fi
+
+# MPD and RMPC installation
+print_info ""
+read -p "Do you want to install music packages (MPD + RMPC)? (y/n): " install_music
+if [[ $install_music =~ ^[Yy]$ ]]; then
+    print_info "Installing music packages..."
+    sudo pacman -S --needed --noconfirm mpd rmpc
+    
+    print_info "Enabling and starting MPD service..."
+    systemctl --user enable mpd.service
+    systemctl --user start mpd.service
+    
+    print_info "Music packages installed successfully."
 fi
 
 # Optional packages installation
@@ -166,32 +183,26 @@ if [[ $install_optional =~ ^[Yy]$ ]]; then
     print_info "Installing optional packages..."
     
     if [ -f "$HOME/.dotfiles/Packages/Optional/pkgList" ]; then
-        sudo pacman -S --needed - < "$HOME/.dotfiles/Packages/Optional/pkgList"
+        sudo pacman -S --needed --noconfirm - < "$HOME/.dotfiles/Packages/Optional/pkgList"
     fi
     
     if [ -f "$HOME/.dotfiles/Packages/Optional/aurPkgList" ]; then
-        paru -S --needed - < "$HOME/.dotfiles/Packages/Optional/aurPkgList"
+        paru -S --needed --noconfirm - < "$HOME/.dotfiles/Packages/Optional/aurPkgList"
     fi
-    
-    # Add user to groups
-    print_info "Adding user to libvirt and docker groups..."
-    sudo usermod -aG libvirt "$USER"
-    sudo usermod -aG docker "$USER"
-    print_info "User added to groups. You'll need to log out and back in for group changes to take effect."
 fi
 
 # Final message
-print_info ""
+echo ""
 print_info "Installation completed successfully!"
-print_info ""
-print_info "Next steps:"
-print_info "1. Reboot your system"
-print_info "2. If you don't have a display manager, start Hyprland with: h"
-print_info "3. Change wallpaper using: Super + W"
-print_info ""
+echo ""
+print_info "P.S."
+print_info "If you don't have a display manager, you can start Hyprland with: h"
+print_info "Change wallpaper using: Super + W"
+echo ""
 print_warning "Please reboot your system for all changes to take effect."
-print_info ""
+echo ""
 
+print_warning ""
 read -p "Do you want to reboot now? (y/n): " reboot_now
 if [[ $reboot_now =~ ^[Yy]$ ]]; then
     sudo reboot
