@@ -136,7 +136,6 @@ else
 fi
 
 # Docker packages
-print_info ""
 read -p "Do you want to install Docker? (y/n): " install_docker
 if [[ $install_docker =~ ^[Yy]$ ]]; then
     print_info "Installing Docker packages..."
@@ -149,7 +148,6 @@ if [[ $install_docker =~ ^[Yy]$ ]]; then
 fi
 
 # Virtualization packages
-print_info ""
 read -p "Do you want to install virtualization tools (QEMU/KVM)? (y/n): " install_virt
 if [[ $install_virt =~ ^[Yy]$ ]]; then
     print_info "Installing virtualization packages..."
@@ -162,7 +160,6 @@ if [[ $install_virt =~ ^[Yy]$ ]]; then
 fi
 
 # MPD and RMPC installation
-print_info ""
 read -p "Do you want to install music packages (MPD + RMPC)? (y/n): " install_music
 if [[ $install_music =~ ^[Yy]$ ]]; then
     print_info "Installing music packages..."
@@ -176,7 +173,6 @@ if [[ $install_music =~ ^[Yy]$ ]]; then
 fi
 
 # Optional packages installation
-print_info ""
 read -p "Do you want to install optional packages? (y/n): " install_optional
 
 if [[ $install_optional =~ ^[Yy]$ ]]; then
@@ -202,7 +198,6 @@ echo ""
 print_warning "Please reboot your system for all changes to take effect."
 echo ""
 
-print_warning ""
 read -p "Do you want to reboot now? (y/n): " reboot_now
 if [[ $reboot_now =~ ^[Yy]$ ]]; then
     sudo reboot
