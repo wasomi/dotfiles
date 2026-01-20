@@ -44,7 +44,7 @@ print_info "Step 1: Installing packages..."
 
 if [ -f "$HOME/.dotfiles/Packages/pkgList" ]; then
     print_info "Installing official packages..."
-    if sudo pacman -S --needed --nocofirm - < "$HOME/.dotfiles/Packages/pkgList"; then
+    if sudo pacman -S --needed --noconfirm - < "$HOME/.dotfiles/Packages/pkgList"; then
         print_info "Official packages installed successfully."
     else
         print_error "Failed to install some official packages."
@@ -66,7 +66,7 @@ fi
 # Install AUR packages
 if [ -f "$HOME/.dotfiles/Packages/aurPkgList" ]; then
     print_info "Installing AUR packages..."
-    if paru -S --needed --nocofirm - < "$HOME/.dotfiles/Packages/aurPkgList"; then
+    if paru -S --needed --noconfirm - < "$HOME/.dotfiles/Packages/aurPkgList"; then
         print_info "AUR packages installed successfully."
     else
         print_error "Failed to install some AUR packages."
