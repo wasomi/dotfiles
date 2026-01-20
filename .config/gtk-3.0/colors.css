@@ -11,32 +11,32 @@
 * Credits: https://github.com/Abhra00
 */
 
-@define-color accent_color #84d6c2;
-@define-color accent_bg_color #005144;
-@define-color accent_fg_color #a0f2de;
+@define-color accent_color #96d5a7;
+@define-color accent_bg_color #11512e;
+@define-color accent_fg_color #b1f1c1;
 @define-color destructive_color #ffb4ab;
 @define-color destructive_bg_color #93000a;
 @define-color destructive_fg_color #ffdad6;
-@define-color success_color #b1ccc4;
-@define-color success_bg_color #334b45;
-@define-color success_fg_color #cde8e0;
-@define-color warning_color #aacbe4;
-@define-color warning_bg_color #2a4a5f;
-@define-color warning_fg_color #c8e6ff;
+@define-color success_color #b6ccb9;
+@define-color success_bg_color #384b3c;
+@define-color success_fg_color #d2e8d4;
+@define-color warning_color #a2cdda;
+@define-color warning_bg_color #214c57;
+@define-color warning_fg_color #beeaf6;
 @define-color error_color #ffb4ab;
 @define-color error_bg_color #93000a;
 @define-color error_fg_color #ffdad6;
-@define-color window_bg_color #0e1513;
-@define-color window_fg_color #dee4e0;
-@define-color view_bg_color #0e1513;
-@define-color view_fg_color #dee4e0;
+@define-color window_bg_color #101510;
+@define-color window_fg_color #dfe4dd;
+@define-color view_bg_color #101510;
+@define-color view_fg_color #dfe4dd;
 @define-color headerbar_bg_color @window_bg_color;
 @define-color headerbar_fg_color @window_fg_color;
 @define-color headerbar_border_color @window_bg_color;
 @define-color headerbar_backdrop_color @window_bg_color;
 @define-color headerbar_shade_color @window_bg_color;
-@define-color card_bg_color #252b29;
-@define-color card_fg_color #dee4e0;
+@define-color card_bg_color #262b27;
+@define-color card_fg_color #dfe4dd;
 @define-color card_shade_color rgba(0, 0, 0, 0.07);
 @define-color dialog_bg_color @card_bg_color;
 @define-color dialog_fg_color @card_fg_color;
@@ -44,7 +44,7 @@
 @define-color popover_fg_color @card_fg_color;
 @define-color shade_color rgba(0, 0, 0, 0.36);
 @define-color scrollbar_outline_color rgba(139, 145, 152, 0.5);
-@define-color sidebar_bg_color #171d1b;
+@define-color sidebar_bg_color #181d18;
 @define-color secondary_sidebar_bg_color @sidebar_bg_color;
 @define-color sidebar_backdrop_color @sidebar_bg_color;
 @define-color secondary_sidebar_backdrop_color @sidebar_bg_color;

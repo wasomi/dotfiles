@@ -8,6 +8,8 @@ audio/flac=mpv.desktop
 text/plain=code.desktop
 application/json=code.desktop
 application/x-shellscript=code.desktop
+x-scheme-handler/tg=userapp-AyuGram Desktop-YUEBJ3.desktop
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-FILBJ3.desktop
 
 [Added Associations]
 inode/directory=nemo.desktop;
@@ -19,3 +21,5 @@ audio/flac=mpv.desktop;
 text/plain=code.desktop;
 application/json=code.desktop;
 application/x-shellscript=code.desktop;
+x-scheme-handler/tg=userapp-AyuGram Desktop-YUEBJ3.desktop;
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-FILBJ3.desktop;

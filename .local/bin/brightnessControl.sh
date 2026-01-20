@@ -8,7 +8,6 @@
 #               /____/                                                                                       
 #
 # Credits: ai
-# Edited by: wasomi
 
 icon_dir="/usr/share/icons/Papirus/48x48@2x/status"
 default_step=5

@@ -7,8 +7,6 @@
 #  |___/\____/_/\__,_/_/ /_/ /_/\___/\____/\____/_/ /_/\__/_/   \____/_/  (_)  /____/_/ /_/ 
 #                                                 
 # Credits: ai
-# Edited by: wasomi
-
 
 icon_dir="/usr/share/icons/Papirus/16x16/panel"
 default_step=5

@@ -8,7 +8,6 @@
 #                                /_/                                                   
 #
 # Credits: ai
-# Edited by: wasomi
 
 for cmd in paru checkupdates; do
     if ! command -v "$cmd" >/dev/null 2>&1; then

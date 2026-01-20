@@ -8,7 +8,6 @@
 #  /_/                                                                                                                                                                                      
 # 
 # Credits: https://github.com/Zproger
-# Edited by: wasomi
 
 for cmd in rofi; do
     if ! command -v "$cmd" >/dev/null 2>&1; then

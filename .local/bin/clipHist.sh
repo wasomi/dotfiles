@@ -8,7 +8,6 @@
 #         /_/   
 #
 # Credits: https://github.com/sentriz
-# Edited by: wasomi
 
 for cmd in cliphist wl-copy; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
@@ -17,8 +16,17 @@ for cmd in cliphist wl-copy; do
     fi
 done
 
+clear=" Clear clipboard..."
+icon_dir="/usr/share/icons/Papirus/16x16/status"
+
 if [ -z "$1" ]; then
+    echo $clear
     cliphist list
 else
-    cliphist decode <<<"$1" | wl-copy
+    if [ "$1" = "$clear" ]; then
+        cliphist wipe
+        notify-send -i "$icon_dir/package-install.svg" "Clipboard" "Cleared!" -r 8 -t 2500
+    else
+        cliphist decode <<<"$1" | wl-copy
+    fi
 fi

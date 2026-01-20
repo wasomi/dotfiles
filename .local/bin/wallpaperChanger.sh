@@ -8,7 +8,6 @@
 #                  /_/         /_/                                      /____/                               
 #
 # Credits: https://www.youtube.com/@sane1090x
-# Edited by: wasomi
 
 wall_dir="$HOME/Pictures/Wallpapers"
 rofi_config="$HOME/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi"

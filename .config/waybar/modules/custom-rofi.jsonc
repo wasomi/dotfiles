@@ -1,0 +1,7 @@
+{
+    "custom/rofi": {
+        "format": "",
+        "on-click": "rofi -show drun -config ~/.dotfiles/.config/rofi/styles/appLauncher.rasi",
+        "tooltip": false
+    }
+}

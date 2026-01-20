@@ -8,11 +8,12 @@
 
 [
     {
-        "output": "HDMI-A-1",
+        "output": "eDP-1",
         "layer": "top",
         "position": "top",
 
         "modules-left": [
+            "custom/rofi",
             "hyprland/workspaces",
             "mpd"
         ],
@@ -25,11 +26,11 @@
 
         "modules-right": [
             "group/settings",
-            "tray",
+            "hyprland/language",
             "custom/update",
             "network",
             "battery",
-            "hyprland/language"
+            "custom/powermenu"
         ],
 
         "include": [
@@ -40,6 +41,7 @@
             "~/.dotfiles/.config/waybar/modules/cpu.jsonc", 
             "~/.dotfiles/.config/waybar/modules/custom-hardware-wrap.jsonc", 
             "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-rofi.jsonc", 
             "~/.dotfiles/.config/waybar/modules/custom-settings-wrap.jsonc", 
             "~/.dotfiles/.config/waybar/modules/custom-update.jsonc", 
             "~/.dotfiles/.config/waybar/modules/disk.jsonc", 
@@ -59,11 +61,12 @@
         "group/settings": {
             "orientation": "horizontal",
             "drawer": {
-                "transition-duration": 0,
+                "transition-duration": 240,
                 "click-to-reveal": true
             },
             "modules": [ 
                 "custom/settings-wrap", 
+                "tray",
                 "bluetooth", 
                 "pulseaudio#microphone", 
                 "pulseaudio", 
@@ -74,7 +77,7 @@
         "group/hardware": {
             "orientation": "horizontal",
             "drawer": {
-                "transition-duration": 0,
+                "transition-duration": 240,
                 "transition-left-to-right": false,
                 "click-to-reveal": true
             },
@@ -103,7 +106,7 @@
         ],
 
         "include": [
-            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/clock.jsonc",
             "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
         ]
     }

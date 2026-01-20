@@ -30,18 +30,16 @@
 
 #waybar {
 	background-color: alpha(@background,.5);
-    /* background-color: @background; */
-    /* background-color: transparent; */
 	color: @on_background;
     border-radius: unset;
 }
 
 tooltip {
     background-color: @background;
-    /* background-color: alpha(@background,.5); */
     border: solid 2px @primary;
-	color: white;
+	color: @on_background;
     border-radius: 8px;
+    box-shadow: 0px 0px 2px @shadow;
 }
 
 .modules-left, 
@@ -49,7 +47,7 @@ tooltip {
 .modules-center {
     background-color: @background;
     margin: 4px;
-	/* background-color: alpha(@background,.5); */
+    box-shadow: 0px 0px 2px @shadow;
 }
 
 #language,
@@ -71,7 +69,8 @@ tooltip {
 #custom-powermenu,
 #custom-update,
 #custom-settings-wrap,
-#custom-hardware-wrap {
+#custom-hardware-wrap,
+#custom-rofi {
     padding: 2px 8px;
     margin: 2px 2px;
 }
@@ -116,12 +115,13 @@ tooltip {
 #custom-settings-wrap:hover,
 #custom-hardware-wrap:hover,
 #custom-powermenu:hover,
+#custom-rofi:hover,
 #workspaces button:hover, 
 #workspaces button.empty:hover,
 #workspaces button.active:hover {
     background-color: @primary_container;
     color: @on_primary_container;
-    /* transition: all .2s ease; */
+    transition: all .2s ease;
     border-radius: 6px;
 }
 

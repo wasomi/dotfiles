@@ -8,7 +8,6 @@
 #       /____/                             /_/   
 #
 # Credits: ai
-# Edited by: wasomi
 
 icon_dir="/usr/share/icons/Papirus/16x16/status"
 
@@ -29,10 +28,19 @@ echo
 
 if paru -Syu; then
     echo -e "\n${green}::${reset} System update completed successfully!"
-    notify-send -i "$icon_dir/package-install.svg" "System Update" "Packages updated successfully!" -r 8 -t 2500 2>/dev/null
+    notify-send -i "$icon_dir/package-install.svg" "System Update" "Packages updated successfully!" -r 8 -t 2500
+
+    echo
+    echo -en "${yellow}::${reset} Do you want to reboot now? (y/N): "
+    read -r response
+    if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+        echo -e "${red}::${reset} Rebooting system..."
+        sleep 1
+        systemctl reboot
+    fi
 else
     echo -e "\n${red}::${reset} System update failed..."
-    notify-send -i "$icon_dir/package-purge.svg" "System Update" "An error occurred during update..." -r 8 -t 2500 2>/dev/null
+    notify-send -i "$icon_dir/package-purge.svg" "System Update" "An error occurred during update..." -r 8 -t 2500
 fi
 
 if pgrep -x waybar >/dev/null; then
