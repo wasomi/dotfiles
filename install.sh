@@ -126,7 +126,8 @@ fi
 
 echo -e "${BLUE}[4/4]${NC} Installing optional packages..."
 # Docker packages
-read -p "${YELLOW}[?]${NC} Do you want to install Docker? (y/N): " install_docker
+echo -e -n "${YELLOW}[?]${NC} Do you want to install Docker? (y/N): "
+read install_docker
 if [[ $install_docker =~ ^[Yy]$ ]]; then
     echo -e "${BLUE}[*]${NC} Installing Docker packages..."
     sudo pacman -S --needed  --noconfirm docker docker-compose
@@ -138,7 +139,8 @@ if [[ $install_docker =~ ^[Yy]$ ]]; then
 fi
 
 # Virtualization packages
-read -p "${YELLOW}[?]${NC} Do you want to install virtualization tools (QEMU/KVM)? (y/N): " install_virt
+echo -e -n "${YELLOW}[?]${NC} Do you want to install virtualization tools (QEMU/KVM)? (y/N): " 
+read install_virt
 if [[ $install_virt =~ ^[Yy]$ ]]; then
     echo -e "${BLUE}[*]${NC} Installing virtualization packages..."
     sudo pacman -S --needed  --noconfirm virt-manager qemu-desktop dnsmasq
@@ -150,7 +152,8 @@ if [[ $install_virt =~ ^[Yy]$ ]]; then
 fi
 
 # MPD and RMPC installation
-read -p "${YELLOW}[?]${NC} Do you want to install music packages (MPD + RMPC)? (y/N): " install_music
+echo -e -n "${YELLOW}[?]${NC} Do you want to install music packages (MPD + RMPC)? (y/N): " 
+read install_music
 if [[ $install_music =~ ^[Yy]$ ]]; then
     echo -e "${BLUE}[*]${NC} Installing music packages..."
     sudo pacman -S --needed --noconfirm mpd rmpc
@@ -163,7 +166,8 @@ if [[ $install_music =~ ^[Yy]$ ]]; then
 fi
 
 # Optional packages installation
-read -p "${YELLOW}[?]${NC} Do you want to install optional packages? (y/N): " install_optional
+echo -e -n "${YELLOW}[?]${NC} Do you want to install optional packages? (y/N): " 
+read install_optional
 
 if [[ $install_optional =~ ^[Yy]$ ]]; then
     echo -e "${BLUE}[*]${NC} Installing optional packages..."
@@ -188,7 +192,8 @@ echo ""
 echo -e "${RED}[!]${NC} Please reboot your system for all changes to take effect."
 echo ""
 
-read -p "${YELLOW}[?]${NC} Do you want to reboot now? (y/N): " reboot_now
+echo -e -n "${YELLOW}[?]${NC} Do you want to reboot now? (y/N): " 
+read reboot_now
 if [[ $reboot_now =~ ^[Yy]$ ]]; then
     reboot
 fi
