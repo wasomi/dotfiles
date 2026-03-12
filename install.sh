@@ -28,7 +28,7 @@ fi
 
 echo -e "${BLUE}[*]${NC} Starting dotfiles installation..."
 
-echo -e "${BLUE}[1/4]${NC} Installing packages..."
+echo -e "${BLUE}[1/5]${NC} Installing packages..."
 
 if [ -f "$HOME/.dotfiles/Packages/pkgList" ]; then
     echo -e "${BLUE}[*]${NC} Installing official packages..."
@@ -63,8 +63,7 @@ else
     echo -e "${RED}[!]${NC} AUR package list not found: ~/.dotfiles/Packages/aurPkgList"
 fi
 
-# Step 2: Create symbolic links
-echo -e "${BLUE}[2/4]${NC} Creating symbolic links..."
+echo -e "${BLUE}[2/5]${NC} Creating symbolic links..."
 
 # Create .config directory if it doesn't exist
 echo -e "${BLUE}[*]${NC} Creating directories..."
@@ -111,8 +110,7 @@ if [ -d "$HOME/.dotfiles/Pictures/Wallpapers" ]; then
     fi
 fi
 
-# Step 3: Change default shell to fish
-echo -e "${BLUE}[3/4]${NC} Changing default shell to fish..."
+echo -e "${BLUE}[3/5]${NC} Changing default shell to fish..."
 if command_exists fish; then
     FISH_PATH=$(which fish)
     if chsh -s "$FISH_PATH"; then
@@ -124,7 +122,14 @@ else
     echo -e "${RED}[!]${NC} Fish shell is not installed..."
 fi
 
-echo -e "${BLUE}[4/4]${NC} Installing optional packages..."
+echo -e "${BLUE}[4/5]${NC} Changing folders color..."
+papirus-folders -C grey
+
+echo -e "${BLUE}[5/6]${NC} Adding user to gamemode group..."
+sudo usermod -aG gamemode "$USER"
+
+echo -e "${BLUE}[6/6]${NC} Installing optional packages..."
+
 # Docker packages
 echo -e -n "${YELLOW}[?]${NC} Do you want to install Docker? (y/N): "
 read install_docker
@@ -181,7 +186,7 @@ if [[ $install_optional =~ ^[Yy]$ ]]; then
     fi
 fi
 
-# Final message
+# change da world. my final message. goodbye
 echo ""
 echo -e "${GREEN}[+]${NC} Installation completed successfully!"
 echo ""

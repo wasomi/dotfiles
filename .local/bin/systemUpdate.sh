@@ -26,7 +26,7 @@ done
 echo -e "${yellow}::${reset} Starting system update..."
 echo
 
-if paru -Syu; then
+if paru -Syu --noconfirm; then
     echo -e "\n${green}::${reset} System update completed successfully!"
     notify-send -i "$icon_dir/package-install.svg" "System Update" "Packages updated successfully!" -r 8 -t 2500
 

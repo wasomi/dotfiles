@@ -41,7 +41,7 @@ cd - > /dev/null || exit 1
 if [ -n "$selected_wall" ]; then
     WALL_PATH="$wall_dir/$selected_wall"
 
-    matugen image "$WALL_PATH" -m "$mode"
+    matugen image "$WALL_PATH" -m "$mode" --source-color-index 0
 
     gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
     sleep 1

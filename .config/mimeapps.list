@@ -1,6 +1,6 @@
 [Default Applications]
-inode/directory=nemo.desktop
-x-directory/normal=nemo.desktop
+inode/directory=thunar.desktop
+x-directory/normal=thunar.desktop
 image/jpeg=imv.desktop
 image/png=imv.desktop
 image/svg+xml=imv.desktop
@@ -8,12 +8,11 @@ audio/flac=mpv.desktop
 text/plain=code.desktop
 application/json=code.desktop
 application/x-shellscript=code.desktop
-x-scheme-handler/tg=userapp-AyuGram Desktop-YUEBJ3.desktop
-x-scheme-handler/tonsite=userapp-AyuGram Desktop-FILBJ3.desktop
+x-scheme-handler/discord=vesktop.desktop
 
 [Added Associations]
-inode/directory=nemo.desktop;
-x-directory/normal=nemo.desktop;
+inode/directory=thunar.desktop;
+x-directory/normal=thunar.desktop;
 image/jpeg=imv.desktop;
 image/png=imv.desktop;
 image/svg+xml=imv.desktop;
@@ -21,5 +20,4 @@ audio/flac=mpv.desktop;
 text/plain=code.desktop;
 application/json=code.desktop;
 application/x-shellscript=code.desktop;
-x-scheme-handler/tg=userapp-AyuGram Desktop-YUEBJ3.desktop;
-x-scheme-handler/tonsite=userapp-AyuGram Desktop-FILBJ3.desktop;
+
