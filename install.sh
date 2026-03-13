@@ -73,17 +73,15 @@ mkdir -p "$HOME/Pictures"
 
 # Link all folders from .dotfiles/.config
 if [ -d "$HOME/.dotfiles/.config" ]; then
-    for dir in "$HOME/.dotfiles/.config"/*; do
-        if [ -d "$dir" ]; then
-            dirname=$(basename "$dir")
-            target="$HOME/.config/$dirname"
-                        
-            if [ -L "$target" ]; then
-                echo -e "${RED}[!]${NC} Symlink already exists: $target"
-            else
-                ln -s "$dir" "$target"
-                echo -e "${GREEN}[+]${NC} Created symlink: $target"
-            fi
+    for entry in "$HOME/.dotfiles/.config"/*; do
+        entryname=$(basename "$entry")
+        target="$HOME/.config/$entryname"
+                    
+        if [ -L "$target" ]; then
+            echo -e "${RED}[!]${NC} Symlink already exists: $target"
+        else
+            ln -s "$entry" "$target"
+            echo -e "${GREEN}[+]${NC} Created symlink: $target"
         fi
     done
 else
