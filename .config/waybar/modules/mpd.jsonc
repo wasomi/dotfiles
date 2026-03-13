@@ -3,7 +3,7 @@
         "format": "{stateIcon}",
         "format-disconnected": "",
         "format-stopped": "",
-        "interval": 1,
+        "interval": 0.5,
         "state-icons": {
             "paused": "",
             "playing": ""
