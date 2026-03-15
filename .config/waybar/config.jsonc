@@ -8,7 +8,7 @@
 
 [
     {
-        "output": "eDP-1",
+        "output": "HDMI-A-1",
         "layer": "top",
         "position": "top",
 
@@ -26,10 +26,10 @@
 
         "modules-right": [
             "group/settings",
-            "hyprland/language",
+            "tray",
             "custom/update",
+            "hyprland/language",
             "network",
-            "battery",
             "custom/powermenu"
         ],
 
@@ -66,11 +66,8 @@
             },
             "modules": [ 
                 "custom/settings-wrap", 
-                "tray",
-                "bluetooth", 
                 "pulseaudio#microphone", 
-                "pulseaudio", 
-                "backlight" 
+                "pulseaudio"
             ]
         },
 
@@ -93,21 +90,16 @@
     },
 
     {
-        "output": "DP-3",
+        "output": "DP-1",
         "layer": "top",
         "position": "top",
 
-        "modules-left": [
-            "hyprland/workspaces"
-        ],
-
-        "modules-right": [
+        "modules-center": [
             "clock"
         ],
 
         "include": [
-            "~/.dotfiles/.config/waybar/modules/clock.jsonc",
-            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
+            "~/.dotfiles/.config/waybar/modules/clock.jsonc"
         ]
     }
 ]

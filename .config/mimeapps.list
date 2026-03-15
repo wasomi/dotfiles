@@ -9,6 +9,7 @@ text/plain=code.desktop
 application/json=code.desktop
 application/x-shellscript=code.desktop
 x-scheme-handler/discord=vesktop.desktop
+application/x-zerosize=code.desktop
 
 [Added Associations]
 inode/directory=thunar.desktop;
@@ -20,4 +21,4 @@ audio/flac=mpv.desktop;
 text/plain=code.desktop;
 application/json=code.desktop;
 application/x-shellscript=code.desktop;
-
+application/x-zerosize=code.desktop;
