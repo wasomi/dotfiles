@@ -123,10 +123,7 @@ fi
 echo -e "${BLUE}[4/5]${NC} Changing folders color..."
 papirus-folders -C grey
 
-echo -e "${BLUE}[5/6]${NC} Adding user to gamemode group..."
-sudo usermod -aG gamemode "$USER"
-
-echo -e "${BLUE}[6/6]${NC} Installing optional packages..."
+echo -e "${BLUE}[5/5]${NC} Installing optional packages..."
 
 # Docker packages
 echo -e -n "${YELLOW}[?]${NC} Do you want to install Docker? (y/N): "
@@ -166,6 +163,20 @@ if [[ $install_music =~ ^[Yy]$ ]]; then
     systemctl --user start mpd.service
     
     echo -e "${GREEN}[+]${NC} Music packages installed successfully."
+fi
+
+# Gamemode, Steam, MangoHUD and MangoJuice installation
+echo -e -n "${YELLOW}[?]${NC} Do you want to install gaming packages (Gamemode, Steam, MangoHUD, MangoJuice)? (y/N): " 
+read install_gaming
+if [[ $install_gaming =~ ^[Yy]$ ]]; then
+    echo -e "${BLUE}[*]${NC} Installing gaming packages..."
+    sudo pacman -S --needed --noconfirm steam gamemode mangohud
+    sudo paru -S --needed -noconfirm mangojuice
+    
+    echo -e "${BLUE}[*]${NC} Adding user to gamemode group..."
+    sudo usermod -aG gamemode "$USER"
+    
+    echo -e "${GREEN}[+]${NC} Gaming packages installed successfully."
 fi
 
 # Optional packages installation
