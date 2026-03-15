@@ -5,8 +5,7 @@ if test -d ~/.local/bin
 end
 
 function fish_greeting
-    # fastfetch
-    # kotofetch
+    fastfetch
 end
 
 if status is-interactive

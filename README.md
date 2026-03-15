@@ -15,16 +15,15 @@
 
 ## docs
 
-- [installation](Docs/install.md)
+- [install](Docs/install.md)
 - [keybinds](Docs/keybinds.md)
 - [features](Docs/features.md)
 - [gallery](Docs/gallery.md)
 
 ## todo
 
-- [ ] config for firefox
 - [ ] gestures
-- [ ] new screenshots
+- [ ] rewrite keybinds
 
 ## thanks to
 
