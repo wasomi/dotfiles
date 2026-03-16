@@ -49,7 +49,7 @@
 
 @define-color on_tertiary #352b4b;
 
-@define-color on_tertiary_container #e9ddff;
+@define-color on_tertiary_container #eaddff;
 
 @define-color on_tertiary_fixed #1f1635;
 
@@ -79,7 +79,7 @@
 
 @define-color shadow #000000;
 
-@define-color source_color #3a607a;
+@define-color source_color #526e83;
 
 @define-color surface #101417;
 
@@ -105,7 +105,7 @@
 
 @define-color tertiary_container #4c4163;
 
-@define-color tertiary_fixed #e9ddff;
+@define-color tertiary_fixed #eaddff;
 
 @define-color tertiary_fixed_dim #cec0e8;
 

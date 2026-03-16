@@ -25,13 +25,13 @@
     secondary-container: #38495699;
     on-secondary-container: #d3e5f5;
     tertiary: #cec0e8;
-    tertiary-fixed: #e9ddff;
+    tertiary-fixed: #eaddff;
     tertiary-fixed-dim: #cec0e8;
     on-tertiary: #352b4b;
     on-tertiary-fixed: #1f1635;
     on-tertiary-fixed-variant: #4c4163;
     tertiary-container: #4c4163;
-    on-tertiary-container: #e9ddff;
+    on-tertiary-container: #eaddff;
     error: #ffb4ab;
     on-error: #690005;
     error-container: #93000a;
