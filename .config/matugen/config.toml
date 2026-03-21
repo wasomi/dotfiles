@@ -52,7 +52,3 @@ output_path = "~/.dotfiles/.config/btop/themes/matugen.theme"
 [templates.rmpc]
 input_path = "./templates/rmpc-theme.ron"
 output_path = "~/.dotfiles/.config/rmpc/theme.ron"
-
-[templates.vscode]
-input_path = "./templates/vscode-theme.jsonc"
-output_path = "~/.config/Code/User/settings.json"
