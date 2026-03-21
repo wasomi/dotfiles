@@ -1,3 +1,15 @@
 .config/mpd/database
 .config/mpd/sticker.sql
 .config/gtk-3.0/bookmarks
+
+.config/btop/themes/matugen.theme
+.config/dunst/dunstrc
+.config/gtk-3.0/colors.css
+.config/gtk-4.0/colors.css
+.config/hypr/conf/colors.conf
+.config/kitty/colors.conf
+.config/qt5ct/colors/matugen.conf
+.config/qt6ct/colors/matugen.conf
+.config/rmpc/theme.ron
+.config/rofi/colors.rasi
+.config/waybar/colors.css

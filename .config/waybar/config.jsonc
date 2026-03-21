@@ -30,6 +30,7 @@
             "custom/update",
             "hyprland/language",
             "network",
+            "battery",
             "custom/powermenu"
         ],
 
@@ -65,9 +66,11 @@
                 "click-to-reveal": true
             },
             "modules": [ 
-                "custom/settings-wrap", 
+                "custom/settings-wrap",
+                "backlight",
                 "pulseaudio#microphone", 
-                "pulseaudio"
+                "pulseaudio",
+                "bluetooth"
             ]
         },
 
