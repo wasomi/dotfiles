@@ -1,8 +1,7 @@
 {
     "hyprland/language": {
-        "format-en": "en",
-        "format-ru": "ru",
-        "on-click": "hyprctl switchxkblayout juchen-usb-keyboard next",
-        "keyboard-name": "juchen-usb-keyboard"
+        "format": "{short}",
+        "on-click": "hyprctl switchxkblayout squalius-cephalus-silakka54 next",
+        "keyboard-name": "squalius-cephalus-silakka54"
     }
 }

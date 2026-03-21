@@ -166,12 +166,12 @@ if [[ $install_music =~ ^[Yy]$ ]]; then
 fi
 
 # Gamemode, Steam, MangoHUD and MangoJuice installation
-echo -e -n "${YELLOW}[?]${NC} Do you want to install gaming packages (Gamemode, Steam, MangoHUD, MangoJuice)? (y/N): " 
+echo -e -n "${YELLOW}[?]${NC} Do you want to install gaming packages (Gamemode, Steam, MangoHUD, MangoJuice, ProtonPlus)? (y/N): " 
 read install_gaming
 if [[ $install_gaming =~ ^[Yy]$ ]]; then
     echo -e "${BLUE}[*]${NC} Installing gaming packages..."
     sudo pacman -S --needed --noconfirm steam gamemode mangohud
-    sudo paru -S --needed -noconfirm mangojuice-bin
+    sudo paru -S --needed -noconfirm mangojuice-bin protonplus
     
     echo -e "${BLUE}[*]${NC} Adding user to gamemode group..."
     sudo usermod -aG gamemode "$USER"
