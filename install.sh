@@ -134,21 +134,12 @@ if [[ $install_docker =~ ^[Yy]$ ]]; then
     
     echo -e "${BLUE}[*]${NC} Adding user to docker group..."
     sudo usermod -aG docker "$USER"
-    
-    echo -e "${GREEN}[+]${NC} Docker installed successfully."
-fi
 
-# Virtualization packages
-echo -e -n "${YELLOW}[?]${NC} Do you want to install virtualization tools (QEMU/KVM)? (y/N): " 
-read install_virt
-if [[ $install_virt =~ ^[Yy]$ ]]; then
-    echo -e "${BLUE}[*]${NC} Installing virtualization packages..."
-    sudo pacman -S --needed  --noconfirm virt-manager qemu-desktop dnsmasq
-    
-    echo -e "${BLUE}[*]${NC} Adding user to libvirt group..."
-    sudo usermod -aG libvirt "$USER"
-    
-    echo -e "${GREEN}[+]${NC} Virtualization tools installed successfully."
+    echo -e "${BLUE}[*]${NC} Enabling and starting docker service..."
+    sudo systemctl enable docker.service
+    sudo systemctl start docker.service
+
+    echo -e "${GREEN}[+]${NC} Docker installed successfully."
 fi
 
 # MPD and RMPC installation
