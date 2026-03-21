@@ -9,13 +9,6 @@
 #
 # Credits: ai
 
-for cmd in paru checkupdates; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 official=$(checkupdates 2>/dev/null | wc -l)
 aur=$(paru -Qua 2>/dev/null | wc -l)
 total=$(( $official + $aur ))

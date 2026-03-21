@@ -18,13 +18,6 @@ font="CodeNewRoman Nerd font Mono 12"
 cursor="Bibata-Modern-Classic"
 icon_dir="/usr/share/icons/Papirus/16x16/status"
 
-for cmd in rofi matugen dunst waybar kitty; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 if [ ! -d "$wall_dir" ]; then
     echo "Error: Wallpaper directory not found: $wall_dir" >&2
     exit 1

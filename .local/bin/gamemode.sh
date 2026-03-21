@@ -9,13 +9,6 @@
 # 
 # Credits: https://wiki.hyprland.org/
 
-for cmd in hyprctl; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 icon="/usr/share/icons/Papirus/16x16/symbolic/categories/applications-games-symbolic.svg"
 
 if [ "$1" = "start" ]; then

@@ -16,13 +16,6 @@ yellow=$(tput setaf 3; tput bold)
 green=$(tput setaf 2; tput bold)
 reset=$(tput sgr0)
 
-for cmd in paru; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 echo -e "${yellow}::${reset} Starting system update..."
 echo
 

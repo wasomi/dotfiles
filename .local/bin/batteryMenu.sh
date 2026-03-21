@@ -9,13 +9,6 @@
 # 
 # Credits: ai
 
-for cmd in rofi; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 icon_dir="/usr/share/icons/Papirus/16x16/status"
 path="/sys/class/power_supply/BAT0/charge_control_end_threshold"
 askpass="$HOME/.dotfiles/.local/bin/askPassword.sh"

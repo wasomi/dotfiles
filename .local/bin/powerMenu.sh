@@ -9,14 +9,6 @@
 # 
 # Credits: https://github.com/Zproger
 
-for cmd in rofi; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
-
 # uptime="`uptime -p | sed -e 's/up //g'`"
 choice=$(printf "\n󰤄\n󰩈\n\n" | rofi -dmenu -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
 

@@ -9,13 +9,6 @@
 #
 # Credits: https://github.com/sentriz
 
-for cmd in cliphist wl-copy; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 clear=" Clear clipboard..."
 icon_dir="/usr/share/icons/Papirus/16x16/status"
 

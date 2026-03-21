@@ -11,13 +11,6 @@
 icon_dir="/usr/share/icons/Papirus/16x16/panel"
 default_step=5
 
-for cmd in wpctl; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 if [[ $# -lt 2 ]]; then
     echo "Usage: $0 [--sound|--mic] [--set|--inc|--dec|--mute] [percent]"
     exit 1

@@ -12,13 +12,6 @@
 icon_dir="/usr/share/icons/Papirus/48x48@2x/status"
 default_step=5
 
-for cmd in brightnessctl; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "Error: '$cmd' not found..." >&2
-        exit 1
-    fi
-done
-
 action="$1"
 percent="${2//%/}"
 percent="${percent:-$default_step}"
