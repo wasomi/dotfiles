@@ -161,8 +161,8 @@ echo -e -n "${YELLOW}[?]${NC} Do you want to install gaming packages (Gamemode, 
 read install_gaming
 if [[ $install_gaming =~ ^[Yy]$ ]]; then
     echo -e "${BLUE}[*]${NC} Installing gaming packages..."
-    sudo pacman -S --needed --noconfirm steam gamemode mangohud
-    sudo paru -S --needed -noconfirm mangojuice-bin protonplus
+    sudo pacman -S --needed steam gamemode mangohud
+    sudo paru -S --needed --noconfirm mangojuice-bin protonplus
     
     echo -e "${BLUE}[*]${NC} Adding user to gamemode group..."
     sudo usermod -aG gamemode "$USER"
