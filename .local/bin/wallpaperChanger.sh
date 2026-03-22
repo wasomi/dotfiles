@@ -48,6 +48,7 @@ if [ -n "$selected_wall" ]; then
     killall waybar && waybar & disown
     killall polkit-gnome-authentication-agent-1 && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
     pkill -SIGUSR1 kitty
+    hyprctl reload
 
     notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
         "Wallpaper and theme updated successfully!" -r 8 -t 1500

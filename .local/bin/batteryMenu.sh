@@ -22,7 +22,7 @@ case "$choice" in
 esac
 
 if SUDO_ASKPASS="$askpass" sudo -A bash -c "echo $threshold > $path"; then
-    notify-send -i "$icon_dir/package-install.svg" "Battery Management" "Charging threshold set to $threshold%" -r 8 -t 2500
+    notify-send -i "$icon_dir/package-install.svg" "Battery Management" "Charging threshold set to $threshold%" -r 8 -t 1000
 else
-    notify-send -i "$icon_dir/package-purge.svg" "Battery Management" "Failed to update charging threshold" -r 8 -t 2500
+    notify-send -i "$icon_dir/package-purge.svg" "Battery Management" "Failed to update charging threshold" -r 8 -t 1000
 fi

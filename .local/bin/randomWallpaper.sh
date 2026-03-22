@@ -45,4 +45,4 @@ killall polkit-gnome-authentication-agent-1 && /usr/lib/polkit-gnome/polkit-gnom
 pkill -SIGUSR1 kitty
  
 notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
-    "Wallpaper: $(basename "$selected_wall")" -r 8 -t 1500
+        "Wallpaper and theme updated successfully!" -r 8 -t 1500
