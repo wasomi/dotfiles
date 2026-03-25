@@ -6,7 +6,7 @@
 #                           /____/             
 
 [config.wallpaper]
-command = "swww img {{ image }} --transition-type center --transition-fps 60 --transition-duration 1.5"
+command = "awww img {{ image }} --transition-type center --transition-fps 60 --transition-duration 1.5"
 set = true
 
 [templates.hyprland]
