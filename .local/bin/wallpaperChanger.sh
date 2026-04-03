@@ -32,9 +32,9 @@ done | rofi -dmenu -show-icons -config "$rofi_config")
 cd - > /dev/null || exit 1
 
 if [ -n "$selected_wall" ]; then
-    WALL_PATH="$wall_dir/$selected_wall"
+    wall_path="$wall_dir/$selected_wall"
 
-    matugen image "$WALL_PATH" -m "$mode" --source-color-index 0
+    matugen image "$wall_path" -m "$mode" --source-color-index 0 || { echo "Matugen failed..." >&2; exit 1; }
 
     gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
     sleep 1
@@ -44,14 +44,17 @@ if [ -n "$selected_wall" ]; then
     gsettings set org.gnome.desktop.interface font-name "$font"
     gsettings set org.gnome.desktop.interface cursor-theme "$cursor"
 
-    killall dunst && dunst & disown
-    killall waybar && waybar & disown
-    killall polkit-gnome-authentication-agent-1 && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
-    pkill -SIGUSR1 kitty
+    pkill dunst;  dunst & disown
+    pkill waybar; waybar & disown
+    pkill polkit-gnome-authentication-agent-1
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
+
+    pgrep kitty > /dev/null && pkill -SIGUSR1 kitty
     hyprctl reload
 
     notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
         "Wallpaper and theme updated successfully!" -r 8 -t 1500
+
 else
     echo "No wallpaper selected..." >&2
 fi

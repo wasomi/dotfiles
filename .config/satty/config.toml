@@ -4,10 +4,10 @@ resize = { mode = "smart" }
 floating-hack = true
 early-exit = true
 early-exit-save-as = true
-corner-roundness = 12
+corner-roundness = 8
 initial-tool = "crop"
 copy-command = "wl-copy"
-annotation-size-factor = 2
+annotation-size-factor = 1
 output-filename = "~/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png"
 save-after-copy = false
 default-hide-toolbars = false
