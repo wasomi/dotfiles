@@ -14,6 +14,7 @@ x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
 x-scheme-handler/tg=userapp-AyuGram Desktop-5HOCM3.desktop
 x-scheme-handler/tonsite=userapp-AyuGram Desktop-QDJCM3.desktop
 application/octet-stream=code.desktop
+x-scheme-handler/incy=incy.desktop
 
 [Added Associations]
 inode/directory=thunar.desktop;

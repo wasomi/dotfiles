@@ -14,8 +14,7 @@
 
         "modules-left": [
             "custom/rofi",
-            "hyprland/workspaces",
-            "mpd"
+            "hyprland/workspaces"
         ],
 
         "modules-center": [

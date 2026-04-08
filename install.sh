@@ -142,20 +142,6 @@ if [[ $install_docker =~ ^[Yy]$ ]]; then
     echo -e "${GREEN}[+]${NC} Docker installed successfully."
 fi
 
-# MPD and RMPC installation
-echo -e -n "${YELLOW}[?]${NC} Do you want to install music packages (MPD + RMPC)? (y/N): " 
-read install_music
-if [[ $install_music =~ ^[Yy]$ ]]; then
-    echo -e "${BLUE}[*]${NC} Installing music packages..."
-    sudo pacman -S --needed --noconfirm mpd rmpc
-    
-    echo -e "${BLUE}[*]${NC} Enabling and starting MPD service..."
-    systemctl --user enable mpd.service
-    systemctl --user start mpd.service
-    
-    echo -e "${GREEN}[+]${NC} Music packages installed successfully."
-fi
-
 # Gamemode, Steam, MangoHUD and MangoJuice installation
 echo -e -n "${YELLOW}[?]${NC} Do you want to install gaming packages (Gamemode, Steam, MangoHUD, MangoJuice, ProtonPlus)? (y/N): " 
 read install_gaming
