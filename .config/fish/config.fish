@@ -23,3 +23,7 @@ alias i="sudo pacman -S"                                            # install pk
 alias ia="paru -S"                                                  # install aur pkg
 alias s="pacman -Ss"                                                # search pkg
 alias sa="paru -Ss"                                                 # search aur pkg
+
+set -x PYENV_ROOT $HOME/.pyenv
+fish_add_path $PYENV_ROOT/bin
+pyenv init - fish | source

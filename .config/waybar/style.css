@@ -1,18 +1,8 @@
-/* 
-*                        __                       __        __   
-*  _      ______ ___  __/ /_  ____ ______   _____/ /___  __/ /__ 
-* | | /| / / __ `/ / / / __ \/ __ `/ ___/  / ___/ __/ / / / / _ \
-* | |/ |/ / /_/ / /_/ / /_/ / /_/ / /     (__  ) /_/ /_/ / /  __/
-* |__/|__/\__,_/\__, /_.___/\__,_/_/     /____/\__/\__, /_/\___/ 
-*              /____/                             /____/         
-*
-*/
-
 @import "colors.css";
 
 @keyframes blink-critical {
     70% {
-        color: @on_secondary_container;
+        color: @on_background;
     }
 
     to {
@@ -35,8 +25,8 @@
 }
 
 tooltip {
-    background-color: @background;
-    border: solid 2px @primary;
+    background-color: alpha(@background,.8);
+    border: 1px solid @outline_variant;
 	color: @on_background;
     border-radius: 8px;
     box-shadow: 0px 0px 2px @shadow;
@@ -45,9 +35,10 @@ tooltip {
 .modules-left, 
 .modules-right,
 .modules-center {
-    background-color: @background;
+    background-color: alpha(@background,.8);
     margin: 4px;
     box-shadow: 0px 0px 2px @shadow;
+    border: 1px solid @outline_variant;
 }
 
 #language,
@@ -93,11 +84,10 @@ tooltip {
 }
 
 #memory.critical {
-    color: @error
+    color: @error;
 }
 
 #workspaces button {
-    /* transition: all .2s ease; */
     padding: 2px 8px;
     margin: 2px 2px;
 }

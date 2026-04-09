@@ -1,12 +1,4 @@
-/*
-*                                 __               
-*   _______________   _________  / /___  __________
-*  / ___/ ___/ ___/  / ___/ __ \/ / __ \/ ___/ ___/
-* / /__(__  |__  )  / /__/ /_/ / / /_/ / /  (__  ) 
-* \___/____/____/   \___/\____/_/\____/_/  /____/  
-*
-* Generated with matugen   
-*/
+/* Generated with matugen */
 
 <* for name, value in colors *>
 @define-color {{name}} {{value.default.hex}};

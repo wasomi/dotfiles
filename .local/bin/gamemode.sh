@@ -1,13 +1,6 @@
 #!/bin/bash
 
-#                                                     __                  __  
-#     ____ _____ _____ ___  ___  ____ ___  ____  ____/ /__          _____/ /_ 
-#    / __ `/ __ `/ __ `__ \/ _ \/ __ `__ \/ __ \/ __  / _ \        / ___/ __ \
-#   / /_/ / /_/ / / / / / /  __/ / / / / / /_/ / /_/ /  __/  _    (__  ) / / /
-#   \__, /\__,_/_/ /_/ /_/\___/_/ /_/ /_/\____/\__,_/\___/  (_)  /____/_/ /_/ 
-#  /____/                                                                        
-# 
-# Credits: https://wiki.hyprland.org/
+# Credits: https://wiki.hypr.land/
 
 icon="/usr/share/icons/Papirus/16x16/symbolic/categories/applications-games-symbolic.svg"
 

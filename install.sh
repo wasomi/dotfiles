@@ -65,11 +65,12 @@ fi
 
 echo -e "${BLUE}[2/5]${NC} Creating symbolic links..."
 
-# Create .config directory if it doesn't exist
+# Create directories if they doesn't exist
 echo -e "${BLUE}[*]${NC} Creating directories..."
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.local"
 mkdir -p "$HOME/Pictures"
+mkdir -p "$HOME/Pictures/Screenshots"
 
 # Link all folders from .dotfiles/.config
 if [ -d "$HOME/.dotfiles/.config" ]; then

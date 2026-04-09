@@ -1,11 +1,4 @@
-//                _____    __  __                      
-//    _________  / __(_)  / /_/ /_  ___  ____ ___  ___ 
-//   / ___/ __ \/ /_/ /  / __/ __ \/ _ \/ __ `__ \/ _ \
-//  / /  / /_/ / __/ /  / /_/ / / /  __/ / / / / /  __/
-// /_/   \____/_/ /_/   \__/_/ /_/\___/_/ /_/ /_/\___/ 
-// 
 // credits: https://github.com/dylanaraps
-// edited by: wasomi
 
 @import "colors.rasi"
 
@@ -42,13 +35,13 @@ configuration {
 
     background-color: transparent;
     foreground: @on-secondary-container;
-    border-color: @primary;
+    border-color: @outline-variant;
     spacing: 2;
 }
 
 window {
     background-color: @background;
-    border: 0;
+    border: 1;
     padding: 24px; 
     border-radius: 8px;
 }
