@@ -13,3 +13,5 @@
 .config/rmpc/theme.ron
 .config/rofi/colors.rasi
 .config/waybar/colors.css
+.config/waybar/config.jsonc
+.config/waybar/hyprland-workspaces.jsonc

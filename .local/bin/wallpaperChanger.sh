@@ -4,11 +4,6 @@
 
 wall_dir="$HOME/Pictures/Wallpapers"
 rofi_config="$HOME/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi"
-mode="dark"
-theme="adw-gtk3-$mode"
-icons="Papirus"
-font="CodeNewRoman Nerd font Mono 12"
-cursor="Bibata-Modern-Classic"
 
 if [ ! -d "$wall_dir" ]; then
     echo "Error: Wallpaper directory not found: $wall_dir" >&2
@@ -27,10 +22,8 @@ cd - > /dev/null || exit 1
 if [ -n "$selected_wall" ]; then
     wall_path="$wall_dir/$selected_wall"
 
-    matugen image "$wall_path" -m "$mode" --source-color-index 0 || { echo "Matugen failed..." >&2; exit 1; }
+    matugen image "$wall_path" -m "$mode" --source-color-index 0 || { echo "Matugen failed..." && notify-send -i "dialog-error-symbolic" "Error" "Matugen failed..." -r 8 >&2; exit 1; }
 
-    gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
-    sleep 1
     gsettings set org.gnome.desktop.interface gtk-theme "$theme"
     gsettings set org.gnome.desktop.interface color-scheme prefer-$mode
     gsettings set org.gnome.desktop.interface icon-theme "$icons"
@@ -38,6 +31,8 @@ if [ -n "$selected_wall" ]; then
     gsettings set org.gnome.desktop.interface cursor-theme "$cursor"
 
     pkill dunst;  dunst & disown
+    envsubst < "$HOME/.dotfiles/.config/waybar/templates/config.jsonc" > "$HOME/.dotfiles/.config/waybar/config.jsonc"
+    envsubst < "$HOME/.dotfiles/.config/waybar/templates/hyprland-workspaces.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
     pkill waybar; waybar & disown
     pkill polkit-gnome-authentication-agent-1
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
