@@ -9,10 +9,10 @@ theme="adw-gtk3-$mode"
 icons="Papirus"
 font="CodeNewRoman Nerd font Mono 12"
 cursor="Bibata-Modern-Classic"
-icon_dir="/usr/share/icons/Papirus/16x16/status"
 
 if [ ! -d "$wall_dir" ]; then
     echo "Error: Wallpaper directory not found: $wall_dir" >&2
+    notify-send -i -u critical "dialog-error-symbolic" "Error" "Wallpaper directory not found..." -r 8
     exit 1
 fi
 
@@ -45,8 +45,7 @@ if [ -n "$selected_wall" ]; then
     pgrep kitty > /dev/null && pkill -SIGUSR1 kitty
     hyprctl reload
 
-    notify-send -i "$icon_dir/package-install.svg" "Theme applied" \
-        "Wallpaper and theme updated successfully!" -r 8 -t 1500
+    notify-send -i "dialog-information-symbolic" "Theme applied" "Wallpaper and theme updated successfully!" -r 8 -t 1500
 
 else
     echo "No wallpaper selected..." >&2

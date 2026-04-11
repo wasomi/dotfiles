@@ -2,7 +2,6 @@
 
 # Credits: ai
 
-icon_dir="/usr/share/icons/Papirus/48x48@2x/status"
 default_step=5
 
 action="$1"
@@ -23,17 +22,17 @@ case "$action" in
         ;;
 esac
 
-choose_icon() {
-    local brightness=$1
+# choose_icon() {
+#     local brightness=$1
 
-    if [[ $brightness -le 30 ]]; then
-        echo "$icon_dir/notification-display-brightness-low.svg"
-    elif [[ $brightness -le 70 ]]; then
-        echo "$icon_dir/notification-display-brightness-medium.svg"
-    else
-        echo "$icon_dir/notification-display-brightness-full.svg"
-    fi
-}
+#     if [[ $brightness -le 30 ]]; then
+#         echo "notification-display-brightness-low"
+#     elif [[ $brightness -le 70 ]]; then
+#         echo "notification-display-brightness-medium"
+#     else
+#         echo "notification-display-brightness-full"
+#     fi
+# }
 
 change_brightness() {
     case "$action" in
@@ -46,9 +45,9 @@ change_brightness() {
     local current=$(brightnessctl get)
     local level=$(awk -v curr="$current" -v max="$max" 'BEGIN { printf "%d", (curr * 100 / max) + 0.5 }')
 
-    local icon=$(choose_icon "$level")
+    # local icon=$(choose_icon "$level")
 
-    notify-send -i "$icon" "Brightness" "${level}%" -h "int:value:$level" -r 8 -t 1000
+    notify-send -i "display-brightness-symbolic" "Brightness" "${level}%" -h "int:value:$level" -r 8 -t 1000
 }
 
 change_brightness

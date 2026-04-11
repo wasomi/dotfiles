@@ -2,8 +2,6 @@
 
 # Credits: https://wiki.hypr.land/
 
-icon="/usr/share/icons/Papirus/16x16/symbolic/categories/applications-games-symbolic.svg"
-
 if [ "$1" = "start" ]; then
     hyprctl --batch "\
         keyword animations:enabled 0;\
@@ -15,11 +13,11 @@ if [ "$1" = "start" ]; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-    notify-send -i "$icon" "Gamemode" "Enabled" -r 8 -t 1000
+    notify-send -i "applications-games-symbolic" "Gamemode" "Enabled" -r 8 -t 1000
     exit 0
 elif [ "$1" = "end" ]; then
     hyprctl reload
-    notify-send -i "$icon" "Gamemode" "Disabled" -r 8 -t 1000
+    notify-send -i "applications-games-symbolic" "Gamemode" "Disabled" -r 8 -t 1000
     exit 0
 else
     echo "Usage: $0 [start|end]" >&2

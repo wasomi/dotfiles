@@ -2,8 +2,6 @@
 
 # Credits: ai
 
-icon_dir="/usr/share/icons/Papirus/16x16/status"
-
 red=$(tput setaf 1; tput bold)
 yellow=$(tput setaf 3; tput bold)
 green=$(tput setaf 2; tput bold)
@@ -14,7 +12,7 @@ echo
 
 if paru -Syu --noconfirm; then
     echo -e "\n${green}::${reset} System update completed successfully!"
-    notify-send -i "$icon_dir/package-install.svg" "System Update" "Packages updated successfully!" -r 8 -t 2500
+    notify-send -i "dialog-information-symbolic" "System Update" "Packages updated successfully!" -r 8 -t 2500
 
     echo
     echo -en "${yellow}::${reset} Do you want to reboot now? (y/N): "
@@ -26,7 +24,7 @@ if paru -Syu --noconfirm; then
     fi
 else
     echo -e "\n${red}::${reset} System update failed..."
-    notify-send -i "$icon_dir/package-purge.svg" "System Update" "An error occurred during update..." -r 8 -t 2500
+    notify-send -i "dialog-error-symbolic" -u critical "System Update" "An error occurred during update..." -r 8
 fi
 
 if pgrep -x waybar >/dev/null; then

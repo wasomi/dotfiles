@@ -17,8 +17,9 @@ configuration {
 }
 
 window {
-    width: 99%;
-    border-radius: 8px;
+    width: 100%;
+    border-radius: 0px;
+    border: 1px 0px;
 }
 
 mainbox {
