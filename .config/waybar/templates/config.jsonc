@@ -8,7 +8,7 @@
 
 [
     {
-        "output": "HDMI-A-1",
+        "output": "$main_monitor",
         "layer": "top",
         "position": "top",
 
@@ -92,7 +92,7 @@
     },
 
     {
-        "output": "DP-1",
+        "output": "$second_monitor",
         "layer": "top",
         "position": "top",
 
