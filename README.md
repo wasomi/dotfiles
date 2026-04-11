@@ -1,7 +1,4 @@
-> [!warning]
-> i made this dotfiles for my device, if you will have any problems i will try to help you
-
-## about
+# about
 
 - os: `arch`
 - wm: `hyprland`
@@ -13,14 +10,14 @@
 - wallpaper daemon: `swww`
 - color generator tool: `matugen`
 
-## docs
+# docs
 
 - [install](Docs/install.md)
 - [keybinds](Docs/keybinds.md)
 - [features](Docs/features.md)
 - [gallery](Docs/gallery.md)
 
-## thanks to
+# thanks to
 
 - [zproger](https://github.com/Zproger/) for the [scripts](https://github.com/Zproger/bspwm-dotfiles/)
 - [sane1090](https://www.youtube.com/@sane1090x) for the [wallpaper switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
