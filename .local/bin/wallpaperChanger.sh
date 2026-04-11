@@ -30,9 +30,11 @@ if [ -n "$selected_wall" ]; then
     gsettings set org.gnome.desktop.interface font-name "$font"
     gsettings set org.gnome.desktop.interface cursor-theme "$cursor"
 
-    pkill dunst;  dunst & disown
     envsubst < "$HOME/.dotfiles/.config/waybar/templates/config.jsonc" > "$HOME/.dotfiles/.config/waybar/config.jsonc"
     envsubst < "$HOME/.dotfiles/.config/waybar/templates/hyprland-workspaces.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
+    envsubst < "$HOME/.dotfiles/.config/waybar/templates/hyprland-language.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-language.jsonc"
+
+    pkill dunst;  dunst & disown
     pkill waybar; waybar & disown
     pkill polkit-gnome-authentication-agent-1
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown

@@ -2,6 +2,6 @@
     "hyprland/language": {
         "format": "{short}",
         "on-click": "hyprctl switchxkblayout all next",
-        "keyboard-name": "squalius-cephalus-silakka54"
+        "keyboard-name": "$keyboard"
     }
 }
