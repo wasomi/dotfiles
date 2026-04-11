@@ -1,3 +1,6 @@
+> [!warning]
+> maybe outdated
+
 # gallery
 
 ![apps](../Pictures/Screenshots/apps.png)

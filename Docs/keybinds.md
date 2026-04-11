@@ -1,3 +1,6 @@
+> [!warning]
+> maybe outdated
+
 # keybinds
 
 ## general
