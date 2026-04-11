@@ -23,7 +23,9 @@
 ## todo
 
 - [ ] gestures
-- [ ] rewrite keybinds
+- [ ] update keybinds
+- [ ] update gallery
+- [ ] update features
 
 ## thanks to
 
