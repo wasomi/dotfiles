@@ -20,13 +20,6 @@
 - [features](Docs/features.md)
 - [gallery](Docs/gallery.md)
 
-## todo
-
-- [ ] gestures
-- [ ] update keybinds
-- [ ] update gallery
-- [ ] update features
-
 ## thanks to
 
 - [zproger](https://github.com/Zproger/) for the [scripts](https://github.com/Zproger/bspwm-dotfiles/)
