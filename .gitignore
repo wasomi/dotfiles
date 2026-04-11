@@ -1,7 +1,4 @@
-.config/mpd/database
-.config/mpd/sticker.sql
 .config/gtk-3.0/bookmarks
-
 .config/btop/themes/matugen.theme
 .config/dunst/dunstrc
 .config/gtk-3.0/colors.css
