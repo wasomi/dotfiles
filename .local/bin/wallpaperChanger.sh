@@ -22,7 +22,7 @@ cd - > /dev/null || exit 1
 if [ -n "$selected_wall" ]; then
     wall_path="$wall_dir/$selected_wall"
 
-    matugen image "$wall_path" -m "$settings_mode" --source-color-index 0 || { echo "Matugen failed..." && notify-send -i "dialog-error-symbolic" "Error" "Matugen failed..." -r 8 >&2; exit 1; }
+    matugen image "$wall_path" -m "$settingsMode" --source-color-index 0 || { echo "Matugen failed..." && notify-send -i "dialog-error-symbolic" "Error" "Matugen failed..." -r 8 >&2; exit 1; }
 
     gsettings set org.gnome.desktop.interface gtk-theme "$settingsTheme"
     gsettings set org.gnome.desktop.interface color-scheme prefer-$settingsMode
