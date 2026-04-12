@@ -24,19 +24,21 @@ fi
  
 echo "Selected wallpaper: $(basename "$selected_wall")"
 
-matugen image "$selected_wall" -m "$mode" --source-color-index 0 || { echo "Matugen failed..." >&2; exit 1; }
+matugen image "$wall_path" -m "$settingsMode" --source-color-index 0 || { echo "Matugen failed..." && notify-send -i "dialog-error-symbolic" "Error" "Matugen failed..." -r 8 >&2; exit 1; }
 
-gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
-sleep 1
-gsettings set org.gnome.desktop.interface gtk-theme "$theme"
-gsettings set org.gnome.desktop.interface color-scheme prefer-$mode
-gsettings set org.gnome.desktop.interface icon-theme "$icons"
-gsettings set org.gnome.desktop.interface font-name "$font"
-gsettings set org.gnome.desktop.interface cursor-theme "$cursor"
+gsettings set org.gnome.desktop.interface gtk-theme "$settingsTheme"
+gsettings set org.gnome.desktop.interface color-scheme prefer-$settingsMode
+gsettings set org.gnome.desktop.interface icon-theme "$settingsIcons"
+gsettings set org.gnome.desktop.interface font-name "$settingsFont"
+gsettings set org.gnome.desktop.interface cursor-theme "$settingsCursor"
+
+envsubst < "$HOME/.dotfiles/.config/waybar/templates/config.jsonc" > "$HOME/.dotfiles/.config/waybar/config.jsonc"
+envsubst < "$HOME/.dotfiles/.config/waybar/templates/hyprland-workspaces.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
+envsubst < "$HOME/.dotfiles/.config/waybar/templates/hyprland-language.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-language.jsonc"
 
 pkill dunst;  dunst & disown
 pkill waybar; waybar & disown
-pkill polkit-gnome-authentication-agent-1
+pkill -f polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
 
 pgrep kitty > /dev/null && pkill -SIGUSR1 kitty
