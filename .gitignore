@@ -13,3 +13,5 @@
 .config/waybar/config.jsonc
 .config/waybar/modules/hyprland-workspaces.jsonc
 .config/waybar/modules/hyprland-language.jsonc
+.config/Thunar/accels.scm
+.config/Thunar/renamerrc

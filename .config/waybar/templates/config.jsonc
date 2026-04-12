@@ -8,7 +8,7 @@
 
 [
     {
-        "output": "$main_monitor",
+        "output": "$settingsMainMonitor",
         "layer": "top",
         "position": "top",
 
@@ -92,7 +92,7 @@
     },
 
     {
-        "output": "$second_monitor",
+        "output": "$settingsSecondMonitor",
         "layer": "top",
         "position": "top",
 

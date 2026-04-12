@@ -4,8 +4,8 @@
         "disable-scroll": true,
         "format": "{name}",
         "persistent-workspaces": {
-            "$main_monitor": [ 1, 2, 3, 4, 5 ],
-            "$second_monitor": [ 6 ]
+            "$settingsMainMonitor": [ 1, 2, 3, 4, 5 ],
+            "$settingsSecondMonitor": [ 6 ]
         }
     }
 }

@@ -2,6 +2,6 @@
     "hyprland/language": {
         "format": "{short}",
         "on-click": "hyprctl switchxkblayout all next",
-        "keyboard-name": "$keyboard"
+        "keyboard-name": "$settingsKeyboardName"
     }
 }
