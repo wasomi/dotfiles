@@ -12,7 +12,7 @@ echo
 
 if paru -Syu --noconfirm; then
     echo -e "\n${green}::${reset} System update completed successfully!"
-    notify-send -i "dialog-information-symbolic" "System Update" "Packages updated successfully!" -r 8 -t 2500
+    notify-send -i "dialog-information-symbolic" "System Update" "Packages updated successfully!" -r 8 -t 2000
 
     echo
     echo -en "${yellow}::${reset} Do you want to reboot now? (y/N): "
