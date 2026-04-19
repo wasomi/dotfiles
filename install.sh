@@ -28,7 +28,7 @@ fi
 
 echo -e "${BLUE}[*]${NC} Starting dotfiles installation..."
 
-echo -e "${BLUE}[1/5]${NC} Installing packages..."
+echo -e "${BLUE}[1/4]${NC} Installing packages..."
 
 if [ -f "$HOME/.dotfiles/Packages/pkgList" ]; then
     echo -e "${BLUE}[*]${NC} Installing official packages..."
@@ -63,7 +63,7 @@ else
     echo -e "${RED}[!]${NC} AUR package list not found: ~/.dotfiles/Packages/aurPkgList"
 fi
 
-echo -e "${BLUE}[2/5]${NC} Creating symbolic links..."
+echo -e "${BLUE}[2/4]${NC} Creating symbolic links..."
 
 # Create directories if they doesn't exist
 echo -e "${BLUE}[*]${NC} Creating directories..."
@@ -109,7 +109,7 @@ if [ -d "$HOME/.dotfiles/Pictures/Wallpapers" ]; then
     fi
 fi
 
-echo -e "${BLUE}[3/5]${NC} Changing default shell to fish..."
+echo -e "${BLUE}[3/4]${NC} Changing default shell to fish..."
 if command_exists fish; then
     FISH_PATH=$(which fish)
     if chsh -s "$FISH_PATH"; then
@@ -121,10 +121,7 @@ else
     echo -e "${RED}[!]${NC} Fish shell is not installed..."
 fi
 
-echo -e "${BLUE}[4/5]${NC} Changing folders color..."
-papirus-folders -C grey
-
-echo -e "${BLUE}[5/5]${NC} Installing optional packages..."
+echo -e "${BLUE}[4/4]${NC} Installing optional packages..."
 
 # Docker packages
 echo -e -n "${YELLOW}[?]${NC} Do you want to install Docker? (y/N): "
