@@ -5,7 +5,7 @@
         "format": "{name}",
         "persistent-workspaces": {
             "$settingsMainMonitor": [ 1, 2, 3, 4, 5 ],
-            "$settingsSecondMonitor": [ 6 ]
+            "$settingsSecondMonitor": [ 6, 7, 8, 9, 10 ]
         }
     }
 }

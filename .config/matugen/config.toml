@@ -42,6 +42,41 @@ output_path = "~/.dotfiles/.config/qt5ct/colors/matugen.conf"
 input_path = "./templates/btop.theme"
 output_path = "~/.dotfiles/.config/btop/themes/matugen.theme"
 
-[templates.rmpc]
-input_path = "./templates/rmpc-theme.ron"
-output_path = "~/.dotfiles/.config/rmpc/theme.ron"
+[templates.papirus-folders]
+input_path = './templates/papirus-folders-colors.toml'
+output_path = '~/.cache/papirus-folders-colors.toml'
+colors_to_compare = [
+    { name = "adwaita", color = "#93c0ea" },
+    { name = "blue", color = "#5294e2" },
+    { name = "blue", color = "#004c6b"},
+    { name = "breeze", color = "#57b8ec" },
+    { name = "breeze", color = "#88d1ec" },
+    { name = "carmine", color = "#a30002" },
+    { name = "darkcyan", color = "#45abb7" },
+    { name = "green", color = "#a1bf80" },
+    { name = "indigo", color = "#838dca" },
+    { name = "nordic", color = "#9db4cb" },
+    { name = "palebrown", color = "#d6c9bd" },
+    { name = "palebrown", color = "#ffb59b" },
+    { name = "pink", color = "#ec87a9" },
+    { name = "pink", color = "#6c3353" },
+    { name = "teal", color = "#159a80" },
+    { name = "white", color = "#e4e4e4" },
+    { name = "yellow", color = "#f3c863" },
+    { name = "yellow", color = "#4b4900" },
+    { name = "black", color = "#797979" },
+    { name = "bluegray", color = "#869aa4" },
+    { name = "brown", color = "#bda68e" },
+    { name = "cyan", color = "#41c7d8" },
+    { name = "deeporange", color = "#e98a68" },
+    { name = "grey", color = "#a6a6a6" },
+    { name = "magenta", color = "#d192e0" },
+    { name = "orange", color = "#eba96a" },
+    { name = "paleorange", color = "#ebd1a7" },
+    { name = "red", color = "#e27c7c" },
+    { name = "red", color = "#ffb4ab" },
+    { name = "violet", color = "#9b7fcb" },
+    { name = "violet", color = "#553b71" }
+]
+compare_to = "{{ colors.primary.default.hex }}"
+post_hook = "SUDO_ASKPASS=~/.dotfiles/.local/bin/askPassword.sh sudo -A papirus-folders -C {{ closest_color }} --theme Papirus-Dark"

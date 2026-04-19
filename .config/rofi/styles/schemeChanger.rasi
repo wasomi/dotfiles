@@ -1,0 +1,24 @@
+@theme "theme.rasi"
+
+mainbox {
+    children: [ listview ];
+}
+
+window {
+    width: 24%;
+}
+
+listview {
+    border: 0;
+}
+
+element {
+    children: [ element-text ];
+}
+
+listview {
+    lines: 9;
+    columns: 1;
+    padding: 0;
+}
+
