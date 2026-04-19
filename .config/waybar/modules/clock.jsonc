@@ -1,8 +1,8 @@
 {
     "clock": {
         "interval": 1,
-        "format": "{:%H:%M:%S}",
-        "format-alt": "{:%A, %d %B %Y}",
+        "format": "{:%d %b %H:%M:%S}",
+        "format-alt": "{:%A, %d %B %Y %H:%M:%S}",
         "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Mono'>{calendar}</span>",
         "calendar": {
             "mode"          : "month",
