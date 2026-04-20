@@ -95,12 +95,25 @@
         "layer": "top",
         "position": "top",
 
+        "modules-left": [
+            "custom/rofi",
+            "hyprland/workspaces"
+        ],
+
         "modules-center": [
             "clock"
         ],
 
+        "modules-right": [
+            "custom/powermenu"
+        ],
+
+
         "include": [
-            "~/.dotfiles/.config/waybar/modules/clock.jsonc"
+            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-rofi.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
         ]
     }
 ]

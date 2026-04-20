@@ -1,5 +1,5 @@
 #!/bin/bash
-                                       
+
 # Credits: ai
 
 default_step=5

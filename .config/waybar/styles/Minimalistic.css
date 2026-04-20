@@ -1,0 +1,127 @@
+@import "colors.css";
+
+@keyframes blink-critical {
+    70% {
+        color: @on_background;
+    }
+    to {
+        color: @error;
+    }
+}
+
+* {
+    font-family: "CodeNewRoman Nerd Font Propo";
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#waybar {
+    background-color: alpha(@background, 0.9);
+    color: @on_background;
+    border-radius: unset;
+}
+
+tooltip {
+    background-color: alpha(@background, 0.9);
+    color: @on_background;
+    border-radius: 8px;
+    border: 1px solid @outline_variant;
+    box-shadow: 0px 0px 2px @shadow;
+}
+
+.modules-left, 
+.modules-right,
+.modules-center {
+    background-color: transparent;
+    margin: 2px 4px;
+}
+
+#language,
+#cpu,
+#memory,
+#disk,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#clock,
+#backlight,
+#temperature,
+#tray,
+#idle_inhibitor,
+#privacy,
+#mpd,
+#power-profiles-daemon,
+#custom-powermenu,
+#custom-update,
+#custom-settings-wrap,
+#custom-hardware-wrap,
+#custom-rofi {
+    padding: 0px 8px;
+    margin: 2px 1px;
+    border-radius: 6px;
+}
+
+#workspaces button {
+    padding: 0px 6px;
+    margin: 2px 1px;
+    border-radius: 6px;
+    color: @on_background;
+    transition: all 0.2s ease-in-out;
+}
+
+#battery,
+#cpu,
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#cpu.critical,
+#memory.critical {
+    color: @error;
+}
+
+#mpd:hover,
+#language:hover,
+#battery:hover, 
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#clock:hover,
+#idle_inhibitor:hover,
+#power-profiles-daemon:hover,
+#custom-update:hover,
+#custom-settings-wrap:hover,
+#custom-hardware-wrap:hover,
+#custom-powermenu:hover,
+#custom-rofi:hover,
+#workspaces button:hover,
+#workspaces button.empty:hover,
+#workspaces button.active:hover,
+#workspaces button.empty.active:hover {
+    background-color: @primary_container;
+    color: @on_primary_container;
+}
+
+#workspaces button.active {
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+}
+
+#workspaces button.empty {
+    color: @tertiary;
+}
+
+#workspaces button.empty.active {
+    color: @on_secondary_container;
+    background-color: @secondary_container;
+}

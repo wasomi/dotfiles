@@ -21,7 +21,7 @@ done) | rofi -dmenu -show-icons -p "Wallpaper" -config "$wallpaper_rofi_config")
 
 if [ -z "$selected_wall" ]; then
     echo "No wallpaper selected..." >&2
-    notify-send -u critical -i "dialog-error-symbolic" "Error" "No wallpaper selected..." -r 8
+    # notify-send -u critical -i "dialog-error-symbolic" "Error" "No wallpaper selected..." -r 8
     exit 0
 fi
 
