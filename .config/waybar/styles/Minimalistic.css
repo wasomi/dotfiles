@@ -18,28 +18,24 @@
 }
 
 #waybar {
-    background-color: alpha(@background, 0.5);
+    background-color: alpha(@background, 0.9);
     color: @on_background;
     border-radius: unset;
 }
 
-
 tooltip {
-    background-color: alpha(@background, 0.8);
-    border: 1px solid @outline_variant;
+    background-color: alpha(@background, 0.9);
     color: @on_background;
     border-radius: 8px;
+    border: 1px solid @outline_variant;
     box-shadow: 0px 0px 2px @shadow;
 }
 
 .modules-left, 
 .modules-right,
 .modules-center {
-    background-color: alpha(@background, 0.8);
-    margin: 4px;
-    box-shadow: 0px 0px 2px @shadow;
-    border: 1px solid @outline_variant;
-    border-radius: 8px;
+    background-color: transparent;
+    margin: 2px 4px;
 }
 
 #language,
@@ -63,9 +59,17 @@ tooltip {
 #custom-settings-wrap,
 #custom-hardware-wrap,
 #custom-rofi {
-    padding: 2px 6px; 
-    margin: 2px 2px;
+    padding: 0px 8px;
+    margin: 2px 1px;
     border-radius: 6px;
+}
+
+#workspaces button {
+    padding: 0px 6px;
+    margin: 2px 1px;
+    border-radius: 6px;
+    color: @on_background;
+    transition: all 0.2s ease-in-out;
 }
 
 #battery,
@@ -84,14 +88,6 @@ tooltip {
 #cpu.critical,
 #memory.critical {
     color: @error;
-}
-
-#workspaces button {
-    padding: 2px 6px; 
-    margin: 2px 2px;
-    border-radius: 6px;
-    color: @on_background;
-    transition: all 0.2s ease;
 }
 
 #mpd:hover,
@@ -126,6 +122,6 @@ tooltip {
 }
 
 #workspaces button.empty.active {
-    background-color: @secondary_container;
     color: @on_secondary_container;
+    background-color: @secondary_container;
 }
