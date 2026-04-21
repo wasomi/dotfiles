@@ -4,6 +4,10 @@ if test -d ~/.local/bin
     end
 end
 
+if test -f ./custom.fish
+    source ./custom.fish
+end
+
 function fish_greeting
     fastfetch
 end

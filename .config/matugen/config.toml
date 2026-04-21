@@ -79,4 +79,4 @@ colors_to_compare = [
     { name = "violet", color = "#553b71" }
 ]
 compare_to = "{{ colors.primary.default.hex }}"
-post_hook = "SUDO_ASKPASS=~/.dotfiles/.local/bin/askPassword.sh sudo -A papirus-folders -C {{ closest_color }} --theme Papirus-Dark"
+post_hook = "SUDO_ASKPASS=~/.dotfiles/.local/bin/askPassword.sh sudo -A true && notify-send -i 'dialog-information-symbolic' 'Updating folders' 'Applying folder color scheme...' -r 8 -t 8000 && papirus-folders -C {{ closest_color }} --theme Papirus-Dark"

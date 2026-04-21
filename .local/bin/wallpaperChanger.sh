@@ -4,7 +4,7 @@
 
 wall_dir="$HOME/Pictures/Wallpapers"
 wallpaper_rofi_config="$HOME/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi"
-scheme_rofi_config="$HOME/.dotfiles/.config/rofi/styles/schemeChanger.rasi"
+scheme_rofi_config="$HOME/.dotfiles/.config/rofi/styles/colorSchemeChanger.rasi"
 random_opt="random"
 
 if [ ! -d "$wall_dir" ]; then
@@ -33,7 +33,7 @@ cd - > /dev/null || exit 1
 wall_path="$wall_dir/$selected_wall"
 
 schemes="Neutral\nTonal Spot\nContent\nMonochrome\nExpressive\nFidelity\nFruit Salad\nRainbow\nVibrant"
-choice=$(echo -e "$schemes" | rofi -dmenu -p "Color Scheme" -config "$scheme_rofi_config")
+choice=$(echo -e "$schemes" | rofi -dmenu -p " Select color scheme" -config "$scheme_rofi_config")
 
 case "$choice" in
     "Neutral")     selected_scheme="scheme-neutral"     ;;
@@ -57,14 +57,30 @@ gsettings set org.gnome.desktop.interface icon-theme "$settingsIcons"
 gsettings set org.gnome.desktop.interface font-name "$settingsFont"
 gsettings set org.gnome.desktop.interface cursor-theme "$settingsCursor"
 
-envsubst < "$HOME/.dotfiles/.config/waybar/templates/config.jsonc" > "$HOME/.dotfiles/.config/waybar/config.jsonc"
-envsubst < "$HOME/.dotfiles/.config/waybar/templates/hyprland-workspaces.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
-envsubst < "$HOME/.dotfiles/.config/waybar/templates/hyprland-language.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-language.jsonc"
+waybar_state="$HOME/.dotfiles/.config/waybar/current_template"
+
+if [ -f "$waybar_state" ]; then
+    current_waybar_template=$(cat "$waybar_state")
+else
+    current_waybar_template="default.jsonc"
+fi
+
+envsubst < "$HOME/.dotfiles/.config/waybar/templates/$current_waybar_template" > "$HOME/.dotfiles/.config/waybar/config.jsonc"
+envsubst < "$HOME/.dotfiles/.config/waybar/templates/modules/hyprland-workspaces.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
+envsubst < "$HOME/.dotfiles/.config/waybar/templates/modules/hyprland-language.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-language.jsonc"
+
+if pgrep -x "waybar" > /dev/null; then
+    pkill -SIGUSR2 waybar
+else
+    waybar & disown
+fi
+
+pkill -SIGUSR1 kitty
 
 hyprctl reload
-pkill -SIGUSR1 kitty
-pkill -SIGUSR2 waybar
+
 dunstctl reload
+
 pkill -f polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
 

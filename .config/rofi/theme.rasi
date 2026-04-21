@@ -34,7 +34,7 @@ configuration {
     selected-urgent-foreground: @on-primary;
 
     background-color: transparent;
-    foreground: @on-secondary-container;
+    foreground: @on-background;
     border-color: @outline-variant;
     spacing: 2;
 }

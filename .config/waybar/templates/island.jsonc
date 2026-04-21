@@ -1,0 +1,116 @@
+[
+    {
+        "output": "$settingsMainMonitor",
+        "layer": "top",
+        "position": "top",
+        "margin-top": 6,
+        "margin-left": 512,
+        "margin-right": 512,
+
+        "modules-left": [
+            "custom/rofi",
+            "hyprland/workspaces"
+        ],
+
+        "modules-center": [
+            "idle_inhibitor",
+            "clock",
+            "power-profiles-daemon"
+        ],
+
+        "modules-right": [
+            "group/settings",
+            "custom/update",
+            "hyprland/language",
+            "network",
+            "battery",
+            "custom/powermenu"
+        ],
+
+        "group/settings": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 240,
+                "click-to-reveal": true
+            },
+            "modules": [ 
+                "custom/settings-wrap",
+                "tray",
+                "backlight",
+                "pulseaudio#microphone", 
+                "pulseaudio",
+                "bluetooth"
+            ]
+        },
+
+        "group/hardware": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 240,
+                "transition-left-to-right": false,
+                "click-to-reveal": true
+            },
+            "modules": [ 
+                "custom/hardware-wrap", 
+                "temperature", 
+                "memory", 
+                "cpu", 
+                "disk" 
+            ]
+        },
+
+        "include": [
+            "~/.dotfiles/.config/waybar/modules/backlight.jsonc",
+            "~/.dotfiles/.config/waybar/modules/battery.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/bluetooth.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/cpu.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-hardware-wrap.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-rofi.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-settings-wrap.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-update.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/disk.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/hyprland-language.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/idle-inhibitor.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/memory.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/mpd.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/network.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/power-profiles-daemon.jsonc",
+            "~/.dotfiles/.config/waybar/modules/privacy.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/pulseaudio.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/temperature.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/tray.jsonc"
+        ]
+    },
+
+    {
+        "output": "$settingsSecondMonitor",
+        "layer": "top",
+        "position": "top",
+        "margin-top": 6,
+        "margin-left": 512,
+        "margin-right": 512,
+
+        "modules-left": [
+            "custom/rofi",
+            "hyprland/workspaces"
+        ],
+
+        "modules-center": [
+            "clock"
+        ],
+
+        "modules-right": [
+            "custom/powermenu"
+        ],
+
+        "include": [
+            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/custom-rofi.jsonc", 
+            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
+        ]
+    }
+]

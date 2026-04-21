@@ -2,6 +2,7 @@
 
 * {
     background: {{ colors.background.default.hex_alpha | set_alpha: 0.75 }};
+    on-background: {{ colors.on_background.default.hex }};
     primary: {{ colors.primary.default.hex }};
     primary-fixed: {{ colors.primary_fixed.default.hex }};
     primary-fixed-dim: {{ colors.primary_fixed_dim.default.hex }};

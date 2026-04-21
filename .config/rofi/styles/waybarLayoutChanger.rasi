@@ -1,7 +1,11 @@
 @theme "theme.rasi"
 
-mainbox {
-    children: [ listview ];
+entry {
+    placeholder: "Select waybar";
+}
+
+textbox-prompt-colon {
+    str: "";
 }
 
 window {
@@ -17,8 +21,6 @@ element {
 }
 
 listview {
-    lines: 9;
+    lines: 5;
     columns: 1;
-    padding: 0;
 }
-

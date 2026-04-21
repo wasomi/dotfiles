@@ -1,11 +1,15 @@
 @theme "theme.rasi"
 
-mainbox {
-    children: [ listview ];
+entry {
+    placeholder: "Select color scheme";
+}
+
+textbox-prompt-colon {
+    str: "";
 }
 
 window {
-    width: 32%;
+    width: 24%;
 }
 
 listview {
@@ -17,8 +21,7 @@ element {
 }
 
 listview {
-    lines: 2;
+    lines: 9;
     columns: 1;
-    padding: 0;
 }
 
