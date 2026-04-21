@@ -25,7 +25,7 @@
 
 
 tooltip {
-    background-color: alpha(@background, 0.85);
+    background-color: alpha(@background, 0.9);
     border: 1px solid @outline_variant;
     color: @on_background;
     border-radius: 8px;
@@ -35,7 +35,7 @@ tooltip {
 .modules-left, 
 .modules-right,
 .modules-center {
-    background-color: alpha(@background, 0.85);
+    background-color: alpha(@background, 0.9);
     margin: 4px;
     box-shadow: 0px 0px 2px @shadow;
     border: 1px solid @outline_variant;

@@ -59,19 +59,19 @@ per_monitor_dpi = false
 
 [urgency_low]
 timeout = 3
-background = "{{ colors.background.default.hex_alpha | set_alpha: 0.85 }}"
+background = "{{ colors.background.default.hex_alpha | set_alpha: 0.75 }}"
 foreground = "{{ colors.on_background.default.hex }}"
 highlight = "{{ colors.primary.default.hex }}"
 
 [urgency_normal]
 timeout = 6
-background = "{{ colors.background.default.hex_alpha | set_alpha: 0.85 }}"
+background = "{{ colors.background.default.hex_alpha | set_alpha: 0.75 }}"
 foreground = "{{ colors.on_background.default.hex }}"
 highlight = "{{ colors.primary.default.hex }}"
 
 [urgency_critical]
 timeout = 0
-background = "{{ colors.background.default.hex_alpha | set_alpha: 0.85 }}"
+background = "{{ colors.background.default.hex_alpha | set_alpha: 0.75 }}"
 foreground = "{{ colors.on_background.default.hex }}"
 highlight = "{{ colors.error.default.hex }}"
 frame_color = "{{ colors.error.default.hex }}"
