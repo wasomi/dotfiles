@@ -18,13 +18,13 @@
 }
 
 #waybar {
-    background-color: alpha(@background, 0.9);
+    background-color: alpha(@background, 0.85);
     color: @on_background;
     border-radius: unset;
 }
 
 tooltip {
-    background-color: alpha(@background, 0.9);
+    background-color: alpha(@background, 0.85);
     color: @on_background;
     border-radius: 8px;
     border: 1px solid @outline_variant;
@@ -108,13 +108,13 @@ tooltip {
 #workspaces button.empty:hover,
 #workspaces button.active:hover,
 #workspaces button.empty.active:hover {
-    background-color: @primary_container;
-    color: @on_primary_container;
+    background-color: @primary;
+    color: @on_primary;
 }
 
 #workspaces button.active {
-    background-color: @secondary_container;
-    color: @on_secondary_container;
+    background-color: @secondary;
+    color: @on_secondary;
 }
 
 #workspaces button.empty {
@@ -122,6 +122,6 @@ tooltip {
 }
 
 #workspaces button.empty.active {
-    color: @on_secondary_container;
-    background-color: @secondary_container;
+    color: @on_secondary;
+    background-color: @secondary;
 }

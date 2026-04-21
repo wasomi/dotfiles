@@ -1,7 +1,7 @@
 // Generated with matugen
 
 * {
-    background: {{ colors.background.default.hex }}99;
+    background: {{ colors.background.default.hex_alpha | set_alpha: 0.85 }};
     primary: {{ colors.primary.default.hex }};
     primary-fixed: {{ colors.primary_fixed.default.hex }};
     primary-fixed-dim: {{ colors.primary_fixed_dim.default.hex }};
