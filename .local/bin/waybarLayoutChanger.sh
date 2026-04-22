@@ -10,7 +10,7 @@ target_config="$waybar_dir/config.jsonc"
 rofi_config="$HOME/.dotfiles/.config/rofi/styles/waybarLayoutChanger.rasi"
 state_file="$waybar_dir/current_template"
 
-options="Default\nMinimal\nFloating\nIsland\nMinimal Island"
+options="Default\nMinimal, but default\nMinimal\nFloating\nIsland\nMinimal Island"
 
 selected=$(echo -e "$options" | rofi -dmenu -config "$rofi_config")
 
@@ -21,6 +21,10 @@ fi
 case "$selected" in
     "Default")
         style_file="default.css"
+        config_template="default.jsonc"
+        ;;
+    "Minimal, but default")
+        style_file="minimal.css"
         config_template="default.jsonc"
         ;;
     "Minimal")

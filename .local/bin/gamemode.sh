@@ -8,6 +8,8 @@ if [ "$1" = "start" ]; then
         keyword animation borderangle,0;\
         keyword decoration:shadow:enabled 0;\
         keyword decoration:blur:enabled 0;\
+        keyword decoration:active_opacity 1;\
+        keyword decoration:inactive_opacity 1;\
         keyword decoration:fullscreen_opacity 1;\
         keyword general:gaps_in 0;\
         keyword general:gaps_out 0;\
