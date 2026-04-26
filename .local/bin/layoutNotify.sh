@@ -12,7 +12,7 @@ socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.sock
             notify-send -t 1000 \
                         -r 8 \
                         -i "input-keyboard-symbolic" \
-                        "Layout Changed" \
+                        "Layout changed" \
                         "$layout"
         fi
     fi
