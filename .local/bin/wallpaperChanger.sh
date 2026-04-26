@@ -5,7 +5,7 @@
 wall_dir="$HOME/Pictures/Wallpapers"
 wallpaper_rofi_config="$HOME/.dotfiles/.config/rofi/styles/wallpaperChanger.rasi"
 scheme_rofi_config="$HOME/.dotfiles/.config/rofi/styles/colorSchemeChanger.rasi"
-random_opt="random"
+random_opt="Random"
 
 if [ ! -d "$wall_dir" ]; then
     echo "Error: Wallpaper directory not found: $wall_dir" >&2
@@ -15,9 +15,16 @@ fi
 
 cd "$wall_dir" || exit 1
 
-selected_wall=$( (echo -en "$random_opt\0icon\x1fview-refresh\n"; for img in *.jpg *.png; do
-    [ -f "$img" ] && echo -en "$img\0icon\x1f$img\n"
-done) | rofi -dmenu -show-icons -p "Wallpaper" -config "$wallpaper_rofi_config")
+random_wall=$(ls *.jpg *.png 2>/dev/null | shuf -n 1)
+
+
+selected_wall=$( (
+    echo -en "$random_opt\0icon\x1fview-refresh\n"
+
+    ls -1 *.jpg *.png 2>/dev/null | sort -V | while read -r img; do
+        echo -en "$img\0icon\x1f$img\n"
+    done
+) | rofi -dmenu -show-icons -p "Wallpaper" -config "$wallpaper_rofi_config")
 
 if [ -z "$selected_wall" ]; then
     echo "No wallpaper selected..." >&2

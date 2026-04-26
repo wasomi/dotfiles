@@ -13,8 +13,12 @@ window {
     border: 1px 0px;
 }
 
-mainbox {
-    children: [ listview ];
+entry {
+    placeholder: "Select wallpaper";
+}
+
+textbox-prompt-colon {
+    str: "󰸉";
 }
 
 listview {
@@ -27,7 +31,7 @@ listview {
 
 element {
     orientation: vertical;
-    children: [ element-icon ];
+    children: [ element-icon, element-text ];
     padding: 0;
 }
 
@@ -35,6 +39,12 @@ element-icon {
     size: 40%;
 }
 
-inputbar {
-    enabled: false;
+element-text {
+    border: 2px solid 0 0 0; 
+    horizontal-align: 0.5;
+    border-color: @selected-active-background;
+}
+
+element-text selected {
+    border-color: @selected-normal-foreground;
 }
