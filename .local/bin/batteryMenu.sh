@@ -14,7 +14,7 @@ case "$choice" in
 esac
 
 if SUDO_ASKPASS="$askpass" sudo -A bash -c "echo $threshold > $path"; then
-    notify-send -i "dialog-information-symbolic" "Battery Management" "Charging threshold set to $threshold%" -r 8 -t 2000
+    notify-send -i "dialog-information-symbolic" "Battery Management" "Charging threshold set to $threshold%" -r 10 -t 2000
 else
-    notify-send -i -u critical "dialog-error-symbolic" "Battery Management" "Failed to update charging threshold" -r 8
+    notify-send -i -u critical "dialog-error-symbolic" "Battery Management" "Failed to update charging threshold" -r 10
 fi
