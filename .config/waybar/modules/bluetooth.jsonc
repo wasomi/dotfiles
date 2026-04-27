@@ -1,6 +1,6 @@
 {
     "bluetooth": {
-        "format": "",
+        "format": "󰂯",
         "format-connected": "󰂱",
         "format-connected-battery": "󰂱 {device_battery_percentage}%",
         "format-disabled": "󰂲",

@@ -1,5 +1,5 @@
 [config.wallpaper]
-command = "awww img {{ image }} --transition-type center --transition-fps 60 --transition-duration 1.5"
+command = "awww img {{ image }} --transition-type center --transition-fps 60 --transition-bezier 0.27,1.06,0.18,1.00 --transition-duration 3.5"
 set = true
 
 [templates.hyprland]

@@ -63,6 +63,7 @@ tooltip {
     padding: 2px 6px; 
     margin: 2px 2px;
     border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
 #battery,

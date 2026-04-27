@@ -1,18 +1,16 @@
 {
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        // "format-bluetooth": " {icon} {volume}%",
         "format-muted": "󰝟",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "󰋋",
+            "hands-free": "󰋋",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰏲",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
-        // "tooltip-format": "{icon} {desc}",
         "scroll-step": 5,
         "on-click": "pavucontrol -t 3"
     },
@@ -24,7 +22,6 @@
         "on-click": "pavucontrol -t 4",
         "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
         "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
-        // "tooltip-format": "{format_source} {source_desc}",
         "scroll-step": 5,
         "max-volume": 100
     }
