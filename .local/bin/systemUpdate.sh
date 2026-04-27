@@ -12,7 +12,7 @@ echo
 
 if paru -Syu --noconfirm; then
     echo -e "\n${green}::${reset} System update completed successfully!"
-    notify-send -i "dialog-information-symbolic" "System Update" "Packages updated successfully!" -r 8 -t 2000
+    notify-send -i "dialog-information-symbolic" "System Update" "Packages updated successfully!" -h string:x-canonical-private-synchronous:system_update -t 2000
 
     echo
     echo -en "${yellow}::${reset} Do you want to reboot now? (y/N): "
@@ -24,7 +24,7 @@ if paru -Syu --noconfirm; then
     fi
 else
     echo -e "\n${red}::${reset} System update failed..."
-    notify-send -i "dialog-error-symbolic" -u critical "System Update" "An error occurred during update..." -r 8
+    notify-send -i "dialog-error-symbolic" -u critical "System Update" "An error occurred during update..." -h string:x-canonical-private-synchronous:system_update
 fi
 
 if pgrep -x waybar >/dev/null; then

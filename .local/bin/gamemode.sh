@@ -15,11 +15,11 @@ if [ "$1" = "start" ]; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-    notify-send -i "applications-games-symbolic" "Gamemode" "Enabled" -r 8 -t 2000
+    notify-send -i "applications-games-symbolic" "Gamemode" "Enabled" -h string:x-canonical-private-synchronous:gamemode -t 2000
     exit 0
 elif [ "$1" = "end" ]; then
     hyprctl reload
-    notify-send -i "applications-games-symbolic" "Gamemode" "Disabled" -r 8 -t 2000
+    notify-send -i "applications-games-symbolic" "Gamemode" "Disabled" -h string:x-canonical-private-synchronous:gamemode -t 2000
     exit 0
 else
     echo "Usage: $0 [start|end]" >&2

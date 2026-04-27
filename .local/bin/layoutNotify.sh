@@ -10,7 +10,7 @@ socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.sock
 
         if [ "$kbd_name" == "$settingsKeyboardName" ]; then
             notify-send -t 1000 \
-                        -r 8 \
+                        -h string:x-canonical-private-synchronous:osd \
                         -i "input-keyboard-symbolic" \
                         "Layout changed" \
                         "$layout"

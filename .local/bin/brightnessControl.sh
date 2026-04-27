@@ -47,7 +47,7 @@ change_brightness() {
 
     # local icon=$(choose_icon "$level")
 
-    notify-send -i "display-brightness-symbolic" "Brightness" "${level}%" -h "int:value:$level" -r 8 -t 1000
+    notify-send -i "display-brightness-symbolic" "Brightness" "${level}%" -h "int:value:$level" -h string:x-canonical-private-synchronous:osd -t 1000
 }
 
 change_brightness

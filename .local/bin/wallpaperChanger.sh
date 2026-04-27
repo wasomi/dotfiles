@@ -9,7 +9,7 @@ random_opt="Random"
 
 if [ ! -d "$wall_dir" ]; then
     echo "Error: Wallpaper directory not found: $wall_dir" >&2
-    notify-send -u critical -i "dialog-error-symbolic" "Error" "Wallpaper directory not found..." -r 8
+    notify-send -u critical -i "dialog-error-symbolic" "Error" "Wallpaper directory not found..." -h string:x-canonical-private-synchronous:wallapaper_changer
     exit 1
 fi
 
@@ -28,7 +28,7 @@ selected_wall=$( (
 
 if [ -z "$selected_wall" ]; then
     echo "No wallpaper selected..." >&2
-    # notify-send -u critical -i "dialog-error-symbolic" "Error" "No wallpaper selected..." -r 8
+    # notify-send -u critical -i "dialog-error-symbolic" "Error" "No wallpaper selected..." -h string:x-canonical-private-synchronous:wallapaper_changer
     exit 0
 fi
 
@@ -55,7 +55,7 @@ case "$choice" in
     *)             selected_scheme="scheme-neutral"     ;;
 esac
 
-matugen image "$wall_path" -m "$settingsMode" -t "$selected_scheme" --source-color-index 0 || { echo "Matugen failed..." && notify-send -u critical -i "dialog-error-symbolic" "Error" "Matugen failed..." -r 8 >&2; exit 1; }
+matugen image "$wall_path" -m "$settingsMode" -t "$selected_scheme" --source-color-index 0 || { echo "Matugen failed..." && notify-send -u critical -i "dialog-error-symbolic" "Error" "Matugen failed..." -h string:x-canonical-private-synchronous:wallapaper_changer >&2; exit 1; }
 
 gsettings set org.gnome.desktop.wm.preferences theme "$settingsTheme"
 gsettings set org.gnome.desktop.interface gtk-theme "$settingsTheme"
@@ -91,4 +91,4 @@ dunstctl reload
 pkill -f polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
 
-notify-send -i "dialog-information-symbolic" "Theme applied" "Wallpaper and theme updated successfully!\nSelected scheme: $choice" -r 8 -t 2000
+notify-send -i "dialog-information-symbolic" "Theme applied" "Wallpaper and theme updated successfully!\nSelected scheme: $choice" -h string:x-canonical-private-synchronous:wallapaper_changer -t 2000

@@ -44,7 +44,7 @@ case "$selected" in
         config_template="minimal island.jsonc"
         ;;
     *)
-        notify-send -u critical "Error" "Unknown layout..." -r 8
+        notify-send -u critical "Error" "Unknown layout..." -h string:x-canonical-private-synchronous:waybar_layout_changer
         exit 1
         ;;
 esac
@@ -57,7 +57,7 @@ envsubst < "$templates_dir/$config_template" > "$target_config"
 envsubst < "$HOME/.dotfiles/.config/waybar/templates/modules/hyprland-workspaces.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
 envsubst < "$HOME/.dotfiles/.config/waybar/templates/modules/hyprland-language.jsonc" > "$HOME/.dotfiles/.config/waybar/modules/hyprland-language.jsonc"
 
-notify-send -i "dialog-information-symbolic" "Waybar updated" "Layout: $selected" -r 8 -t 2000
+notify-send -i "dialog-information-symbolic" "Waybar updated" "Layout: $selected" -h string:x-canonical-private-synchronous:waybar_layout_changer -t 2000
 
 if pgrep -x "waybar" > /dev/null; then
     pkill -SIGUSR2 waybar

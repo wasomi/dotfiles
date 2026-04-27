@@ -10,7 +10,7 @@ if [ -z "$1" ]; then
 else
     if [ "$1" = "$clear" ]; then
         cliphist wipe
-        notify-send -i "dialog-information-symbolic" "Clipboard" "Cleared!" -r 8 -t 2000
+        notify-send -i "dialog-information-symbolic" "Clipboard" "Cleared!" -h string:x-canonical-private-synchronous:clipboard -t 2000
     else
         cliphist decode <<<"$1" | wl-copy
     fi

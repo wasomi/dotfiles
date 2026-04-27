@@ -28,28 +28,28 @@ check_battery() {
 
     if [ "$status" != "$last_status" ]; then
         if [ "$status" = "charging" ]; then
-            notify-send -i "battery-good-charging-symbolic" "Charging" "Adapter plugged in ($capacity%)" -r 9 -t 3000 &
+            notify-send -i "battery-good-charging-symbolic" "Charging" "Adapter plugged in ($capacity%)" -h string:x-canonical-private-synchronous:battery_status -t 3000 &
             last_level="NONE" # Сбрасываем флаги низкого заряда
         elif [ "$status" = "discharging" ]; then
-            notify-send -i "battery-good-symbolic" "Discharging" "Adapter unplugged ($capacity%)" -r 9 -t 3000 &
+            notify-send -i "battery-good-symbolic" "Discharging" "Adapter unplugged ($capacity%)" -h string:x-canonical-private-synchronous:battery_status -t 3000 &
         fi
         last_status="$status"
     fi
 
     if [ "$last_level" != "FULL" ] && [ "$status" = "fully-charged" ]; then
-        notify-send -i "battery-full-symbolic" "Battery full" -r 9 -t 2000 &
+        notify-send -i "battery-full-symbolic" "Battery full" -h string:x-canonical-private-synchronous:battery_status -t 2000 &
         last_level="FULL"
     fi
 
     if [ "$last_level" != "LOW" ] && [ "$last_level" != "CRITICAL" ] && \
        [ "$status" = "discharging" ] && [ "$capacity" -le "$low" ]; then
-        notify-send -i "battery-low-symbolic" "Battery low" "Capacity: $capacity%" -r 9 -t 5000 &
+        notify-send -i "battery-low-symbolic" "Battery low" "Capacity: $capacity%" -h string:x-canonical-private-synchronous:battery_status -t 5000 &
         last_level="LOW"
     fi
 
     if [ "$last_level" != "CRITICAL" ] && [ "$status" = "discharging" ] && \
        [ "$capacity" -le "$critical" ]; then
-        notify-send -u critical -i "battery-empty-symbolic" "Battery critical" "Capacity: $capacity%" -r 9 &
+        notify-send -u critical -i "battery-empty-symbolic" "Battery critical" "Capacity: $capacity%" -h string:x-canonical-private-synchronous:battery_status &
         last_level="CRITICAL"
     fi
 }
