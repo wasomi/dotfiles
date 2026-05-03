@@ -11,21 +11,21 @@
 
 * {
     font-family: "CodeNewRoman Nerd Font Propo";
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     box-shadow: none;
     text-shadow: none;
 }
 
 #waybar {
-    background-color: transparent;
+    background: transparent;
     color: @on_background;
     border-radius: unset;
 }
 
 
 tooltip {
-    background-color: alpha(@background, 0.8);
+    background: alpha(@background, 0.8);
     border: 1px solid @outline_variant;
     color: @on_background;
     border-radius: 8px;
@@ -35,11 +35,8 @@ tooltip {
 .modules-left, 
 .modules-right,
 .modules-center {
-    background-color: alpha(@background, 0.8);
-    margin: 4px;
-    box-shadow: 0px 0px 2px @shadow;
-    border: 1px solid @outline_variant;
-    border-radius: 8px;
+    background: transparent;
+    margin: 2px 4px 0px;
 }
 
 #language,
@@ -63,10 +60,13 @@ tooltip {
 #custom-settings-wrap,
 #custom-hardware-wrap,
 #custom-rofi {
-    padding: 2px 6px; 
+    padding: 0px 8px;
     margin: 2px 2px;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: all 0.2s ease;
+    background: alpha(@background, 0.8);
+    box-shadow: 0px 0px 2px @shadow;
+    border: 1px solid @outline_variant;
 }
 
 #battery,
@@ -87,13 +87,7 @@ tooltip {
     color: @error;
 }
 
-#workspaces button {
-    padding: 2px 6px; 
-    margin: 2px 2px;
-    border-radius: 6px;
-    color: @on_background;
-    transition: all 0.2s ease;
-}
+
 
 #mpd:hover,
 #language:hover,
@@ -113,20 +107,40 @@ tooltip {
 #workspaces button.empty:hover,
 #workspaces button.active:hover,
 #workspaces button.empty.active:hover {
-    background-color: @primary;
+    background: @primary;
     color: @on_primary;
+    border: 1px solid @outline;
 }
 
-#workspaces button.active {
-    background-color: @secondary;
-    color: @on_secondary;
+#workspaces button {
+    padding: 0px 8px;
+    margin: 2px 2px;
+    border-radius: 8px;
+    color: transparent;
+    transition: all 0.2s ease;
+    background: alpha(@secondary, 0.8);
+    box-shadow: 0px 0px 2px @shadow;
+    border: 1px solid @outline_variant;
 }
 
 #workspaces button.empty {
-    color: @tertiary;
+    background: @background;
 }
 
-#workspaces button.empty.active {
-    background-color: @secondary;
-    color: @on_secondary;
+#workspaces button.active {
+    background: @primary;
+    color: @on_primary;
+    min-width: 32px;
+    border: 1px solid @outline;
 }
+
+#workspaces button:hover {
+    min-width: 32px;
+}
+
+#workspaces button.urgent {
+    background: @inverse_surface;
+    color: @inverse_on_surface;
+    min-width: 32px;
+}
+

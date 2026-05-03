@@ -1,7 +1,7 @@
 @theme "theme.rasi"
 
 entry {
-    placeholder: "Select waybar";
+    placeholder: "Select waybar layout";
 }
 
 textbox-prompt-colon {
@@ -21,6 +21,6 @@ element {
 }
 
 listview {
-    lines: 6;
+    lines: 4;
     columns: 1;
 }

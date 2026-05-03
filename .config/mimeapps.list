@@ -14,7 +14,6 @@ x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
 x-scheme-handler/tg=userapp-AyuGram Desktop-GZE7N3.desktop
 x-scheme-handler/tonsite=userapp-AyuGram Desktop-T936N3.desktop
 application/octet-stream=code.desktop
-x-scheme-handler/incy=incy.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop

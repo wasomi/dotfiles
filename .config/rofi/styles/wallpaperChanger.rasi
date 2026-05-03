@@ -40,11 +40,6 @@ element-icon {
 }
 
 element-text {
-    border: 2px solid 0 0 0; 
     horizontal-align: 0.5;
-    border-color: @selected-active-background;
 }
 
-element-text selected {
-    border-color: @selected-normal-foreground;
-}

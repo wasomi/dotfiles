@@ -57,28 +57,7 @@
         },
 
         "include": [
-            "~/.dotfiles/.config/waybar/modules/backlight.jsonc",
-            "~/.dotfiles/.config/waybar/modules/battery.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/bluetooth.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/cpu.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/custom-hardware-wrap.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/custom-rofi.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/custom-settings-wrap.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/custom-update.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/disk.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/hyprland-language.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/idle-inhibitor.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/memory.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/mpd.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/network.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/power-profiles-daemon.jsonc",
-            "~/.dotfiles/.config/waybar/modules/privacy.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/pulseaudio.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/temperature.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/tray.jsonc"
+            "~/.dotfiles/.config/waybar/modules/*json*"
         ]
     },
 
@@ -101,10 +80,7 @@
         ],
 
         "include": [
-            "~/.dotfiles/.config/waybar/modules/clock.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/custom-powermenu.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/custom-rofi.jsonc", 
-            "~/.dotfiles/.config/waybar/modules/hyprland-workspaces.jsonc"
+            "~/.dotfiles/.config/waybar/modules/*json*"
         ]
     }
 ]

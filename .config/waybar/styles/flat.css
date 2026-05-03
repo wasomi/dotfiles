@@ -11,7 +11,7 @@
 
 * {
     font-family: "CodeNewRoman Nerd Font Propo";
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     box-shadow: none;
     text-shadow: none;
@@ -60,17 +60,9 @@ tooltip {
 #custom-hardware-wrap,
 #custom-rofi {
     padding: 0px 8px;
-    margin: 2px 1px;
+    margin: 2px 2px;
     border-radius: 6px;
     transition: all 0.2s ease;
-}
-
-#workspaces button {
-    padding: 0px 6px;
-    margin: 2px 1px;
-    border-radius: 6px;
-    color: @on_background;
-    transition: all 0.2s ease-in-out;
 }
 
 #battery,
@@ -113,16 +105,31 @@ tooltip {
     color: @on_primary;
 }
 
-#workspaces button.active {
-    background-color: @secondary;
-    color: @on_secondary;
+#workspaces button {
+    padding: 0px 8px;
+    margin: 2px 2px;
+    border-radius: 6px;
+    color: transparent;
+    background: @secondary;
+    transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.empty {
-    color: @tertiary;
+    background: @background;
 }
 
-#workspaces button.empty.active {
-    color: @on_secondary;
-    background-color: @secondary;
+#workspaces button.active {
+    background: @primary;
+    color: @on_primary;
+    min-width: 32px;
+}
+
+#workspaces button:hover {
+    min-width: 32px;
+}
+
+#workspaces button.urgent {
+    background: @inverse_surface;
+    color: @inverse_on_surface;
+    min-width: 32px;
 }
