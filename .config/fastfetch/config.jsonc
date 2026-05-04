@@ -7,7 +7,7 @@
         "separator": "  »  ",
         "color": {
             "keys": "blue",
-            "separator": "black"
+            "separator": "bright_black"
         }
     },
     "modules": [
