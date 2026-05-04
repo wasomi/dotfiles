@@ -3,7 +3,7 @@
 @import "colors.rasi"
 
 configuration {
-    font: "CodeNewRoman Nerd Font Propo 13";
+    font: "CodeNewRoman Nerd Font Propo 12";
     display-drun: "Search";
     display-emoji: "Search";
     display-clipboard: "Search";
