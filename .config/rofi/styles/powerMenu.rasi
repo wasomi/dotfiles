@@ -1,5 +1,11 @@
 @theme "theme.rasi"
 
+window {
+    margin: 6px;
+    location: east;
+    anchor: east;
+}
+
 configuration {
     kb-move-char-back: "Control+b";
     kb-move-char-forward: "Control+f";
@@ -12,8 +18,8 @@ mainbox {
 }
 
 listview {
-    lines: 1;
-    columns: 5;
+    lines: 5;
+    columns: 1;
     scrollbar: false;
     padding: 0;
 }
@@ -21,7 +27,6 @@ listview {
 element {
     orientation: vertical;
     children: [ element-text ];
-    padding: 32px 16px;
 }
 
 element-text {

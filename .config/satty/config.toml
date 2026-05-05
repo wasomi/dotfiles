@@ -1,5 +1,5 @@
 [general]
-fullscreen = false
+fullscreen = true
 resize = { mode = "smart" }
 floating-hack = true
 early-exit = true
