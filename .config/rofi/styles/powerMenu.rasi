@@ -4,6 +4,7 @@ window {
     margin: 6px;
     location: east;
     anchor: east;
+    width: 8%;
 }
 
 configuration {
@@ -30,7 +31,8 @@ element {
 }
 
 element-text {
-    font: "CodeNewRoman Nerd Font Propo 32";
+    font: "CodeNewRoman Nerd Font Propo 24";
     horizontal-align: 0.5;
+    padding: 16px 16px;
 }
 
