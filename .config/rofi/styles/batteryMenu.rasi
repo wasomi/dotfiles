@@ -14,7 +14,7 @@ mainbox {
 }
 
 listview {
-    lines: 5;
+    lines: 3;
     columns: 1;
     scrollbar: false;
     padding: 0;

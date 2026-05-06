@@ -1,4 +1,6 @@
-# about
+# dotfiles
+
+## about
 
 - os: `arch`
 - wm: `hyprland`
@@ -10,14 +12,14 @@
 - wallpaper daemon: `swww`
 - color generator tool: `matugen`
 
-# docs
+## docs
 
 - [install](Docs/install.md)
 - [keybinds](Docs/keybinds.md)
 - [features](Docs/features.md)
 - [gallery](Docs/gallery.md)
 
-# thanks to
+## thanks to
 
 - [zproger](https://github.com/Zproger/) for the [scripts](https://github.com/Zproger/bspwm-dotfiles/)
 - [sane1090](https://www.youtube.com/@sane1090x) for the [wallpaper switcher script](https://youtu.be/PLb2lA9jBCI?si=PrIcooBkzP5Gz0YF)
@@ -26,3 +28,4 @@
 - [abhra00](https://github.com/Abhra00) for the [matugen gtk css](https://github.com/Abhra00/Matuprland/blob/main/matugen/templates/matugen-gtk.css)
 - [mahaveergurjar](https://github.com/mahaveergurjar) for the [battery lockscreen script](https://github.com/mahaveergurjar/Hyprlock-Dots/blob/main/.config/hyprlock/scripts/battery.sh)
 - ai bots for providing useful examples and scripts
+- [cebem1nt](https://github.com/cebem1nt ) for the idea of the rofi menu and its [dotfiles](https://github.com/cebem1nt/dotfiles)

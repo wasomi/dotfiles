@@ -4,7 +4,7 @@
 
 path="/sys/class/power_supply/BAT0/charge_control_end_threshold"
 askpass="$HOME/.dotfiles/.local/bin/askPassword.sh"
-choice=$(printf "󰁿\n󰂁\n󰁹" | rofi -dmenu -config ~/.dotfiles/.config/rofi/styles/powerMenu.rasi)
+choice=$(printf "󰁿\n󰂁\n󰁹" | rofi -dmenu -config ~/.dotfiles/.config/rofi/styles/batteryMenu.rasi)
 
 case "$choice" in
     "󰁿") threshold=60 ;;

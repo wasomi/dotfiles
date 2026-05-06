@@ -1,5 +1,14 @@
 @theme "theme.rasi"
 
+window {
+    width: 24%;
+    margin: 6px 6px 0 6px;
+    location: south;
+    anchor: south;
+    border-radius: 8px 8px 0 0;
+    border: 1px 1px 0 1px; 
+}
+
 entry {
     placeholder: "Select color scheme";
 }
@@ -8,20 +17,12 @@ textbox-prompt-colon {
     str: "";
 }
 
-window {
-    width: 24%;
-}
-
-listview {
-    border: 0;
-}
-
 element {
     children: [ element-text ];
 }
 
 listview {
-    lines: 9;
-    columns: 1;
+    lines: 5;
+    columns: 2;
 }
 

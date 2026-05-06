@@ -62,7 +62,7 @@ tooltip {
 #custom-rofi {
     padding: 0px 8px; 
     margin: 2px 2px;
-    border-radius: 6px;
+    border-radius: 4px;
     transition: all 0.2s ease;
 }
 
@@ -108,7 +108,7 @@ tooltip {
 #workspaces button {
     padding: 0px 8px; 
     margin: 2px 2px;
-    border-radius: 6px;
+    border-radius: 4px;
     color: transparent;
     background: @secondary;
     transition: all 0.2s ease-in-out;

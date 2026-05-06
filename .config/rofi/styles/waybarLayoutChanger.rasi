@@ -1,15 +1,20 @@
 @theme "theme.rasi"
 
+window {
+    width: 24%;
+    margin: 6px 6px 0 6px;
+    location: south;
+    anchor: south;
+    border-radius: 8px 8px 0 0;
+    border: 1px 1px 0 1px; 
+}
+
 entry {
     placeholder: "Select waybar layout";
 }
 
 textbox-prompt-colon {
     str: "";
-}
-
-window {
-    width: 24%;
 }
 
 listview {

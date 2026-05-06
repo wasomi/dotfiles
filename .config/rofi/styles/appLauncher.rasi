@@ -1,14 +1,23 @@
 @theme "theme.rasi"
 
+configuration {
+    modes: [ drun,window ];
+}
+
 window {
     width: 20%;
-    height: 100%;
-    margin: 6px;
+    height: 72%;
+    margin: 6px 6px 6px 0;
     location: west;
     anchor: west;
+    border-radius: 0 8px 8px 0;
+    border: 1px 1px 1px 0;
+}
+
+mainbox {
+    children: [ "inputbar", "listview", "mode-switcher" ];
 }
 
 listview {
-    lines: 9;
     columns: 1;
 }

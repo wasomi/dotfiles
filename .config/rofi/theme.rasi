@@ -4,27 +4,28 @@
 
 configuration {
     font: "CodeNewRoman Nerd Font Propo 12";
-    display-drun: "Search";
-    display-emoji: "Search";
-    display-clipboard: "Search";
+    display-drun: "";
+    display-window: "󱂬";
+    display-emoji: "󰞅";
+    display-clipboard: "󰅇";
     icon-theme: "Papirus-Dark";
     show-icons: true;
 }
 
 * {
-    active-background: @tertiary;
-    active-foreground: @foreground;
+    active-background: @secondary;
+    active-foreground: @on-secondary;
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: @error;
-    urgent-foreground: @foreground;
+    urgent-background: @inverse-surface;
+    urgent-foreground: @inverse-on-surface;
 
     alternate-active-background: @background;
     alternate-active-foreground: @foreground;
     alternate-normal-background: @background;
     alternate-normal-foreground: @foreground;
-    alternate-urgent-background: @background;
-    alternate-urgent-foreground: @foreground;
+    alternate-urgent-background: @inverse-surface;
+    alternate-urgent-foreground: @inverse-on-surface;
 
     selected-active-background: @primary;
     selected-active-foreground: @on-primary;
@@ -62,20 +63,21 @@ textbox {
 }
 
 inputbar {
-    background-color: transparent;
+    background-color: @background;
+    border-radius: 4px;
     children: [ textbox-prompt-colon, entry ];
 }
 
 entry {
     placeholder: "Search...";
-    padding: 8px;
+    padding: 12px 0px 12px;
     text-color: @normal-foreground;
 }
 
 textbox-prompt-colon {
     expand: false;
     str: "";
-    padding: 8px;
+    padding: 12px;
     text-color: @normal-foreground;
 }
 
@@ -85,7 +87,6 @@ listview {
     border-color: @border-color;
     spacing: 2px;
     scrollbar: false;
-    padding: 4px 0 0 0;
 }
 
 element {
@@ -161,23 +162,20 @@ scrollbar {
 }
 
 sidebar {
-    border: 2px 0px 0px;
+    border: 1px;
     border-color: @border-color;
 }
 
 button {
+    border-radius: 4px;
+    padding: 8px;
     text-color: @normal-foreground;
+    background-color: @normal-background;
 }
 
 button.selected {
     background-color: @selected-normal-background;
     text-color: @selected-normal-foreground;
-}
-
-inputbar {
-    spacing: 0;
-    text-color: @normal-foreground;
-    padding: 1px;
 }
 
 case-indicator {
